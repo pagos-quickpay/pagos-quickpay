@@ -1,5 +1,4 @@
-# Metodos de pago disponibles
+# Para crear un pago debes seguir los siguientes pasos:
 
-  - [Pago in App Credit (APP CMR)](pago-in-app-credit/introduction.md)
-  - [Pago in App Debit (APP Banco Falabella)](pago-in-app-debit/introduction.md)
-  - [Pago de estado de cuenta de CMR con Cuenta de Banco Falabella](cardbill-payment/introduction.md)
+  - [Obtener token de acceso](obtener-token-acceso.md)
+  - [Crear intención de pago](crear-intencion-pago.md)
