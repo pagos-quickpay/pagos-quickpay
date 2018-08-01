@@ -4,6 +4,7 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 
 ### Pagos en la App CMR
 [Ejemplo payment_method": "PAGOINAPP_CREDIT" ](json-pago-credit.md)
+
 [Ejemplo payment_method": "PAGOINAPP_DEBIT" ](json-pago-debit.md)
 
 ### Pagos de estado de cuenta de Tarjeta CMR en App CMR
