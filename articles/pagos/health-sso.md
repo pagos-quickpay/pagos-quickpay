@@ -10,8 +10,6 @@ curl -X GET \
 
 Cuando el status del servicio es **UP** recibirás una respuesta similar a:
 
-Http status code 200
-
 ```
 {
   "status": "UP",
@@ -27,3 +25,4 @@ Http status code 200
   }
 }
 ```
+Http status code: **200**
