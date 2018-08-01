@@ -83,7 +83,7 @@ curl -X POST \
 }'
  ```
  
-A continuación se presenta ejemplo de un JSON como respuesta al crear una intención de pago a través de la API RESTful de checkout:
+A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear una intención de pago a través de la API RESTful de checkout:
 
 ```
 {
