@@ -3,12 +3,12 @@
 Para generar una intención de pago debes hacer una petición a la API de **Intención de Pago /payments** con el **access_token** generado en el [paso 1](obtener-token-acceso.md)
 
 ### Pagos en la App CMR
-[Ejemplo payment_method": "PAGOINAPP_CREDIT" ](json-pago-credit.md)
+- [Ejemplo payment_method": "PAGOINAPP_CREDIT" ](json-pago-credit.md)
 
-[Ejemplo payment_method": "PAGOINAPP_DEBIT" ](json-pago-debit.md)
+- [Ejemplo payment_method": "PAGOINAPP_DEBIT" ](json-pago-debit.md)
 
 ### Pagos de estado de cuenta de Tarjeta CMR en App CMR
-[Ejemplo payment_method": "CARDBILL_PAYMENT_DEBIT_BF" ](json-cardbill.md)
+- [Ejemplo payment_method": "CARDBILL_PAYMENT_DEBIT_BF" ](json-cardbill.md)
 
 
 **Detalle de los Campos de la Petición**
