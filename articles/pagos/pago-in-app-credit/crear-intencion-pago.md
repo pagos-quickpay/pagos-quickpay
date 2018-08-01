@@ -85,6 +85,11 @@ curl -X POST \
   }
 }'
  ```
+> Tienes los siguientes metodos de pago disponibles:
+> **"payment_method": "PAGOINAPP_CREDIT"** Pagos en la App CMR
+> **"payment_method": "PAGOINAPP_DEBIIT"** Pagos en la App Banco Falabella
+> **"payment_method": "CARDBILL_PAYMENT_DEBIT_BF"** Pagos de estado de cuenta de Tarjeta CMR en App CMR
+
 **Detalle de los Campos de la Petición**
 
 | Nombre                                   | Descripción                              | Tipo         |
@@ -309,8 +314,6 @@ A continuación se presenta ejemplo de un JSON como respuesta al crear una inten
 - **self_by_gateway_order**: desde esta URL puedes consultar la información de la intención de pago.
 
 > Estas URLs son dinamicas, nunca debes guardarlas como variables de entorno. Siempre debes consultarlas desde aquí para continuar con los pasos siguientes.
-
-¿Quieres saber cómo actualizar una intención de pago?[haz clic aquí](update-transaction.md)
 
 [Consultar estado del servicio (Health Check)](health-checkout.md)
 
