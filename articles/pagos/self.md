@@ -96,7 +96,7 @@ Obtendrás una respuesta similar a:
 ```
 > Esta información es identica a la respuesta obtenida en la respuesta de la intencion de pago
 
-# Ejemplo de Self rechazado
+# Ejemplo de Self incorrecto
 
 Enviando un id incorrecto
 
