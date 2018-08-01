@@ -127,5 +127,3 @@ El resultado de la llamada a la API de checkout, será una intención de pago en
 > Estas URLs son dinamicas, nunca debes guardarlas como variables de entorno. Siempre debes consultarlas desde aquí para continuar con los pasos siguientes.
 
 [Consultar estado del servicio (Health Check)](health-checkout.md)
-
-Ir al paso [xxx](xxx.md)
