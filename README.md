@@ -2,4 +2,4 @@
 
 Bienvenido al portal de desarrolladores
 
-¿Quieres contribuir con el contenido de PEINAU? [Más Info Aquí](articles/contribuciones/introduccion.md)
+¿Quieres contribuir con nuestro contenido? [Más Info Aquí](articles/contribuciones/introduccion.md)
