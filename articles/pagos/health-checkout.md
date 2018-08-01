@@ -25,3 +25,4 @@ Cuando el status del servicio es **UP** recibirás una respuesta similar a:
   }
 }
 ```
+Http status code: **200**
