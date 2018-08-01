@@ -87,7 +87,9 @@ curl -X POST \
  ```
 > Tienes los siguientes metodos de pago disponibles:
 > **"payment_method": "PAGOINAPP_CREDIT"** Pagos en la App CMR
+>
 > **"payment_method": "PAGOINAPP_DEBIIT"** Pagos en la App Banco Falabella
+>
 > **"payment_method": "CARDBILL_PAYMENT_DEBIT_BF"** Pagos de estado de cuenta de Tarjeta CMR en App CMR
 
 **Detalle de los Campos de la Petición**
