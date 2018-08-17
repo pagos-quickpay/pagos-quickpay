@@ -6,7 +6,7 @@ Con estas credenciales, deberás obtener un **token de acceso** enviando por med
 
 El servidor de autorización intercambiara las llaves del aplicativo por un token de acceso (**access_token**) válido para ejecutar requerimientos a nuestras a APIs RESTful. 
 
-El campo **identifier** que va en el body, es un campo opcional, sin embargo se recomienda enviar el merchant-transaction-id en este campo, el cual sera encriptado y devuelto dentro del token, para propositos de seguridad en las transacciones.
+El campo **identifier** que va en el body, es un campo opcional, sin embargo se recomienda enviar el gateway_order en este campo, el cual sera encriptado y devuelto dentro del token, para propositos de seguridad en las transacciones.
 
 **Ejemplo:**
 ```
