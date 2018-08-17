@@ -6,17 +6,20 @@ Con estas credenciales, deberás obtener un **token de acceso** enviando por med
 
 El servidor de autorización intercambiara las llaves del aplicativo por un token de acceso (**access_token**) válido para ejecutar requerimientos a nuestras a APIs RESTful. 
 
+El campo **identifier** que va en el body, es un campo opcional, sin embargo se recomienda enviar el merchant-transaction-id en este campo, el cual sera encriptado y devuelto dentro del token, para propositos de seguridad en las transacciones.
+
 **Ejemplo:**
 ```
 export CLIENT_ID=641281901508761220281
 export CLIENT_SECRET=B8WKRXMiWHHrMCectt9Rg3ju4Y8GNheEa50gx6365sBV
+export IDENTIFIER=123456789
 curl -v -X POST https://api.sandbox.connect.fif.tech/sso/oauth2/v2/token \
  -H "Content-Type:application/x-www-form-urlencoded" \
  -H "Authorization: Basic $CLIENT_ID:$CLIENT_SECRET" \
- -d "grant_type=client_credentials" | json_pp
+ -d "{grant_type=client_credentials, identifier=$IDENTIFIER}" | json_pp
 ```
 
-> El **CLIENT_ID** y **CLIENT_SECRET** utilizados en esta petición son datos de prueba.
+> El **CLIENT_ID**, **CLIENT_SECRET** e **IDENTIFIER** utilizados en esta petición son datos de prueba.
 
 Como respuesta obtendrás el **access_token**:
 
