@@ -8,6 +8,10 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 
 - [Json ejemplo payment_method": "CARDBILL_PAYMENT_DEBIT_BF" ](json-cardbill.md)
 
+- [Json ejemplo payment_method": "QUICKPAY_CREDIT" ](json-quickpay-credit.md)
+
+- [Json ejemplo payment_method": "QUICKPAY_DEBIT" ](json-quickpay-debit.md)
+
 
 **Detalle de los Campos de la Petición**
 
