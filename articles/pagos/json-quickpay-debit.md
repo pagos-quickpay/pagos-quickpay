@@ -18,6 +18,7 @@ curl -X POST \
           "payment_method": "QUICKPAY_DEBIT"
         },
         "transaction": {
+          "gateway_order": "identificador_unico",
           "description": "Compra comercio x",
           "soft_descriptor": "Compra comercio x",
           "amount": {
