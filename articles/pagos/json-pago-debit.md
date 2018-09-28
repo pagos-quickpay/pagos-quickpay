@@ -18,6 +18,7 @@ curl -X POST \
     "payment_method": "PAGOINAPP_DEBIT"
   },
   "transaction": {
+    "gateway_order": "identificador_unico comercio (max 12 caracteres)",
     "description": "Compra COPEC Chesterton",
     "soft_descriptor": "COPEC-PAGO-CLICK",
     "item_list": {
