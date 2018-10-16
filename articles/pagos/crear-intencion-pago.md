@@ -73,8 +73,8 @@ El resultado de la llamada a la API de checkout, será una intención de pago en
 | payer.payer_info.email                   | correo electrónico                       | string       |
 | payer.payer_info.full_name               | nombre completo                          | string       |
 | payer.payer_info.country                 | Nacionalidad                             | string       |
-| payer.payer_info.documentNumber          | Número de identificación                 | string       |
-| payer.payer_info.documentType            | Tipo de documento de identificación      | string       |
+| payer.payer_info.document_number          | Número de identificación                 | string       |
+| payer.payer_info.document_type            | Tipo de documento de identificación      | string       |
 | payer.payment_method                     | Identifica el método de pago a utilizar  | string       |
 | **transaction**                          | **Grupo de campos con la información de la transacción** | **object**   |
 | transaction.gateway_order                | Número de la orden de compra. Id de transacción que es enviada al  gateway de pago. **Este valor debe ser unico** | string       |
