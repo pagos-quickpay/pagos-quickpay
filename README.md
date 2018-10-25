@@ -9,6 +9,7 @@ Bienvenido al portal de desarrolladores
   - Pago de estado de cuenta de CMR con Cuenta de Banco Falabella
   - Pago con CMR
   - Pago con Debito de Banco Falabella
+  - Pago con CMR Credit Doc Id
 
 ## [¿Como integrarte?](articles/pagos/introduction.md)
 
