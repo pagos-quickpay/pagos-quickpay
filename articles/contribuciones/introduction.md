@@ -1,14 +1,14 @@
-## About your contributions to Peinau content
+## About your contributions to Pagos Quickpay content
 
 ### Minor corrections
 Minor corrections or clarifications you submit for documentation and code examples in this repo are covered by the general terms.
 
 
 ## Repository organization
-The content in the peinau-docs repository follows the organization of documentation on https://docs.peinau.com/peinau/. This repository contains two root folders:
+The content in the pagos-quickpay-docs repository follows the organization of documentation on https://github.com/pagos-quickpay. This repository contains two root folders:
 
 ### \articles
-The *\articles* folder contains the documentation articles formatted as markdown files with an *.md* extension. Articles are typically grouped by Peinau Services.
+The *\articles* folder contains the documentation articles formatted as markdown files with an *.md* extension. Articles are typically grouped by Pagos Quickpay Services.
 
 The *\articles* folder contains the *\media* folder for root directory article media files, inside which are subfolders with the images for each article.  The service folders contain a separate media folder for the articles within each service folder. The article image folders are named identically to the article file, minus the *.md* file extension.
 
@@ -22,7 +22,7 @@ All the articles in this repository use GitHub flavored markdown.  Here's a list
 
 
 ## Labels
-In the public peinau-docs repository, automated labels are assigned to pull requests to help us manage the pull request workflow and to help let you know what's going on with your pull request:
+In the public pagos-quickpay-docs repository, automated labels are assigned to pull requests to help us manage the pull request workflow and to help let you know what's going on with your pull request:
 
 * Contribution License Agreement related
   * cla-not-required: The change is relatively minor and does not require that you sign a CLA.
