@@ -13,4 +13,4 @@ Bienvenido al portal de desarrolladores
 
 ## [¿Como integrarte?](articles/pagos/introduction.md)
 
-¿Quieres contribuir con nuestro contenido? [Más Info Aquí](contribuciones/introduccion.md)
+¿Quieres contribuir con nuestro contenido? [Más Info Aquí](articles/contribuciones/introduction.md)
