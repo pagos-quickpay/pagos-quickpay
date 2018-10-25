@@ -65,7 +65,6 @@ curl -X POST \
       "3"
     ],
     "installments_without_interest": [
-      "3"
     ],
     "default_installment_number": "1",
     "default_deferred_month": "3",
