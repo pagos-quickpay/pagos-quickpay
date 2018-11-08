@@ -1,4 +1,5 @@
-'{
+```
+{
     "_id": "5be432acce01180015ca6319",
     "expiration_date": "2018-11-08T12:58:16.948Z",
     "application": "5af0799cd1aa8e000f9de4ca",
@@ -105,4 +106,5 @@
     "state": "rejected",
     "intent": "sale",
     "id": "5be432acce01180015ca6319"
-}'
+}
+```
