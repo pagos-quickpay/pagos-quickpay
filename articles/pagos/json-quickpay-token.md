@@ -14,8 +14,8 @@ curl -X POST 'https://api.sandbox.connect.fif.tech/checkout/payments' \
        "email": "jlprueba1@quickpay.com", 
        "full_name": "Andres Roa",
        "country": "CL",
-       "documentNumber": "123123123",
-       "documentType": "RUT"
+       "document_number": "123123123",
+       "document_type": "RUT"
      }, 
      "payment_method": "QUICKPAY_TOKEN"
    }, 
@@ -114,8 +114,8 @@ Como respuesta obtendrás la siguiente información:
     },
     "payer": {
         "payer_info": {
-            "documentType": "RUT",
-            "documentNumber": "123123123",
+            "document_type": "RUT",
+            "document_number": "123123123",
             "country": "CL",
             "full_name": "Andres Roa",
             "email": "jlprueba1@quickpay.com"
@@ -254,8 +254,8 @@ Obtendrás una respuesta silimar a:
     },
     "payer": {
         "payer_info": {
-            "documentType": "RUT",
-            "documentNumber": "123123123",
+            "document_type": "RUT",
+            "document_number": "123123123",
             "country": "CL",
             "full_name": "Andres Roa",
             "email": "jlprueba1@quickpay.com"
