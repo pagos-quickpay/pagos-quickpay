@@ -371,5 +371,5 @@ Posibles estados de la transacción hasta este punto:
 | paid  | El cargo fue realizado exitosamente en la cuenta del cliente |
 | rejected | El cargo no fue realizado |
 
-
+Para realizar [pagos recurrentes)](pagos-recurrentes.md).  
 Si deseas hacer la devolución al cliente, debes llamar a [API de Anulación (**refund_method**)](anulacion.md).
