@@ -1,6 +1,6 @@
 ## Crear Intención de pago
 
-Para contiunar con el proceso de pago debes ingresar el [access_token](obtener-token-acceso.md) generado en el paso anterior en el header de la petición y hacer el llamado de la siguiente forma:
+Para contiunar con el proceso de pago, debes ingresar en el header de la petición el [access_token](obtener-token-acceso.md) generado en el paso anterior y hacer el llamado de la siguiente forma:
 
 ```
 curl -X POST 'https://api.sandbox.connect.fif.tech/checkout/payments' \
