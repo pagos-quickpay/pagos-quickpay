@@ -294,7 +294,7 @@ Obtendrás una respuesta similar a:
 
 En este caso enviamos la solicitud de anulación enviando letras en el refunded_ amount para generar el error.
 
-Necesitas enviar el **access_token** (en el header de la petición) obtenido en la **Autenticación** y el **id de la intención de pago** generado en el **paso 4**, para ejecutar una petición a la **API de Anulación /refund** de la siguiente forma:
+Necesitas enviar el **access_token** (en el header de la petición) generado en la **Autenticación** y el **id de la intención de pago** obtenido como respuesta de la intención de pago, para ejecutar una petición a la **API de Anulación /refund** de la siguiente forma:
 
 ```
  curl -X POST 'https://api.sandbox.connect.fif.tech/payments/gateways/quickpay/token/{id}/refund' \
