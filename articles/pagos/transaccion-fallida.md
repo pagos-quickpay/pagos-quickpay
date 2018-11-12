@@ -67,8 +67,8 @@ Obtendras una respuesta similar a:
    },
    "payer":{  
       "payer_info":{  
-         "documentType":"RUT",
-         "documentNumber":"123123123",
+         "document_type":"RUT",
+         "document_number":"123123123",
          "country":"CL",
          "full_name":"Andres Roa",
          "email":"jlprueba2@quickpay.com"
@@ -179,8 +179,8 @@ Obtendrás una respuesta similar a:
     },
     "payer": {
         "payer_info": {
-            "documentType": "RUT",
-            "documentNumber": "123123123",
+            "document_type": "RUT",
+            "document_number": "123123123",
             "country": "CL",
             "full_name": "Andres Roa",
             "email": "jlprueba2@quickpay.com"
@@ -324,8 +324,8 @@ curl -X GET \
     },
     "payer": {
         "payer_info": {
-            "documentType": "RUT",
-            "documentNumber": "123123123",
+            "document_type": "RUT",
+            "document_number": "123123123",
             "country": "CL",
             "full_name": "Andres Roa",
             "email": "jlprueba2@quickpay.com"
