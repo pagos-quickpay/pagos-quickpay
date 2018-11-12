@@ -73,7 +73,66 @@ curl -X POST \
 }'
  
 ```
- 
+
+**Detalle de los Campos de la Petición**
+
+| Nombre                                   | Descripción                              | Tipo                          |    Requerido | Cybersource |
+| ---------------------------------------- | ---------------------------------------- | ----------------------------- | ------------ | |
+| intent                                   | Identifica en tipo de transacción: Venta | string                        | Si           | |
+| **payer**                                | **Pagador**                              | **object**                    |              | |
+| **payer.payer_info**                     | **Información del cliente que está comprando en el sitio del  comercio** | **object**   | | | |
+| payer.payer_info.email                   | correo electrónico                       | string                        | Si       | |
+| payer.payer_info.first_name              | nombre completo                          | string                        | Si       | |
+| payer.payer_info.last_name               | nombre completo                          | string       | Si       | |
+| payer.payer_info.qp_user_id              | Token del cliente registrado en sistema Quickpay | string       | No       | No |
+| payer.payer_info.country                 | Nacionalidad                             | string       | Si       | |
+| payer.payer_info.phone                   | Número telefonico del cliente            | string       | No       | |
+| payer.payer_info.gender                  | Nacionalidad                             | string       | No       |Si |
+| payer.payer_info.age                     | Nacionalidad                             | string       | No       |Si |
+| payer.payer_info.session_id              | Nacionalidad                             | string       | No       |Si |
+| payer.payer_info.session_attempt_count   | Nacionalidad                             | string       | No       |Si |
+| payer.payer_info.taxpayer_identity       | Nacionalidad                             | string       | No       |Si |
+| payer.payer_info.document_number         | Número de identificación                 | string       | Si       | |
+| payer.payer_info.document_type           | Tipo de documento de identificación      | string       | Si       | |
+| payer.payer_info.is_guest                | Indica si es un cliente invitado o un cliente que hizo login en el comercio | string  | No       | |
+| payer.payment_method                     | Identifica el método de captura a utilizar (PEINAU_CAPTURE)  | string       | Si       |
+| **transaction**                          | **Grupo de campos con la información de la transacción** | **object**   |        | |
+| transaction.gateway_order                | Número de la orden de compra. Id de transacción que es enviada al  gateway de pago. **Este valor debe ser unico y maximo de 12 caracteres** | string       | Si       | |
+| transaction.reference_id                 | El código de referencia de la transacción. Representa el identificador de  la transacción en el sistema del comercio. | string       | No       | |
+| transaction.purchase_order                | El código de referencia de la transacción. Representa el identificador de  la transacción en el sistema del comercio. (para propositos de conciliación) | string       | Si       | |
+| transaction.description                  | Descripción de la compra                 | string       | Si       | |
+| transaction.soft_descriptor              | Descripción corta de la transacción      | string       | Si       | |
+| **transaction.amount**                   | **Grupo de campos que detalla los montos de la compra** | **object**   | |
+| transaction.amount.currency              | Código ISO de la moneda asociada al monto de la compra. | string       | Si       | |
+| transaction.amount.total                 | Monto total de la compra que será descontado de la tarjeta o cuenta del  cliente | number          | Si       | |
+| transaction.amount.details               | Detalles del monto de la compra          |              | |
+| transaction.amount.details.subtotal      | Monto de la compra sin incluir impuesto  | number          | Si       | |
+| transaction.amount.details.tax           | Monto total de los impuestos             | number          | Si       | |
+| transaction.amount.details.shipping      | Costo del despacho                       | number          | Si       | |
+| transaction.amount.details.shipping_discount | Monto de descuento en costo de despacho  | number          | Si       | |
+| **transaction.item_list**                | **Información del producto(s)**         | **object**   |
+| **transaction.item_list.shipping_address** | **Dirección de despacho (compras con despacho a domicilio)** | **object**   | |
+| transaction.item_list.shipping_address.line1 | Direccion de despaho                     | string       | Si       | |
+| transaction.item_list.shipping_address.city | Ciudad donde se realizará el despacho    | string       | Si       | |
+| transaction.item_list.shipping_address.country_code | Código de país donde se efectúa el despacho | string       | Si       | |
+| transaction.item_list.shipping_address.phone | Número de teléfono para la recepción de los productos despachados | string       | Si       | |
+| transaction.item_list.shipping_address.type | Tipo de despacho                         | string       | Si       | |
+| transaction.item_list.shipping_address.recipient_name | Nombre de la persona que recibirá el producto | string       | Si       | |
+| transaction.item_list.shipping_method    | Método de despacho de la compra: Digital, | string       | Si       |
+| **transaction.item_list.items**          | **Grupo de campos que detalla los productos o servicios de la compra** | **objeto**   | |
+| transaction.item_list.items.sku          | Código SKU                               | string       | Si       | |
+| transaction.item_list.items.name         | Nombre del producto                      | string       | Si       | |
+| transaction.item_list.items.description  | Descripción del producto                 | string       | Si       | |
+| transaction.item_list.items.quantity     | Cantidad                                 | string       | Si       | |
+| transaction.item_list.items.price        | Precio unitario                          | number          | Si       | |
+| transaction.item_list.items.tax          | Monto del impuesto del producto          | number          | Si       | |
+| **redirect_urls**                        | **Url de redirección dependiendo del estado de la captura una vez  finalizado el proceso de captura** | **objeto**   | |
+| redirect_urls.return_url                 | URL de notificación de pago exitoso      | string (url) | Si       | |
+| redirect_urls.cancel_url                 | URL de notificación de pago fallido      | string (url) | Si       | |
+| **additional_attributes**                | **Grupo de campos de uso exclusivo**     | **objeto**   | |
+| additional_attributes.return_url                 | URL de notificación de pago exitoso      | string (url) | Si       | |
+| redirect_urls.cancel_url                 | URL de notificación de pago fallido      | string (url) | Si       | |
+
 A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear una intención de pago a través de la API RESTful de checkout:
 
 ```
