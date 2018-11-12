@@ -2,19 +2,19 @@
 
 Para generar una intención de pago debes hacer una petición a la API de **Intención de Pago /payments** con el **access_token** generado en el [paso 1](obtener-token-acceso.md) y el JSON correspondiente al metodo de pago que quieras emplear.
 
-- [Json ejemplo payment_method": "PAGOINAPP_CREDIT" ](json-pago-credit.md)
+- Pago in App Credit (APP CMR) [Json ejemplo payment_method": "PAGOINAPP_CREDIT" ](json-pago-credit.md)
 
-- [Json ejemplo payment_method": "PAGOINAPP_DEBIT" ](json-pago-debit.md)
+- Pago in App Debit (APP Banco Falabella) [Json ejemplo payment_method": "PAGOINAPP_DEBIT" ](json-pago-debit.md)
 
-- [Json ejemplo payment_method": "CARDBILL_PAYMENT_DEBIT_BF" ](json-cardbill.md)
+- Pago de estado de cuenta de CMR con Cuenta de Banco Falabella [Json ejemplo payment_method": "CARDBILL_PAYMENT_DEBIT_BF" ](json-cardbill.md)
 
-- [Json ejemplo payment_method": "QUICKPAY_CREDIT" ](json-quickpay-credit.md)
+- Pago con CMR [Json ejemplo payment_method": "QUICKPAY_CREDIT" ](json-quickpay-credit.md)
 
-- [Json ejemplo payment_method": "QUICKPAY_DEBIT" ](json-quickpay-debit.md)
+- Pago con Debito de Banco Falabella [Json ejemplo payment_method": "QUICKPAY_DEBIT" ](json-quickpay-debit.md)
 
-- [Json ejemplo payment_method": "QUICKPAY_CREDIT_DOC_ID" ](json-quickpay-credit-doc-id.md)
+- Pago con CMR Credit Doc Id [Json ejemplo payment_method": "QUICKPAY_CREDIT_DOC_ID" ](json-quickpay-credit-doc-id.md)
 
-- [Json ejemplo payment_method": "QUICKPAY_TOKEN" ](json-quickpay-token.md)
+- Pago con Tarjeta de Crédito de Terceros [Json ejemplo payment_method": "QUICKPAY_TOKEN" ](json-quickpay-token.md)
 
 
 **Detalle de los Campos de la Petición**
