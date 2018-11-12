@@ -1,6 +1,6 @@
 ## Crear nueva intención de pago
 
-Para ejecutar el pago recurrente debes crear una nueva intención de pago con el **token de la tarjeta (id)** obtenido previamente de la **return_url** en el campo **capture_token** de la Intención de Pago original, el **access_token** generado en el [paso 1](obtener-token-acceso.md), y hacer el llamado de la siguiente forma:
+Para ejecutar el pago recurrente debes crear una nueva intención de pago con el **token de la tarjeta (id)** obtenido previamente en el campo **capture_token**de la respuesta del pago original, el **access_token** generado en el [paso 1](obtener-token-acceso.md), y hacer el llamado de la siguiente forma:
 
 > Para completar los datos del pago puedes utilizar la información enviada en la intención de pago original
 
