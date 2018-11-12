@@ -285,12 +285,10 @@ A continuación se presenta ejemplo de un JSON como respuesta al crear una inten
 - **self**: desde esta URL puedes consultar la información de la captura. [Ejemplo de ejecución de Self](self.md).
 - **approval_url**: desde esta URL el cliente debe autorizar el pago.
 - **update_url**: a partir de esta url podrás actualizar ciertos datos de la intención de pago.
-- **silent_charge**: llamando a este endpoint desde la [API silent_charge](cargo-tarjeta.md) puedes ejecutar el cargo a la tarjeta de cŕedito del cliente sin pasar por la intención de pago.
-- **refund_method**: para anular la transacción, debes hacer el llamado a este endpoint desde la [API de Anulación](../../anulaciones/introduccion.md).
+- **silent_charge**: llamando a este endpoint desde la [API silent_charge] puedes ejecutar el cargo a la tarjeta de cŕedito del cliente sin pasar por la intención de pago.
+- **refund_method**: para anular la transacción, debes hacer el llamado a este endpoint desde la [API de Anulación](anulacion.md).
 
 > Estas URLs son dinamicas, nunca debes guardarlas como variables de entorno. Siempre debes consultarlas desde aquí para continuar con los pasos siguientes.
-
-[Consultar estado del servicio (Health Check)](health-checkout.md)
 
 ## Realizar el cargo a la tarjeta
 
@@ -302,7 +300,7 @@ curl -v -X PUT 'https://api.sandbox.connect.fif.tech/checkout/payments/{id}/sile
  -H "Content-Type: application/json" \
  -H "Authorization: Bearer access_token"
  -d '{  
-   	"installments_number": 36,
+   	"installments_number": 1,
      }'
  
 ```
@@ -317,7 +315,8 @@ Posibles estados de la transacción:
 | -------- | ---------------------------------------- |
 | paid  | El cargo fue realizado exitosamente en la cuenta del cliente |
 | rejected | Transacción fallida. El cargo no fue realizado |
-| refunded | Tiene al menos una devolución asociada |
+| partially_refunded | Tiene al menos una devolución asociada |
+
 
 **Pago exitoso**
 Descripción de los campos que deben utilizar tus sistemas para obtener la respuesta del pago
@@ -456,7 +455,7 @@ Ejemplo de respuesta Silent charge (Json completo):
                 "currency": "CLP",
                 "buy_order": "INPA-50000001613",
                 "amount": 4500,
-                "installments_number": 36
+                "installments_number": 1
             },
             "response": {
                 "code": 100
@@ -469,6 +468,8 @@ Ejemplo de respuesta Silent charge (Json completo):
 [Ejemplo de silent charge fallido](transaccion-fallida.md)
 
 Además, agregamos información específica del código entregado por el Gateway CyberSource (Estructura resume del JSON de respuesta). [Ver la lista de códigos de respuesta CyberSource aquí](cybersource_reason_code.md).
+
+[Consultar estado del servicio (Health Check)](health-checkout.md)
 
 
 
