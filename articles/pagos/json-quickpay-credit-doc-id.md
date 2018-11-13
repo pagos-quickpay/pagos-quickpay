@@ -1,4 +1,4 @@
-## Ejemplo petición payment_method": "QUICKPAY_CREDIT_DOC_ID"
+## Ejemplo petición payment_method": "QUICKPAY_CREDIT_DOC_ID."
 
 ```
 curl -X POST \
