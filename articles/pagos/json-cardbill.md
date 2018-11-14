@@ -160,4 +160,6 @@ Posibles estados de la transacción:
 | paid     | El cargo fue realizado exitosamente en la cuenta del cliente |
 | rejected | El sistema rechazo el cargo                                  |
 
-
+| TITULO1| TITULO2|
+| ----- | ---- |
+| CONTENIDO COLUMNA 1 | CONTENIDO COLUMNA 2 |
