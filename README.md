@@ -14,4 +14,6 @@ Bienvenido al portal de desarrolladores
 
 ## [¿Como integrarte?](articles/pagos/introduction.md)
 
+### [URLs ambiente productivo](articles/pagos/url-produccion.md)
+
 ¿Quieres contribuir con nuestro contenido? [Más Info Aquí](articles/contribuciones/introduction.md)
