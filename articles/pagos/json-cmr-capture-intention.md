@@ -63,7 +63,7 @@ Como respuesta obtendrás la siguiente información:
         "country": "CL"
     },
     "cardholder": {
-        "reference_id": "001389",
+        "reference_id": "Merchant_id_reference",
         "country": "CL",
         "name": "Jhon Doe",
         "email": "jhondoe@gmail.com"
