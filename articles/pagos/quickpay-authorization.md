@@ -178,7 +178,7 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al autoriza
     "update_time": "2018-12-03T21:20:14.919Z",
     "create_time": "2018-12-03T21:19:55.617Z",
     "invoice_number": "IP-15438719956172591",
-    "state": "paid",
+    "state": "authorized",
     "intent": "sale",
     "id": "5c059dfbca2e140015a77694"
 }
