@@ -8,7 +8,7 @@ Para generar una intención de captura debes hacer una petición a la API de **I
 **Detalle de las URLs generadas:**
 
 - **self**: desde esta URL puedes consultar la información de la intención de pago. [Ejemplo de ejecución de Self](self-capture.md).
-- **capture**: desde esta se debe tokenizar/capturar tarjeta [Ejemplo de ejecución del capture](capture.md).
+- **capture**: desde esta se debe tokenizar/capturar tarjeta [Ejemplo de ejecución del capture](json-capture.md).
 
 > Estas URLs son dinamicas, nunca debes guardarlas como variables de entorno. Siempre debes consultarlas desde aquí para continuar con los pasos siguientes.
 
