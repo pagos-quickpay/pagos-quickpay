@@ -219,5 +219,5 @@ Obtendrás los Links:
 - **query_installments**: este endpoint se usa para consultar las cuotas de la tarjeta. [ejemplo](quickpay-query-installments.md)
 - **check_balance**: este endpoint sirve para consultar si la tarjeta tiene saldo para la compra. [ejemplo](quickpay-check-balance.md)
 - **silent_charge**: este endpoint se usa para aplicar la pre-autorización. [ejemplo](quickpay-authorization.md)
-- **void_method**: este endpoint sirve para anular la compra el mismo dia. [ejemplo](quickpay-void.md)
-- **refund_method**: este endpoint sirve para anular la compra. [ejemplo](quickpay-refund.md)
+- **void_method**: este endpoint sirve para anular la compra el mismo dia.
+- **refund_method**: este endpoint sirve para anular la compra.
