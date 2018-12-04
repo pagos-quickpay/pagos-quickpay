@@ -7,6 +7,7 @@ Bienvenido al portal de desarrolladores
   - Pago in App Credit (APP CMR)
   - Pago in App Debit (APP Banco Falabella)
   - Pago de estado de cuenta de CMR con Cuenta de Banco Falabella
+  - Captura CMR
   - Pago con CMR
   - Pago con Debito de Banco Falabella
   - Pago con CMR Credit Doc Id
