@@ -10,6 +10,8 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 
 - Pago con CMR [Json ejemplo payment_method": "QUICKPAY_CREDIT" ](json-quickpay-credit.md)
 
+- Pago con CMR con captura previa [Json ejemplo payment_method": "QUICKPAY_CREDIT" ](json-captured-quickpay-credit.md)
+
 - Pago con Debito de Banco Falabella [Json ejemplo payment_method": "QUICKPAY_DEBIT" ](json-quickpay-debit.md)
 
 - Pago con CMR Credit Doc Id [Json ejemplo payment_method": "QUICKPAY_CREDIT_DOC_ID" ](json-quickpay-credit-doc-id.md)
