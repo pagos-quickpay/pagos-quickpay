@@ -38,7 +38,7 @@ Como respuesta obtendrás la siguiente información:
             "security": []
         },
         {
-            "href": "http://localhost:8090/captures/gateways/cmr/capture/ad76140d-fcb7-48bc-9d80-986e85bd1261/capture",
+            "href": "https://api.qa.peinau.fif.tech/tokenization/captures/gateways/cmr/capture/ad76140d-fcb7-48bc-9d80-986e85bd1261/capture",
             "rel": "capture",
             "method": "POST",
             "security": [
@@ -71,11 +71,6 @@ Como respuesta obtendrás la siguiente información:
 }
 
 ```
-
-Obtendrás los Links:
-
-- **self**: desde esta URL puedes consultar la información de la captura.
-- **capture**: desde este endpoint se hace la captura de la tarjeta
 
 Datos importantes:
 
