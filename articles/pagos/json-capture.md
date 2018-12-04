@@ -77,7 +77,7 @@ Obtendrás los Links:
 - **self**: desde esta URL puedes consultar la información de la captura.
 - **capture**: desde este endpoint se hace la captura de la tarjeta
 
-Datos importante:
+Datos importantes:
 
 - **gateway**: Contiene informacion del resultado de la tokenizacion, como el qpCardId, que es el token interno que utiliza quickpay para operar.
 - **id**: es el token de Connect, con este token se debe proseguir a crear la intencion de pago para de este modo enlazar la intención de pago con la captura realizada
