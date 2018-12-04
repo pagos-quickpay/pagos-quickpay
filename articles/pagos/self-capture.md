@@ -1,6 +1,6 @@
-# ¿Cómo puedes consultar el estado de la transacción?
+# ¿Cómo puedes consultar el estado de la captura?
 
-Debes llamar al self obtenido en la respuesta de la intención de pago de la siguiente forma:
+Debes llamar al self obtenido en la respuesta de la intención de captura de la siguiente forma:
 
 ```
 curl -X GET \
@@ -61,8 +61,8 @@ Obtendrás una respuesta similar a:
     "cardholder": {
         "reference_id": "001389",
         "country": "CL",
-        "name": "Alejandro Rivero",
-        "email": "JLPrueba1@gmail.com"
+        "name": "Jhon Doe",
+        "email": "jdoe@gmail.com"
     },
     "deletion_time": "2018-12-05T13:29:53.486Z",
     "update_time": "2018-12-04T13:30:08.146Z",
