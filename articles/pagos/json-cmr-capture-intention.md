@@ -23,8 +23,8 @@ curl -X POST \
     "country": "CL"
   },
   "redirect_urls": {
-    "return_url": "http://portal.sandbox.connect.fif.tech",
-    "cancel_url": "http://portal.sandbox.connect.fif.tech"
+    "return_url": "http://portal.qa.connect.fif.tech",
+    "cancel_url": "http://portal.qa.connect.fif.tech"
   }
 }'
  ```
