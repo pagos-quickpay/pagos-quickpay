@@ -1,4 +1,4 @@
-Una vez hecha la intención de captura se procede a tokenizar con los datos de la tarjeta, nuevamente incluyendo el token de autorización en la cabecera del request.
+Una vez hecha la intención de captura se procede a capturar/tokenizar con los datos de la tarjeta, nuevamente incluyendo el token de autorización en la cabecera del request.
 
 
 ```
