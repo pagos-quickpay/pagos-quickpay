@@ -113,7 +113,7 @@ El resultado de la llamada a la API de checkout, será una intención de pago en
 | transaction.item_list.items.quantity     | Cantidad                                 | string       |
 | transaction.item_list.items.price        | Precio unitario                          | number          |
 | transaction.item_list.items.tax          | Monto del impuesto del producto          | number          |
-| **redirect_urls**                        | **Url de redirección dependiendo del estado de la captura una vez  finalizado el proceso de captura** | **objeto**   |
+| **redirect_urls**                        | **Url de redirección dependiendo del estado una vez  finalizado el proceso de pago** | **objeto**   |
 | redirect_urls.return_url                 | URL de notificación de pago exitoso      | string (url) |
 | redirect_urls.cancel_url                 | URL de notificación de pago fallido      | string (url) |
 | **additional_attributes**                | **Grupo de campos de uso exclusivo**     | **objeto**   |
