@@ -420,3 +420,14 @@ Obtendrás una respuesta similar a:
     "id": "5c2cc7630105ab1daf59f84d"
 }
 ```
+
+El objeto operationDates guarda la hora en que Transbank avisa la culminación del pago, y cuando se ejecutan los acknowledge del comercio a Connect y Connect a Transbank.
+
+```
+    "operationDates": {
+          "ackDate": "2019-01-02T14:15:47.961Z", (Hora se envía ACK a Transbank)
+          "commerceACK": "2019-01-02T14:15:47.842Z", (Hora Comercio envía ACK a Connect)
+          "tbkNotifiyDate": "2019-01-02T14:15:37.659Z", (Hora Transbank avisa a Connect cliente termina Pago)
+          "fetchResultDate": "2019-01-02T14:15:38.444Z" (Hora Connect consulta estado transacción en Transbank, inmediatamente después se enva notificación al Comercio de la culminación del pago)
+      }
+```
