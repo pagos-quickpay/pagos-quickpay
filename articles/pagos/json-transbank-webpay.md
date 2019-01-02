@@ -165,9 +165,9 @@ Obtendrás los Links:
 - **acknowledge**: (FLUJO DEPRECADO) desde esta URL se realiza acknowledge a Transbank.
 # Mostrar Formulario Checkout
 
-Con la **approval_url** obtenida en el paso anterior debes desplegar el formulario de Checkout (pago). 
+Con la **approval_url** obtenida en el paso anterior debes desplegar el formulario te Transbank para que el cliente ejecute el pago.
 
-**NOTA**: En el flujo sin llamado del comercio al ACKNOWLEDGE el pago termina en estado 'paid', y no se deben realizar pasos extras para terminar la transacción. En caso de que su comercio aún utilize el flujo con ACKNOWLEDGE el pago termina en estado 'created' y se debe confirmar el pago en TRANSBANK a través del ACKNOWLEDGE para culminar el pago (pasar a paid).
+**NOTA**: En el flujo sin llamado del comercio al ACKNOWLEDGE el pago termina en estado 'paid', y no se deben realizar pasos extras para terminar la transacción. En caso de que su comercio aún utilize el flujo con ACKNOWLEDGE el pago termina en estado 'created' y se debe confirmar el pago en TRANSBANK a través del ACKNOWLEDGE.
 
 ## Consultar Estado de la Transacción
 
@@ -266,16 +266,17 @@ Obtendrás una respuesta similar a:
     "id": "5c2ccf090105ab1daf59f855"
 }
 ```
-Posibles estados de la transacción hasta este punto:
+Posibles estados de la transacción:
   
 | State    | Definición                               |
 | -------- | ---------------------------------------- |
+| created  | El pago aún no se ha ejecutado, o no se ha confirmado con el acknowledge (FLUJO DEPRECADO)  |
 | paid  | El cargo fue realizado exitosamente en la cuenta del cliente |
 | rejected | El cargo no fue realizado |
 
 
 ## Acknowledge (FLUJO DEPRECADO)
-Para confirmar una transacción en TRANSBANK una vez concluido el pago se debe llamar a esta URL en menos de 20 segundos una vez concluido el pago, de no llamar en este rango de tiempo la transacción no será confirmada por Transbank y se rechazará el pago. Ejemplo llamado:
+Para confirmar una transacción en TRANSBANK una vez el cliente culmina el pago, se debe llamar a esta URL en menos de 20 segundos, de no llamar en este rango de tiempo la transacción no será confirmada por Transbank y se rechazará el pago. Ejemplo llamado:
 
 
 ```
