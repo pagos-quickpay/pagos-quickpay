@@ -273,7 +273,7 @@ Posibles estados de la transacción hasta este punto:
 
 
 ## Acknowledge (FLUJO DEPRECADO)
-Para confirmar una transacción en TRANSBANK una vez concluido el pago se debe llamar a esta URL en menos de 25 segundos una vez concluido el pago, de no llamar en este rango de tiempo la transacción no ser confirmada por Transbank y se rechazar el pago. Ejemplo llamado:
+Para confirmar una transacción en TRANSBANK una vez concluido el pago se debe llamar a esta URL en menos de 25 segundos una vez concluido el pago, de no llamar en este rango de tiempo la transacción no será confirmada por Transbank y se rechazará el pago. Ejemplo llamado:
 
 
 ```
