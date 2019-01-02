@@ -162,10 +162,11 @@ Obtendrás los Links:
 
 - **self**: desde esta URL puedes consultar la información del pago.
 - **approval_url**: debes desplegar esta URL al cliente para que pueda continuar con el pago.
-- **acknowledge**: (DEPRECADO) desde esta URL se realiza acknowledge a Transbank.
+- **acknowledge**: (FLUJO DEPRECADO) desde esta URL se realiza acknowledge a Transbank.
 # Mostrar Formulario Checkout
 
-Con la **approval_url** obtenida en el paso anterior debes desplegar el formulario de Checkout (pago).
+Con la **approval_url** obtenida en el paso anterior debes desplegar el formulario de Checkout (pago). 
+NOTA: En el flujo sin llamado del comercio al ACKNOWLEDGE el pago termina en estado 'paid', y no se deben realizar pasos extras para terminar la transacción. En caso de que su comercio aún utilize el flujo con ACKNOWLEDGE el pago termina en estado 'created' y se debe confirmar el pago en TRANSBANK a través del ACKNOWLEDGE para culminar el pago (pasar a paid).
 
 ## Consultar Estado de la Transacción
 
