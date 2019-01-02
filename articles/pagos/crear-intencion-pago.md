@@ -18,6 +18,7 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 
 - Pago con Tarjeta de Crédito de Terceros [Json ejemplo payment_method": "QUICKPAY_TOKEN" ](json-quickpay-token.md)
 
+- Pago con Transbank Webpay [Json ejemplo payment_method": "TRANSBANK_WEBPAY" ](json-transbank-webpay.md)
 
 **Detalle de los Campos de la Petición**
 
