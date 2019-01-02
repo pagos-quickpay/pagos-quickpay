@@ -124,27 +124,27 @@ Como respuesta obtendrás la siguiente información:
     },
     "links": [
         {
-            "href": "http://localhost:8081/payments/5c2ccf090105ab1daf59f855",
+            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/5c2ccf090105ab1daf59f855",
             "rel": "self",
             "method": "GET"
         },
         {
-            "href": "http://localhost:8081/payments/gateways/transbank/webpay/5c2ccf090105ab1daf59f855/pay",
+            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/gateways/transbank/webpay/5c2ccf090105ab1daf59f855/pay",
             "rel": "approval_url",
             "method": "REDIRECT"
         },
         {
-            "href": "http://localhost:8081/payments/5c2ccf090105ab1daf59f855/edit",
+            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/5c2ccf090105ab1daf59f855/edit",
             "rel": "update_url",
             "method": "PUT"
         },
         {
-            "href": "http://localhost:8081/payments/gateways/transbank/webpay/5c2ccf090105ab1daf59f855/acknowledge",
+            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/gateways/transbank/webpay/5c2ccf090105ab1daf59f855/acknowledge",
             "rel": "acknowledge_method",
             "method": "POST"
         },
         {
-            "href": "http://localhost:8081/payments/QP00009",
+            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/QP00009",
             "rel": "self_by_gateway_order",
             "method": "GET"
         }
@@ -236,22 +236,22 @@ Obtendrás una respuesta similar a:
     },
     "links": [
         {
-            "href": "http://localhost:8081/payments/5c2ccf090105ab1daf59f855",
+            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/5c2ccf090105ab1daf59f855",
             "rel": "self",
             "method": "GET"
         },
         {
-            "href": "http://localhost:8081/payments/gateways/transbank/webpay/5c2ccf090105ab1daf59f855/pay",
+            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/gateways/transbank/webpay/5c2ccf090105ab1daf59f855/pay",
             "rel": "approval_url",
             "method": "REDIRECT"
         },
         {
-            "href": "http://localhost:8081/payments/5c2ccf090105ab1daf59f855/edit",
+            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/5c2ccf090105ab1daf59f855/edit",
             "rel": "update_url",
             "method": "PUT"
         },
         {
-            "href": "http://localhost:8081/payments/gateways/transbank/webpay/5c2ccf090105ab1daf59f855/acknowledge",
+            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/gateways/transbank/webpay/5c2ccf090105ab1daf59f855/acknowledge",
             "rel": "acknowledge_method",
             "method": "POST"
         }
@@ -278,7 +278,7 @@ Para confirmar una transacción en TRANSBANK una vez concluido el pago se debe l
 
 ```
 curl -X POST \
-  http://localhost:8081/payments/gateways/transbank/webpay/5c2ccf090105ab1daf59f855/acknowledge \
+  https://api.sandbox.connect.fif.tech/checkout/payments/gateways/transbank/webpay/5c2ccf090105ab1daf59f855/acknowledge \
   -H 'cache-control: no-cache' \
   -H 'Authorization: Bearer REEMPLAZAR AQUI EL ACCESS TOKEN'
 ```
@@ -392,22 +392,22 @@ Obtendrás una respuesta similar a:
     },
     "links": [
         {
-            "href": "http://localhost:8081/payments/5c2cc7630105ab1daf59f84d",
+            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/5c2cc7630105ab1daf59f84d",
             "rel": "self",
             "method": "GET"
         },
         {
-            "href": "http://localhost:8081/payments/gateways/transbank/webpay/5c2cc7630105ab1daf59f84d/pay",
+            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/gateways/transbank/webpay/5c2cc7630105ab1daf59f84d/pay",
             "rel": "approval_url",
             "method": "REDIRECT"
         },
         {
-            "href": "http://localhost:8081/payments/5c2cc7630105ab1daf59f84d/edit",
+            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/5c2cc7630105ab1daf59f84d/edit",
             "rel": "update_url",
             "method": "PUT"
         },
         {
-            "href": "http://localhost:8081/payments/gateways/transbank/webpay/5c2cc7630105ab1daf59f84d/acknowledge",
+            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/gateways/transbank/webpay/5c2cc7630105ab1daf59f84d/acknowledge",
             "rel": "acknowledge_method",
             "method": "POST"
         }
