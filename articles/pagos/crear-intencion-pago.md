@@ -68,6 +68,8 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | redirect_urls.return_url                 | URL de notificación de pago exitoso      | string (url) | Si       |
 | redirect_urls.cancel_url                 | URL de notificación de pago fallido      | string (url) | Si       |
 | **additional_attributes**                | **Grupo de campos de uso exclusivo**     | **objeto**   |
+| additional_attributes.insuranceCode      | Código de la Aseguradora                 | string       | No       |
+| additional_attributes.insuranceName      | Nemotécnico de la Asegurado              | string       | No       |
 
 El resultado de la llamada a la API de checkout, será una intención de pago en su estado inicial (created), que contendrá el, o los links HATEOAS relacionados con la llamada.
 
