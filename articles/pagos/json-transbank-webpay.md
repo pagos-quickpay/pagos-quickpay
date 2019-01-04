@@ -175,7 +175,7 @@ para consultar el estado (state) de la transacción necesitas enviar el **access
 
 ```
 curl -X GET \
-  https://api.sandbox.connect.fif.tech/checkout/payments/19a516df-b027-443e-be15-e44a41dbd94f \
+  https://api.sandbox.connect.fif.tech/checkout/payments/5c2ccf090105ab1daf59f855 \
   -H 'cache-control: no-cache' \
   -H 'Authorization: Bearer REEMPLAZAR AQUI EL ACCESS TOKEN'
 ```
@@ -185,13 +185,44 @@ Obtendrás una respuesta similar a:
 {
     "_id": "5c2ccf090105ab1daf59f855",
     "application": "5af350553dbed900146c5945",
+    "gateway": {
+        "accountingDate": "0104",
+        "buyOrder": "IP-15466255714717151",
+        "cardDetail": {
+            "cardNumber": "1111"
+        },
+        "detailOutput": [
+            {
+                "sharesNumber": 0,
+                "amount": "12334",
+                "commerceCode": "597020000541",
+                "buyOrder": "IP-15466255714717151",
+                "authorizationCode": "181945",
+                "paymentTypeCode": "VD",
+                "responseCode": 0
+            }
+        ],
+        "sessionId": "5c2fa22307cb9c00151de965",
+        "transactionDate": "2019-01-04T18:12:57.465Z",
+        "urlRedirection": "https://webpay3gint.transbank.cl/webpayserver/voucher.cgi",
+        "VCI": "TSY",
+        "transaction_token": "e2da374b2c40c1a0c04fc6b8c423f084bc7ac648778af64fef54c594e0d5e96a",
+        "operationDates": {
+            "tbkNotifiyDate": "2019-01-04T18:13:26.389Z",
+            "fetchResultDate": "2019-01-04T18:13:28.221Z"
+        }
+    },
+    "additional_attributes": {
+        "remember_capture": true,
+        "capture_token": "3283180e-b3ba-4536-b47b-8528698dc2f9"
+    },
     "redirect_urls": {
         "return_url": "https://peinau.azureedge.net/redirections/payment_success.html",
         "cancel_url": "https://chao.com"
     },
     "transaction": {
+        "gateway_order": "IP-15466255714717151",
         "reference_id": "OD0000233",
-        "gateway_order": "QP00009",
         "description": "Transaction detailed description",
         "soft_descriptor": "Short Description",
         "item_list": {
@@ -199,7 +230,7 @@ Obtendrás una respuesta similar a:
             "items": [
                 {
                     "sku": "1231232",
-                    "name": "Destornillador 2344",
+                    "name": "Destornillador  2344",
                     "description": "Destornillador SCL - ONT",
                     "quantity": 1,
                     "price": 4500,
@@ -217,7 +248,7 @@ Obtendrás una respuesta similar a:
         },
         "amount": {
             "currency": "CLP",
-            "total": 4500,
+            "total": 12334,
             "details": {
                 "subtotal": 810,
                 "tax": 190,
@@ -228,40 +259,40 @@ Obtendrás una respuesta similar a:
     },
     "payer": {
         "payer_info": {
-            "email": "jlprueba1@quickpay.com",
-            "full_name": "Andres Roa",
+            "email": "reject@reject.com",
+            "full_name": "Alejandro Rivero",
             "country": "CL",
-            "document_number": "123123123",
-            "document_type": "RUT"
+            "documentNumber": "123123123",
+            "documentType": "RUT"
         },
         "payment_method": "TRANSBANK_WEBPAY"
     },
     "links": [
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/5c2ccf090105ab1daf59f855",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/5c2ccf090105ab1daf59f855",
             "rel": "self",
             "method": "GET"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/gateways/transbank/webpay/5c2ccf090105ab1daf59f855/pay",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/transbank/webpay/5c2ccf090105ab1daf59f855/pay",
             "rel": "approval_url",
             "method": "REDIRECT"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/5c2ccf090105ab1daf59f855/edit",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/5c2ccf090105ab1daf59f855/edit",
             "rel": "update_url",
             "method": "PUT"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/gateways/transbank/webpay/5c2ccf090105ab1daf59f855/acknowledge",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/transbank/webpay/5c2ccf090105ab1daf59f855/acknowledge",
             "rel": "acknowledge_method",
             "method": "POST"
         }
     ],
-    "update_time": "2019-01-02T14:47:37.595Z",
-    "create_time": "2019-01-02T14:47:37.595Z",
-    "invoice_number": "IP-15464404575959741",
-    "state": "created",
+    "update_time": "2019-01-04T18:13:28.262Z",
+    "create_time": "2019-01-04T18:12:51.471Z",
+    "invoice_number": "IP-15466255714717151",
+    "state": "authorized",
     "intent": "sale",
     "id": "5c2ccf090105ab1daf59f855"
 }
