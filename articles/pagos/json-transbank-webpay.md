@@ -167,7 +167,7 @@ Obtendrás los Links:
 
 Con la **approval_url** obtenida en el paso anterior debes desplegar el formulario te Transbank para que el cliente ejecute el pago.
 
-**NOTA**: En el flujo sin llamado del comercio al ACKNOWLEDGE el pago termina en estado 'paid', y no se deben realizar pasos extras para terminar la transacción. En caso de que su comercio aún utilize el flujo con ACKNOWLEDGE el pago termina en estado 'authorized' y se debe confirmar el pago en TRANSBANK a través del ACKNOWLEDGE.
+**NOTA**: En el flujo sin llamado del comercio al ACKNOWLEDGE el pago termina en estado 'paid', y no se deben realizar pasos extras para terminar la transacción. En caso de que su comercio aún utilice el flujo con ACKNOWLEDGE el pago termina en estado 'authorized' y se debe confirmar el pago en TRANSBANK a través del ACKNOWLEDGE.
 
 ## Consultar Estado de la Transacción
 
