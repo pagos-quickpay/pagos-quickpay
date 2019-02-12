@@ -1,4 +1,4 @@
-## 2. Intención de Pago
+## Intención de Pago
 
 Para generar una intención de pago debes hacer una petición a la API de **Intención de Pago /payments** con el **access_token** generado en el [paso 1](obtener-token-acceso.md) y el JSON correspondiente al metodo de pago que quieras emplear.
 
