@@ -152,6 +152,7 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
     "id": "5b622b8ddd053a001662dd5a"
 }
 ´´´
+
 Posibles estados de la transacción:
   
 | State    | Definición                                                   |
