@@ -153,11 +153,3 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
 }
 ´´´
 
-Posibles estados de la transacción:
-  
-| State    | Definición                                                   |
-| -------- | ------------------------------------------------------------ |
-| created  | El cargo no se ha ejecutado                                  |
-| paid     | El cargo fue realizado exitosamente en la cuenta del cliente |
-| rejected | El sistema rechazo el cargo                                  |
-
