@@ -11,4 +11,5 @@
 | 104 | No auth devices |
 | 105 | No credit cards available |
 | 106 | Insufficient point balance |
+| 107 | Insufficient currency balance |
 | 999 | Error no mapeado del backend |
