@@ -88,6 +88,6 @@ Como respuesta obtendrás la siguiente información:
 
 - **self**: desde esta URL puedes consultar la información de la captura. [Ejemplo de ejecución de Self](self-capture.md).
 - **capture_url**: con esta URL podemos abrir el iframe para tokenizar la tarjeta. [Ejemplo de apertura de iframe de tokenización](json-iframe-capture.md).
-- **capture_card**: este endpoint sirve para tokenizar la tarjeta enviando sus datos (para utilizar esta opción, el comercio debe tener certificación PCI). [Ejemplo de ejecución del capture/tokenización](json-capture.md).
+- **capture_card**: este endpoint sirve para tokenizar la tarjeta enviando sus datos (para utilizar esta opción, el comercio debe tener certificación PCI). [Ejemplo de ejecución del capture/tokenización](json-peinau-silent-capture.md).
 
 > Estas URLs son dinamicas, nunca debes guardarlas como variables de entorno. Siempre debes consultarlas desde aquí para continuar con los pasos siguientes.
