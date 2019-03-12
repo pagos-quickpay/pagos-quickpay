@@ -1,12 +1,8 @@
-##Captura de tarjeta mediante formulario (capture_url)
+## Captura de tarjeta mediante formulario (capture_url)
 
 Con la **capture_url** obtenida puedes desplegar el formulario de captura de tarjeta.
 
-![Ejemplo de ventana Formulario](images/captura-tarjeta-1.png)
-
 El cliente debe ingresar los datos solicitados en el formulario y hacer clic en **Usar esta tarjeta** para obtener el token de la tarjeta de crédito.
-
-![Ejemplo datos a ingresar](images/captura-tarjeta-2.png)
 
 **Tarjeta de prueba:**
 
