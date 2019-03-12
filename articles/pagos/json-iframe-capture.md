@@ -26,7 +26,7 @@ La respuesta será enviada a la página de confirmacion indicada en la variable 
 
 > Debes reemplazar el **id** por el obtenido en la respuesta de la **Creación de intención de Captura**.
 
-**Ejemplo de respuesta enviada a la return_url:**
+**Ejemplo de respuesta:**
 
 ```
 {
