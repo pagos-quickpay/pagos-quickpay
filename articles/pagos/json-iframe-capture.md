@@ -2,7 +2,11 @@
 
 Con la **capture_url** obtenida puedes desplegar el formulario de captura de tarjeta.
 
+![Ejemplo de ventana Formulario](images/captura-tarjeta-1.png)
+
 El cliente debe ingresar los datos solicitados en el formulario y hacer clic en **Usar esta tarjeta** para obtener el token de la tarjeta de crédito.
+
+![Ejemplo datos a ingresar](images/captura-tarjeta-2.png)
 
 **Tarjeta de prueba:**
 
@@ -10,7 +14,7 @@ El cliente debe ingresar los datos solicitados en el formulario y hacer clic en 
 | ------------- | --------------- | ------------ |
 | 4111111111111111 | 123   | 02/2020             |
 
-La respuesta será enviada a la página de confirmacion indicada en la variable **"return_url"** de la petición a la [API de intención de Captura (paso 2)](crear-intencion-captura.md) o puedes consultar dicha respuesta llamando a la **API Revisión de Captura** de la siguiente forma:
+La respuesta será enviada a la página de confirmacion indicada en la variable **"return_url"**. También puedes consultar dicha respuesta llamando a la **API Revisión de Captura** de la siguiente forma:
 
 ```
  curl -v -X GET 'https://api.qa.peinau.fif.tech/tokenization/captures/{{id}}' \
