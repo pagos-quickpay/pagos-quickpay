@@ -78,7 +78,10 @@ Como respuesta obtendrás la siguiente información:
 }
 ```
 
-Obtendrás los Links:
+**Detalle de las URLs generadas:**
 
-- **self**: desde esta URL puedes consultar la información de la captura.
-- **capture**: este endpoint sirve para tokenizar la tarjeta.
+- **self**: desde esta URL puedes consultar la información de la intención de captura. [Ejemplo de ejecución de Self](self-capture.md).
+- **capture**: desde esta se debe tokenizar/capturar tarjeta [Ejemplo de ejecución del capture/tokenización](json-capture.md).
+
+
+> Estas URLs son dinamicas, nunca debes guardarlas como variables de entorno. Siempre debes consultarlas desde aquí para continuar con los pasos siguientes.
