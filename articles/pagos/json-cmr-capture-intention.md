@@ -78,7 +78,7 @@ Como respuesta obtendrás la siguiente información:
 }
 ```
 
-**Detalle de las URLs generadas:**
+**Obtendrás los links:**
 
 - **self**: desde esta URL puedes consultar la información de la intención de captura. [Ejemplo de ejecución de Self](self-capture.md).
 - **capture**: desde esta se debe tokenizar/capturar tarjeta [Ejemplo de ejecución del capture/tokenización](json-capture.md).
