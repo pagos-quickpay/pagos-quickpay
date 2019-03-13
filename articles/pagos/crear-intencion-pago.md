@@ -37,7 +37,7 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | **transaction**                          | **Grupo de campos con la información de la transacción** | **object**   |        |
 | transaction.gateway_order                | Número de la orden de compra. Id de transacción que es enviada al  gateway de pago. **Este valor debe ser unico y maximo de 12 caracteres** | string       | Si       |
 | transaction.reference_id                 | El código de referencia de la transacción. Representa el identificador de  la transacción en el sistema del comercio. | string       | No       |
-| transaction.purchase_order                | El código de referencia de la transacción. Representa el identificador de  la transacción en el sistema del comercio. (para propositos de conciliación) | string       | Si       |
+| transaction.purchase_order.purchase_order_id | El código de referencia de la transacción. Representa el identificador de  la transacción en el sistema del comercio. (para propositos de conciliación) | string       | Si       |
 | transaction.description                  | Descripción de la compra                 | string       | Si       |
 | transaction.soft_descriptor              | Descripción corta de la transacción      | string       | Si       |
 | **transaction.amount**                   | **Grupo de campos que detalla los montos de la compra** | **object**   |
