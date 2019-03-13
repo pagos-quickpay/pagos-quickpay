@@ -5,10 +5,10 @@ curl -X POST \
   https://api.sandbox.connect.fif.tech/checkout/payments \
   -H 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcmltYXJ5c2lkIjoiMjhhZGI5OTktN2EyZS03MGI4LWMwOTItZTRjMTZhOWU5ZTBhIiwidW5pcXVlX25hbWUiOiJUb2lwYXRvLmNvbSIsImdyb3Vwc2lkIjoiQVBQTCIsImlzcyI6IkZhbGFiZWxsYSIsImF1ZCI6IldlYiIsInR5cGUiOiJCZWFyZXIiLCJzY29wZSI6W10sImlhdCI6MTUxMzE3Nzk1OCwiZXhwIjoxNTEzMTc4ODU4fQ.OYBksNEvNBU012fJt4IhUnQ5g0szPXPmivD2GvprLczjbG6Pd7HeSyWddSCVOAwAXfycNMzwn0nb_6VdYMqbSzE3T9Bu0Oqzih4b_BfLLb4EwpRQ3L0ObFNkJTI2hfIMUNJQ5ohT8b2yR-1SiehAUd0Tlkb3zrh2aDP9AYVZGqkjLdnwQOpBtXVs6VmntXnb3_MklOU7U0BylB1kVG40t9qfSxf79DYTcr3JWs6LdCFDThkudMZtJfnjYsOoqt--Iv8BzhCU7Eft1Isf2Qfqn_1-p778E7r4yQY1GREuAsXPNfnnHxi7gOVVQ1owq1aekqt4m4ML-VLow8pUx5duYw' \
   -H 'content-type: application/json' \
-  -d ' {
+  -d ' {  
    "intent":"sale",
-   "payer":{
-      "payer_info":{
+   "payer":{  
+      "payer_info":{  
          "email":"aroa@gmail.com",
          "full_name":"Andres Roa",
          "country":"CL",
@@ -17,22 +17,22 @@ curl -X POST \
       },
       "payment_method":"QUICKPAY_DEBIT"
    },
-   "transaction":{
+   "transaction":{  
       "gateway_order":"identificador_unico",
       "description":"Compra comercio x",
       "soft_descriptor":"Compra comercio x",
-      "amount":{
+      "amount":{  
          "currency":"CLP",
          "total":1000,
-         "details":{
+         "details":{  
             "subtotal":1000,
             "tax":0,
             "shipping":0,
             "shipping_discount":0
          }
       },
-      "item_list":{
-         "shipping_address":{
+      "item_list":{  
+         "shipping_address":{  
             "line1":"Direccion del cliente",
             "city":"Santiago",
             "country_code":"CL",
@@ -40,13 +40,9 @@ curl -X POST \
             "type":"HOME_OR_WORK",
             "recipient_name":"Luisa Perez"
          },
-         "purchase_order":{
-            "purchase_order_id":"orden_venta_comercio",
-            "purchase_order_date":"2018-09-05T00:00:00-05:00"
-         },
          "shipping_method":"DIGITAL",
-         "items":[
-            {
+         "items":[  
+            {  
                "thumbnail":"http://portal.sandbox.connect.fif.tech/bundles/app/css/images/e-commerce-demo/product-icon.png",
                "sku":"983792642-2",
                "name":"Producto A",
@@ -58,12 +54,16 @@ curl -X POST \
          ]
       }
    },
-   "redirect_urls":{
+   "purchase_order":{  
+      "purchase_order_id":"orden_venta_comercio",
+      "purchase_order_date":"2018-09-05T00:00:00-05:00"
+   },
+   "redirect_urls":{  
       "return_url":"http://portal.sandbox.connect.fif.tech",
       "cancel_url":"http://portal.sandbox.connect.fif.tech"
    },
-   "additional_attributes":{
-      "tributary_document_type": "B"
+   "additional_attributes":{  
+      "tributary_document_type":"B"
    }
 }'
  ```
