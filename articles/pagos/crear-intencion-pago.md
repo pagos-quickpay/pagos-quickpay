@@ -35,7 +35,7 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | payer.payer_info.is_guest                | Indica si es un cliente invitado o un cliente que hizo login en el comercio | string  | No       |
 | payer.payment_method                     | Identifica el método de captura a utilizar (PEINAU_CAPTURE)  | string       | Si       |
 | **transaction**                          | **Grupo de campos con la información de la transacción** | **object**   |        |
-| transaction.gateway_order                | Número de la orden de compra. Id de transacción que es enviada al  gateway de pago. **Este valor debe ser unico** | string       | Si       |
+| transaction.gateway_order                | Id de transacción que es enviada al  gateway de pago. **Este valor debe ser unico** | string       | Si       |
 | transaction.reference_id                 | El código de referencia de la transacción. Representa el identificador de  la transacción en el sistema del comercio. | string       | No       |
 | transaction.description                  | Descripción de la compra                 | string       | Si       |
 | transaction.soft_descriptor              | Descripción corta de la transacción      | string       | Si       |
