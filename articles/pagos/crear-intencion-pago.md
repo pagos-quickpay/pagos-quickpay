@@ -65,6 +65,7 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | transaction.item_list.items.tax          | Monto del impuesto del producto          | number          | Si       |
 | **purchase_order**          | **Grupo de campos con el detalle de la orden del comercio** | **objeto**   |
 | purchase_order.purchase_order_id | El código de referencia de la transacción. Representa el identificador de  la transacción en el sistema del comercio. (para propositos de conciliación) **Este valor debe tener como maximo 12 caracteres** | string       | Si       |
+| purchase_order.purchase_order_date | Fecha de inscripción de la orden en el sistema del comercio. | string (ISO 8601)    | Si       |
 | **redirect_urls**                        | **Url de redirección dependiendo del estado de la captura una vez  finalizado el proceso de captura** | **objeto**   |
 | redirect_urls.return_url                 | URL de notificación de pago exitoso      | string (url) | Si       |
 | redirect_urls.cancel_url                 | URL de notificación de pago fallido      | string (url) | Si       |
