@@ -6,7 +6,7 @@ Para ejecutar el pago recurrente debes crear una nueva intención de pago con el
 
 ```
 curl -X POST \
-  https://api.sandbox.connect.fif.tech/checkout/payments \
+  https://api.qa.peinau.fif.tech/checkout/payments \
   -H 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcmltYXJ5c2lkIjoiMjhhZGI5OTktN2EyZS03MGI4LWMwOTItZTRjMTZhOWU5ZTBhIiwidW5pcXVlX25hbWUiOiJUb2lwYXRvLmNvbSIsImdyb3Vwc2lkIjoiQVBQTCIsImlzcyI6IkZhbGFiZWxsYSIsImF1ZCI6IldlYiIsInR5cGUiOiJCZWFyZXIiLCJzY29wZSI6W10sImlhdCI6MTUxMzE3Nzk1OCwiZXhwIjoxNTEzMTc4ODU4fQ.OYBksNEvNBU012fJt4IhUnQ5g0szPXPmivD2GvprLczjbG6Pd7HeSyWddSCVOAwAXfycNMzwn0nb_6VdYMqbSzE3T9Bu0Oqzih4b_BfLLb4EwpRQ3L0ObFNkJTI2hfIMUNJQ5ohT8b2yR-1SiehAUd0Tlkb3zrh2aDP9AYVZGqkjLdnwQOpBtXVs6VmntXnb3_MklOU7U0BylB1kVG40t9qfSxf79DYTcr3JWs6LdCFDThkudMZtJfnjYsOoqt--Iv8BzhCU7Eft1Isf2Qfqn_1-p778E7r4yQY1GREuAsXPNfnnHxi7gOVVQ1owq1aekqt4m4ML-VLow8pUx5duYw' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
@@ -180,7 +180,7 @@ A continuación se presenta ejemplo de un JSON como respuesta al crear una inten
     },
     "links": [
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/aedac5dc-49a2-87db-e373-aa44675951a7",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/aedac5dc-49a2-87db-e373-aa44675951a7",
             "rel": "self",
             "security": [
                 "ApiKey"
@@ -188,17 +188,17 @@ A continuación se presenta ejemplo de un JSON como respuesta al crear una inten
             "method": "GET"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/gateways/quickpay/token/aedac5dc-49a2-87db-e373-aa44675951a7/pay",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/quickpay/token/aedac5dc-49a2-87db-e373-aa44675951a7/pay",
             "rel": "approval_url",
             "method": "REDIRECT"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/aedac5dc-49a2-87db-e373-aa44675951a7/edit",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/aedac5dc-49a2-87db-e373-aa44675951a7/edit",
             "rel": "update_url",
             "method": "PUT"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/gateways/quickpay/token/aedac5dc-49a2-87db-e373-aa44675951a7/silent",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/quickpay/token/aedac5dc-49a2-87db-e373-aa44675951a7/silent",
             "rel": "silent_charge",
             "security": [
                 "Jwt"
@@ -206,7 +206,7 @@ A continuación se presenta ejemplo de un JSON como respuesta al crear una inten
             "method": "POST"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/gateways/quickpay/token/aedac5dc-49a2-87db-e373-aa44675951a7/refund",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/quickpay/token/aedac5dc-49a2-87db-e373-aa44675951a7/refund",
             "rel": "refund_method",
             "security": [
                 "Jwt"
@@ -295,7 +295,7 @@ A continuación se presenta ejemplo de un JSON como respuesta al crear una inten
 Necesitas el **access_token** obtenido en la **Autenticación** y la **url silent charge** obtenida en el paso anterior para ejecutar una llamada a la **API de Silent Charge /silent** de la siguiente forma:
 
 ```
-curl -v -X PUT 'https://api.sandbox.connect.fif.tech/checkout/payments/{id}/silent' \
+curl -v -X PUT 'https://api.qa.peinau.fif.tech/checkout/payments/{id}/silent' \
   
  -H "Content-Type: application/json" \
  -H "Authorization: Bearer access_token"
