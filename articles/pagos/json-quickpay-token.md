@@ -3,7 +3,7 @@
 Para contiunar con el proceso de pago, debes ingresar en el header de la petición el [access_token](obtener-token-acceso.md) generado en el paso anterior y hacer el llamado de la siguiente forma:
 
 ```
-curl -X POST 'https://api.sandbox.connect.fif.tech/checkout/payments' \
+curl -X POST 'https://api.qa.peinau.fif.tech/checkout/payments' \
  -H "Content-Type: application/json" \
  -H "Authorization: Bearer REEMPLAZAR AQUI EL ACCESS TOKEN" \
  -d '{ 
@@ -124,7 +124,7 @@ Como respuesta obtendrás la siguiente información:
     },
     "links": [
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/19a516df-b027-443e-be15-e44a41dbd94f",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/19a516df-b027-443e-be15-e44a41dbd94f",
             "rel": "self",
             "security": [
                 "ApiKey"
@@ -132,17 +132,17 @@ Como respuesta obtendrás la siguiente información:
             "method": "GET"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/gateways/quickpay/token/19a516df-b027-443e-be15-e44a41dbd94f/pay",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/quickpay/token/19a516df-b027-443e-be15-e44a41dbd94f/pay",
             "rel": "approval_url",
             "method": "REDIRECT"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/19a516df-b027-443e-be15-e44a41dbd94f/edit",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/19a516df-b027-443e-be15-e44a41dbd94f/edit",
             "rel": "update_url",
             "method": "PUT"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/gateways/quickpay/token/19a516df-b027-443e-be15-e44a41dbd94f/silent",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/quickpay/token/19a516df-b027-443e-be15-e44a41dbd94f/silent",
             "rel": "silent_charge",
             "security": [
                 "Jwt"
@@ -150,7 +150,7 @@ Como respuesta obtendrás la siguiente información:
             "method": "POST"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/gateways/quickpay/token/19a516df-b027-443e-be15-e44a41dbd94f/refund",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/quickpay/token/19a516df-b027-443e-be15-e44a41dbd94f/refund",
             "rel": "refund_method",
             "security": [
                 "Jwt"
@@ -158,7 +158,7 @@ Como respuesta obtendrás la siguiente información:
             "method": "POST"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/QP00009",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/QP00009",
             "rel": "self_by_gateway_order",
             "security": [
                 "ApiKey"
@@ -200,7 +200,7 @@ para consultar el estado (state) de la transacción necesitas enviar el **access
 
 ```
 curl -X GET \
-  https://api.sandbox.connect.fif.tech/checkout/payments/19a516df-b027-443e-be15-e44a41dbd94f \
+  https://api.qa.peinau.fif.tech/checkout/payments/19a516df-b027-443e-be15-e44a41dbd94f \
   -H 'cache-control: no-cache' \
   -H 'Authorization: Bearer REEMPLAZAR AQUI EL ACCESS TOKEN'
 ```
@@ -264,7 +264,7 @@ Obtendrás una respuesta silimar a:
     },
     "links": [
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/19a516df-b027-443e-be15-e44a41dbd94f",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/19a516df-b027-443e-be15-e44a41dbd94f",
             "rel": "self",
             "security": [
                 "ApiKey"
@@ -272,17 +272,17 @@ Obtendrás una respuesta silimar a:
             "method": "GET"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/gateways/quickpay/token/19a516df-b027-443e-be15-e44a41dbd94f/pay",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/quickpay/token/19a516df-b027-443e-be15-e44a41dbd94f/pay",
             "rel": "approval_url",
             "method": "REDIRECT"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/19a516df-b027-443e-be15-e44a41dbd94f/edit",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/19a516df-b027-443e-be15-e44a41dbd94f/edit",
             "rel": "update_url",
             "method": "PUT"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/gateways/quickpay/token/19a516df-b027-443e-be15-e44a41dbd94f/silent",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/quickpay/token/19a516df-b027-443e-be15-e44a41dbd94f/silent",
             "rel": "silent_charge",
             "security": [
                 "Jwt"
@@ -290,7 +290,7 @@ Obtendrás una respuesta silimar a:
             "method": "POST"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/gateways/quickpay/token/19a516df-b027-443e-be15-e44a41dbd94f/refund",
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/quickpay/token/19a516df-b027-443e-be15-e44a41dbd94f/refund",
             "rel": "refund_method",
             "security": [
                 "Jwt"
