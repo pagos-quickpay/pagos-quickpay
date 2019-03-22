@@ -67,3 +67,5 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
 ```
 
 Posibles resultados de la transacción
+
+- [Json ejemplo Consulta Exitosa](json-consulta-exitosa.md)
