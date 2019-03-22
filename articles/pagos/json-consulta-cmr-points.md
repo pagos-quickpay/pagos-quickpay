@@ -66,7 +66,7 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
 }
 ```
 
-Posibles resultados de la transacción
+Posibles resultados de la consulta
 
 - [Json ejemplo Consulta Exitosa](json-consulta-exitosa.md)
 - [Json ejemplo Consulta Fallida](json-consulta-fallida.md)
