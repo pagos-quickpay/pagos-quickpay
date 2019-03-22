@@ -52,7 +52,7 @@ El resultado de la llamada a la API de query, será una intención de consulta e
 
 **Detalle de las URLs generadas:**
 
-- **self**: desde esta URL puedes consultar la información de la intención de consulta. [Ejemplo de ejecución de Self](self.md).
+- **self**: desde esta URL puedes consultar la información de la intención de consulta. [Ejemplo de ejecución de Self](self-query.md).
 - **query_url**: desde esta URL el cliente debe ejcutar la consulta de CMR Points.
 
 > Estas URLs son dinamicas, nunca debes guardarlas como variables de entorno. Siempre debes consultarlas desde aquí para continuar con los pasos siguientes.
