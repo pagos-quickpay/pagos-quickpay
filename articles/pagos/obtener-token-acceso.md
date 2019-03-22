@@ -34,4 +34,4 @@ Como respuesta obtendrás el **access_token**:
 
 [Consultar estado del servicio (Health Check)](health-sso.md)
 
-Ir al paso [2. Crear una Intención de pago](crear-intencion-pago.md)
+Ir al paso 2. [Crear una Intención de pago](crear-intencion-pago.md) o [Crear una Intención de consulta](crear-intencion-consulta.md)
