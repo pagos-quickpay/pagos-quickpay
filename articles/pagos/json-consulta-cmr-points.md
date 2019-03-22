@@ -1,4 +1,4 @@
-## Ejemplo petición query": "CMR-POINTS"
+## Ejemplo petición query: "CMR-POINTS"
 
 ```
 curl -X POST \
@@ -69,3 +69,4 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
 Posibles resultados de la transacción
 
 - [Json ejemplo Consulta Exitosa](json-consulta-exitosa.md)
+- [Json ejemplo Consulta Fallida](json-consulta-fallida.md)
