@@ -19,16 +19,15 @@ curl -X POST \
   },
   "transaction": {
     "gateway_order": "identificador_unico comercio (max 12 caracteres)",
-    "description": "Compra COPEC Chesterton",
-    "soft_descriptor": "COPEC-PAGO-CLICK",
+    "description": "Compra COMERCIO X",
     "item_list": {
       "shipping_method": "DIGITAL",
       "items": [
         {
           "thumbnail": "http://portal.test.peinau.fif.tech/bundles/app/css/images/e-commerce-demo/product-icon.png",
-          "sku": "GASOLINA",
-          "name": "Gas. 93",
-          "description": "Gasolina 93, 45lts",
+          "sku": "123456789",
+          "name": "PRODUCTO X",
+          "description": "PRODUCTO X",
           "quantity": 1,
           "price": 30000,
           "tax": 0,
@@ -56,7 +55,7 @@ curl -X POST \
         }
       ],
       "shipping_address": {
-        "line1": "Dirección Sucursal Matriz Copec",
+        "line1": "Moneda 970",
         "city": "Santiago",
         "country_code": "CL",
         "phone": "+56 9 8762 1244",
@@ -96,16 +95,16 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
     },
     "transaction": {
         "gateway_order": "INPA-1533092308183",
-        "description": "Compra COPEC Chesterton",
-        "soft_descriptor": "COPEC-PAGO-CLICK",
+        "description": "Compra en Comercio X",
+        "soft_descriptor": "PRODUCTO X",
         "item_list": {
             "shipping_method": "DIGITAL",
             "items": [
                 {
                     "thumbnail": "http://portal.test.peinau.fif.tech/bundles/app/css/images/e-commerce-demo/product-icon.png",
-                    "sku": "GASOLINA",
-                    "name": "Gas. 93",
-                    "description": "Gasolina 93, 45lts",
+                    "sku": "123456789",
+                    "name": "PRODUCTO X",
+                    "description": "PRODUCTO X",
                     "quantity": 1,
                     "price": 30000,
                     "tax": 0,
@@ -133,10 +132,10 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
                 }
             ],
             "shipping_address": {
-                "line1": "Dirección Sucursal Matriz Copec",
+                "line1": "Monerda 970",
                 "city": "Santiago",
                 "country_code": "CL",
-                "phone": "+56 9 8762 1244",
+                "phone": "+56 9 1234 1234",
                 "type": "HOME_OR_WORK",
                 "recipient_name": "Jhon Doe Son"
             }
