@@ -182,7 +182,15 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
   "id": "5ca4e4894fec1e0016a6d72b"
 }
 ```
-**Consultar el estado de la transación:**
+
+Obtendrás los Links:
+
+self: desde esta URL puedes consultar la información del pago.
+approval_url: debes desplegar esta URL al cliente para que pueda continuar con el pago.
+refund_method: te permite anular la transacción.
+self_by_gateway_order: desde esta URL también puedes consultar la información del pago utilizando el gateway_order.
+
+##Consultar la información de la transación:
 
 Cuando se realiza una búsqueda para transacción se obtienen estos datos: 
 
@@ -269,3 +277,18 @@ Cuando se realiza una búsqueda para transacción se obtienen estos datos:
      "id": "5ca4ea4157a18100167f15de"
    }
 ```
+## Mostrar Formulario Pago con puntos mas pesos
+
+Con la **approval_url** de la respuesta de la intención de captura, puedes iniciar el flujo de pago de puntos/puntos mas pesos
+
+![Ejemplo de Apertura de iframe de pago-con-puntos](images/apertura-iframe-1.png)
+
+El cliente debe ingresar los datos de rut y multiclave, seleccionar las cuotas, pasar la prueba de segundo factor y aprobar el pago para que nuestro sistema pueda ejecutar el cargo a la tarjeta de crédito. 
+
+## Anular o reversar una compra.
+
+Para anular o reversar una compra, se debe usar el método refund o void. Al anular obtendremos un json de respuesta exitosa, en caso de que la anulación funcine de forma acorrecta, obtendremos un json como el siguiente.
+En caso de que la anulación el refund falle, obtendremos los repsectivos mensajes de error.
+
+
+
