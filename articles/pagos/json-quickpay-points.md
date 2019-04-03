@@ -1,4 +1,5 @@
 ## Ejemplo petición payment_method": "CMR_POINTS"
+Esta petición es para puntos mas pesos. Si se quiere realizar una consulta de solo puntos, se debe setear los campos transaction.amount.total = 0 y transaction.amount.details.subtotal = 0.
 
 ```
 curl -X POST \
@@ -292,7 +293,7 @@ El cliente debe ingresar los datos de rut y multiclave, seleccionar las cuotas, 
 
 ## Anular o reversar una compra.
 
-Para anular o reversar una compra, se debe usar el método refund o void. Al anular obtendremos un json de respuesta exitosa, en caso de que la anulación o el refund funcine de forma correcta, obtendremos un json con el estado de la transacción en refunded o void. A continuación un ejemplo de la transaccion en estado refunded.
+Para anular o reversar una compra, se debe usar el método refund o void. Al anular obtendremos un json de respuesta exitosa, en caso de que la anulación o el refund funcione de forma correcta, obtendremos un json con el estado de la transacción en refunded o void. A continuación un ejemplo de la transaccion en estado refunded.
 ```
 {
   "_id": "5ca5044657a18100167f15fd",
@@ -489,5 +490,21 @@ Se realiza un void, y solo se puede hacer refund para esta transacción.
       ]
     }
   }
+}
+```
+Un ejemplo de refund fallido es el siguiente:
+
+```
+{
+    "error_code": "INVALID_HTTP_STATUS_CODE_IN_REQUEST",
+    "error_description": "The request return a invalid status code response",
+    "meta_data": {
+        "errors": [
+            {
+                "message": "An error has occurred while refunding transaction.",
+                "code": "REFUND_ERROR"
+            }
+        ]
+    }
 }
 ```
