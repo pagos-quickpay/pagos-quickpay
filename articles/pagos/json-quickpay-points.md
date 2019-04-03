@@ -292,9 +292,7 @@ El cliente debe ingresar los datos de rut y multiclave, seleccionar las cuotas, 
 
 ## Anular o reversar una compra.
 
-Para anular o reversar una compra, se debe usar el método refund o void. Al anular obtendremos un json de respuesta exitosa, en caso de que la anulación funcine de forma acorrecta, obtendremos un json como el siguiente.
-En caso de que la anulación el refund falle, obtendremos los repsectivos mensajes de error.
-
+Para anular o reversar una compra, se debe usar el método refund o void. Al anular obtendremos un json de respuesta exitosa, en caso de que la anulación o el refund funcine de forma correcta, obtendremos un json con el estado de la transacción en refunded o void. A continuación un ejemplo de la transaccion en estado refunded.
 ```
 {
   "_id": "5ca5044657a18100167f15fd",
@@ -467,5 +465,29 @@ En caso de que la anulación el refund falle, obtendremos los repsectivos mensaj
   "state": "refunded",
   "intent": "sale",
   "id": "5ca5044657a18100167f15fd"
+}
+```
+En caso de que la anulación o el refund falle, obtendremos los repsectivos mensajes de error.
+Un posible fallo es el siguiente:
+Se realiza un void, y solo se puede hacer refund para esta transacción.
+```
+{
+  "error_code": "TRANSITION_TO_NEW_STATE_IS_NOT_FOUND",
+  "error_description": "TRANSITION_TO_NEW_STATE_IS_NOT_FOUND",
+  "meta_data": {
+    "paymentId": "5ca509574fec1e0016a6d75a",
+    "gatewayOrder": "IP-15543197032341481",
+    "paymentMethod": "CMR_POINTS",
+    "documentState": "rejected",
+    "curency": "CLP",
+    "totalAmount": 100,
+    "payerDocumentNumber": "177694886",
+    "additionalData": {
+      "newState": "voided",
+      "availableTransitions": [
+        "reversed"
+      ]
+    }
+  }
 }
 ```
