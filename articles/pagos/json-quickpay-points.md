@@ -183,14 +183,19 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
 }
 ```
 
-Obtendrás los Links:
+## Obtendrás los Links en la respuesta:
 
 self: desde esta URL puedes consultar la información del pago.
+
 approval_url: debes desplegar esta URL al cliente para que pueda continuar con el pago.
+
 refund_method: te permite anular la transacción.
+
+void_method: te permite cancelar la transacción.
+
 self_by_gateway_order: desde esta URL también puedes consultar la información del pago utilizando el gateway_order.
 
-##Consultar la información de la transación:
+## Consultar la información de la transación:
 
 Cuando se realiza una búsqueda para transacción se obtienen estos datos: 
 
