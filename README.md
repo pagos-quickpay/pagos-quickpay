@@ -12,6 +12,7 @@ Bienvenido al portal de desarrolladores
   - Pago con Debito de Banco Falabella
   - Pago con CMR Credit Doc Id
   - Pago con Tarjeta de Crédito de Terceros
+  - Pago con puntos mas pesos
   
 ## Tienes los siguientes metodos de consulta disponibles
 
