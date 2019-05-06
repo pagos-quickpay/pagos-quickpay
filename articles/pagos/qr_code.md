@@ -9,4 +9,4 @@ curl -X GET \
 
 Obtendrás una respuesta similar a:
 
-![Ejemplo de QR Code](pagos/images/qr_code.png)
+![Ejemplo de QR Code](images/qr_code.png)
