@@ -147,7 +147,7 @@ El resultado de la llamada a la API de checkout, será una intención de pago en
 - **self**: desde esta URL puedes consultar la información de la intención de pago. [Ejemplo de ejecución de Self](self.md).
 - **approval_url**: desde esta URL el cliente debe autorizar el pago.
 - **update_url**: a partir de esta url podrás actualizar ciertos datos de la intención de pago.
-- **qr_code**: esta URL genera automaticamente un codigo QR para autorizar un pago.
+- **qr_code**: esta URL genera automaticamente un codigo QR para autorizar un pago (Solo disponible para PagoInApp). [Ejemplo de ejecución de Qr Code](qr_code.md).
 - **self_by_gateway_order**: desde esta URL puedes consultar la información de la intención de pago.
 
 > Estas URLs son dinamicas, nunca debes guardarlas como variables de entorno. Siempre debes consultarlas desde aquí para continuar con los pasos siguientes.
