@@ -1,6 +1,6 @@
 # ¿Cómo obtener el codigo QR para autorizar una transacción?
 
-Una vez ejecutada la intención de pago se desplegará el listado de URLs, debes utilizar la URL con el nombre **qr_code**
+Una vez creada una [intención de pago](crear-intencion-pago.md) se desplegará el listado de URLs, debes utilizar la URL con el nombre **qr_code**
 
 ```
 curl -X GET \
