@@ -22,6 +22,8 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 
 - Pago con Puntos [Json ejemplo payment_method": "CMR_POINTS" ](json-quickpay-points.md)
 
+- Pago con Wallet [Json ejemplo payment_method": "WALLET" ](json-wallet.md)
+
 **Detalle de los Campos de la Petición**
 
 | Nombre                                   | Descripción                              | Tipo         |    Requerido |
