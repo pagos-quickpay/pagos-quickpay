@@ -77,6 +77,14 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | **additional_attributes**                | **Grupo de campos de uso exclusivo**     | **objeto**   |
 | additional_attributes.insuranceCode      | Código de la Aseguradora                 | string       | No       |
 | additional_attributes.insuranceName      | Nemotécnico de la Asegurado              | string       | No       |
+| **additional_attributes.promotions**      | Listado de Promociones                    | **objeto**   | No       |
+| additional_attributes.promotions.type     | Tipo de Promoción                        | string       | No       |
+| additional_attributes.promotions.amount   | Monto correspondiente a la promoción       | number       | No       |
+| additional_attributes.promotions.currency | Código ISO de la moneda asociada al descuento | string  | No       |
+| **additional_attributes.installments_offer** | Listado de cuotas habilitadas por el comercio | **objeto (string)** | No    |
+| **additional_attributes.installments_without_interest** | Listado de cuotas sin interes | **objeto (string)** | No    |
+| additional_attributes.default_installment_number | Cantidad de cuotas por default | string | No   |
+| additional_attributes.default_deferred_month | Cantidad de  cuotas diferidas para el pago de la primera cuota | string | No   |
 
 El resultado de la llamada a la API de checkout, será una intención de pago en su estado inicial (created), que contendrá el, o los links HATEOAS relacionados con la llamada.
 
