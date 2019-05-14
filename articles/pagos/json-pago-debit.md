@@ -79,6 +79,13 @@ curl -X POST \
     "cancel_url": "http://portal.sandbox.connect.fif.tech"
   },
   "additional_attributes": {
+      "discounts": [
+        {
+          "type": "CMR",
+          "amount": 10000,
+          "currency": "CLP",
+        }
+      ],  
   }
 }'
  ```
