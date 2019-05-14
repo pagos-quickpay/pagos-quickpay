@@ -80,6 +80,23 @@ curl -X POST \
     "cancel_url": "http://portal.sandbox.connect.fif.tech"
   },
   "additional_attributes": {
+      "discounts": [
+        {
+          "type": "CMR",
+          "amount": 10000,
+          "currency": "CLP",
+        }
+      ],
+      "installments_offer":[
+         "1",
+         "3",
+         "6"
+      ],
+      "installments_without_interest":[  
+         "3"
+      ],
+      "default_installment_number":"1",
+      "default_deferred_month":"3",
   }
 }'
  ```
