@@ -6,6 +6,8 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 
 - Pago in App Debit (APP Banco Falabella) [Json ejemplo payment_method": "PAGOINAPP_DEBIT" ](json-pago-debit.md)
 
+- Pago con Wallet [Json ejemplo payment_method": "WALLET" ](json-wallet.md)
+
 - Pago de estado de cuenta de CMR con Cuenta de Banco Falabella [Json ejemplo payment_method": "CARDBILL_PAYMENT_DEBIT_BF" ](json-cardbill.md)
 
 - Pago con CMR [Json ejemplo payment_method": "QUICKPAY_CREDIT" ](json-quickpay-credit.md)
@@ -21,8 +23,6 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 - Pago con Transbank Webpay [Json ejemplo payment_method": "TRANSBANK_WEBPAY" ](json-transbank-webpay.md)
 
 - Pago con Puntos [Json ejemplo payment_method": "CMR_POINTS" ](json-quickpay-points.md)
-
-- Pago con Wallet [Json ejemplo payment_method": "WALLET" ](json-wallet.md)
 
 **Detalle de los Campos de la Petición**
 
