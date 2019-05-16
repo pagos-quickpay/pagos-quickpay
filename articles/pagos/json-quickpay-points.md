@@ -69,7 +69,14 @@ https://api.qa.peinau.fif.tech/checkout/payments \
   "cancel_url": "http://portal.sandbox.connect.fif.tech"
 },
 "additional_attributes": {
-  "point_type": "CMR_PUNTOS"
+  "point_type": "CMR_PUNTOS",
+  "installments_offer": [
+	  "1",
+	  "3",
+	  "6"
+	],
+	"default_installment_number": "3",
+	"default_deferred_month": "3"
 }
 }'
  
@@ -85,7 +92,14 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
     "purchase_order_id": "536155295217"
   },
   "additional_attributes": {
-    "point_type": "CMR_PUNTOS"
+    "point_type": "CMR_PUNTOS",
+    "installments_offer": [
+      "1",
+      "3",
+      "6"
+    ],
+    "default_installment_number": "3",
+    "default_deferred_month": "3"
   },
   "redirect_urls": {
     "return_url": "http://portal.sandbox.connect.fif.tech",
@@ -209,7 +223,14 @@ Cuando se realiza una búsqueda para transacción se obtienen estos datos:
        "purchase_order_id": "536155295217"
      },
      "additional_attributes": {
-       "point_type": "CMR_PUNTOS"
+       "point_type": "CMR_PUNTOS",
+       "installments_offer": [
+        "1",
+        "3",
+        "6"
+      ],
+      "default_installment_number": "3",
+      "default_deferred_month": "3"
      },
      "redirect_urls": {
        "return_url": "http://portal.sandbox.connect.fif.tech",
@@ -375,7 +396,14 @@ Para anular o reversar una compra, se debe usar el método refund o void. Al anu
     "purchase_order_id": "536155295217"
   },
   "additional_attributes": {
-    "point_type": "CMR_PUNTOS"
+    "point_type": "CMR_PUNTOS",
+    "installments_offer": [
+      "1",
+      "3",
+      "6"
+    ],
+    "default_installment_number": "3",
+    "default_deferred_month": "3"
   },
   "redirect_urls": {
     "return_url": "http://portal.sandbox.connect.fif.tech",
