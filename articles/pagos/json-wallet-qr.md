@@ -7,52 +7,50 @@ curl -X POST \
   -H 'content-type: application/json' \
   -d '{
   "intent": "sale",
+  "payment_method": "WALLET_QR",
   "payer": {
-    "payer_info": {
-      "email": "pperez@gmail.com",
-      "full_name": "Pedro Perez",
-      "country": "CL",
-      "document_number": "371119582",
-      "document_type": "RUT"
-    },
-    "payment_method": "WALLET_QR"
+    "email": "",
+    "full_name": "",
+    "country": "",
+    "document_number": "",
+    "document_type": ""
   },
   "transaction": {
-    "gateway_order": "identificador_unico comercio (max 12 caracteres)",
+    "purchase_order": "identificador_unico comercio (max 12 caracteres)",
+    "reconciliation_id": "9182736633",
     "description": "Compra en Comercio X",
     "soft_descriptor": "COMERCIO",
+    "invoice_type": "boleta",
+    "invoice_number": "AB-123456",
+    "terminal_id": "1234567",
+    "store_id": "102",
+    "channel:" "WEB",
     "item_list": {
       "shipping_method": "DIGITAL",
       "items": [
         {
-          "thumbnail": "http://portal.test.peinau.fif.tech/bundles/app/css/images/e-commerce-demo/product-icon.png",
           "sku": "123456789",
           "name": "PRODUCTO X",
           "description": "DESCRIPCON X",
           "quantity": 1,
           "price": 30000,
-          "tax": 0,
-          "_id": "5a7a14343df88b000fdac92a"
+          "tax": 0
         },
         {
-          "thumbnail": "http://portal.test.peinau.fif.tech/bundles/app/css/images/e-commerce-demo/product-icon.png",
           "sku": "DESCLIP",
           "name": "Desc Socio",
           "description": "Descuento Socio",
           "quantity": 1,
           "price": -1500,
-          "tax": 0,
-          "_id": "5a7a14343df88b000fdac929"
+          "tax": 0
         },
         {
-          "thumbnail": "http://portal.test.peinau.fif.tech/bundles/app/css/images/e-commerce-demo/product-icon.png",
           "sku": "DESGASO93",
           "name": "Desc Falabella",
           "description": "Destalle Descuento Falabella",
           "quantity": 1,
           "price": -2000,
-          "tax": 0,
-          "_id": "5a7a14343df88b000fdac928"
+          "tax": 0
         }
       ],
       "shipping_address": {
@@ -73,31 +71,34 @@ curl -X POST \
         "shipping": 0,
         "shipping_discount": 0
       }
-    }
-  },
-  "redirect_urls": {
-    "return_url": "http://portal.sandbox.connect.fif.tech",
-    "cancel_url": "http://portal.sandbox.connect.fif.tech"
-  },
-  "additional_attributes": {
-      "promotions": [
+    },
+    "promotions": [
         {
           "type": "CMR",
-          "amount": 10000,
+          "amount": 20000,
           "currency": "CLP",
         }
+    ],
+    "installments": {
+        "installments_offer": [
+           "1",
+           "3",
+           "6"
+        ],
+        "installments_without_interest": [  
+           "3"
+        ],
+        "default_installment_number": "1"
+    },
+    "deferred_info": {
+      "deferred_months": [
+        "1", "2", "3"
       ],
-      "installments_offer":[
-         "1",
-         "3",
-         "6"
-      ],
-      "installments_without_interest":[  
-         "3"
-      ],
-      "default_installment_number":"1",
-      "default_deferred_month":"3",
-      "invoice_type": "boleta"
+      "default_deferred_month":"3"
+    }
+  },
+  "additional_attributes": {
+      
   }
 }'
  ```
@@ -108,46 +109,43 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
 {
     "application": "5af0799cd1aa8e000f9de4ca",
     "_id": "5b6121d4d28fc400163111d6",
-    "redirect_urls": {
-        "return_url": "http://portal.sandbox.connect.fif.tech",
-        "cancel_url": "http://portal.sandbox.connect.fif.tech"
-    },
+    "payment_method": "WALLET_QR"
     "transaction": {
-        "gateway_order": "INPA-1533092308183",
+        "purchase_order": "IP1533092308183",
+        "reconciliation_id": "9182736633",
         "description": "Compra en Comercio X",
         "soft_descriptor": "PRODUCTO X",
+        "invoice_type": "boleta",
+        "invoice_number": "AB-123456",
+        "terminal_id": "1234567",
+        "store_id": "102",
+        "channel:" "WEB",
         "item_list": {
             "shipping_method": "DIGITAL",
             "items": [
                 {
-                    "thumbnail": "http://portal.test.peinau.fif.tech/bundles/app/css/images/e-commerce-demo/product-icon.png",
                     "sku": "GASOLINA",
                     "name": "Gas. 93",
                     "description": "Gasolina 93, 45lts",
                     "quantity": 1,
                     "price": 30000,
-                    "tax": 0,
-                    "_id": "5a7a14343df88b000fdac92a"
+                    "tax": 0
                 },
                 {
-                    "thumbnail": "http://portal.test.peinau.fif.tech/bundles/app/css/images/e-commerce-demo/product-icon.png",
                     "sku": "DESCLIP",
                     "name": "Desc Socio",
                     "description": "Descuento Socio",
                     "quantity": 1,
                     "price": -1500,
-                    "tax": 0,
-                    "_id": "5a7a14343df88b000fdac929"
+                    "tax": 0
                 },
                 {
-                    "thumbnail": "http://portal.test.peinau.fif.tech/bundles/app/css/images/e-commerce-demo/product-icon.png",
                     "sku": "DESGASO93",
                     "name": "Desc Falabella",
                     "description": "Destalle Descuento Falabella",
                     "quantity": 1,
                     "price": -2000,
-                    "tax": 0,
-                    "_id": "5a7a14343df88b000fdac928"
+                    "tax": 0
                 }
             ],
             "shipping_address": {
@@ -168,17 +166,38 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
                 "shipping": 0,
                 "shipping_discount": 0
             }
+        },
+        "promotions": [
+          {
+            "type": "CMR",
+            "amount": 20000,
+            "currency": "CLP",
+          }
+        ],
+        "installments": {
+            "installments_offer": [
+               "1",
+               "3",
+               "6"
+            ],
+            "installments_without_interest": [  
+               "3"
+            ],
+            "default_installment_number": "1"
+        },
+        "deferred_info": {
+          "deferred_months": [
+            "1", "2", "3"
+          ],
+          "default_deferred_month":"3"
         }
     },
     "payer": {
-        "payer_info": {
-            "document_type": "RUT",
-            "document_number": "371119582",
-            "country": "CL",
-            "full_name": "Andres Roa",
-            "email": "aroa@gmail.com"
-        },
-        "payment_method": "PAGOINAPP_CREDIT"
+        "document_type": "",
+        "document_number": "",
+        "country": "",
+        "full_name": "",
+        "email": ""
     },
     "links": [
         {
@@ -192,19 +211,18 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
             "method": "REDIRECT"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/5b6121d4d28fc400163111d6/edit",
-            "rel": "update_url",
-            "method": "PUT"
+            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/IP1533092308183",
+            "rel": "self_by_purchase_order",
+            "method": "GET"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/INPA-1533092308183",
-            "rel": "self_by_gateway_order",
-            "method": "GET"
-        }
+           "href": "https://api.sandbox.connect.fif.tech/checkout/payments/gateways/pagoinapp/credit/5cd04013d907ed001dd9a8c4/qr",
+           "rel": "qr_code",
+           "method": "GET"
+       },
     ],
     "update_time": "2018-08-01T02:58:28.183Z",
     "create_time": "2018-08-01T02:58:28.183Z",
-    "invoice_number": "INPA-1533092308183",
     "state": "created",
     "intent": "sale",
     "id": "5b6121d4d28fc400163111d6"
@@ -214,7 +232,6 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
  Posibles resultados de la transacción
  
  - [Json ejemplo Pago Exitoso](json-pago-exitoso.md)
- - [Json ejemplo respuesta por NO cliente](json-no-cliente.md)
  - [Json ejemplo Pago Rechazado](json-pago-rechazado.md)
  - [Json ejemplo Pago Expirado](json-pago-expirado.md)
  - [Json ejemplo Pago Reversado](json-pago-reversado.md)
