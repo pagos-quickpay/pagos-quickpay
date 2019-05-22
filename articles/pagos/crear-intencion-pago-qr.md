@@ -2,24 +2,22 @@
 
 Para generar una intención de pago debes hacer una petición a la API de **Intención de Pago /payments** con el **access_token** generado en el [paso 1](obtener-token-acceso.md) y el JSON correspondiente al metodo de pago que quieras emplear.
 
-- Pago in App Credit (APP CMR) [Json ejemplo payment_method": "PAGOINAPP_CREDIT" ](json-wallet-qr.md)
+- Wallet QR [Json ejemplo payment_method": "WALLET_QR" ](json-wallet-qr.md)
 
 **Detalle de los Campos de la Petición**
 
 | Nombre                                   | Descripción                              | Tipo         |    Requerido |
 | ---------------------------------------- | ---------------------------------------- | ------------ | ------------ |
 | intent                                   | Identifica en tipo de transacción: Venta | string       | Si           |
-| **payer**                                | **Pagador**                              | **object**   |         |
-| **payer.payer_info**                     | **Información del cliente que está comprando en el sitio del  comercio** | **object**   |
-| payer.payer_info.email                   | correo electrónico                       | string       | Si       |
-| payer.payer_info.full_name               | nombre completo                          | string       | Si       |
-| payer.payer_info.country                 | Nacionalidad                             | string       | Si       |
-| payer.payer_info.document_number         | Número de identificación                 | string       | Si       |
-| payer.payer_info.document_type           | Tipo de documento de identificación      | string       | Si       |
-| payer.payer_info.is_guest                | Indica si es un cliente invitado o un cliente que hizo login en el comercio | string  | No       |
-| payer.payment_method                     | Identifica el método de captura a utilizar (PEINAU_CAPTURE)  | string       | Si       |
+| **payer**                     | **Información del cliente que está comprando en el sitio del  comercio** | **object**   |
+| payer.email                   | correo electrónico                       | string       | Si       |
+| payer.full_name               | nombre completo                          | string       | Si       |
+| payer.country                 | Nacionalidad                             | string       | Si       |
+| payer.document_number         | Número de identificación                 | string       | Si       |
+| payer.document_type           | Tipo de documento de identificación      | string       | Si       |
+| payer.payment_method                     | Identifica el método de pago a utilizar (WALLET_QR)  | string       | Si       |
 | **transaction**                          | **Grupo de campos con la información de la transacción** | **object**   |        |
-| transaction.gateway_order                | Id de transacción que es enviada al  gateway de pago. **Este valor debe ser unico** | string       | Si       |
+| transaction.purchase_order                | Id de transacción que es enviada al  gateway de pago. **Este valor debe ser unico** | string       | Si       |
 | transaction.reference_id                 | El código de referencia de la transacción. Representa el identificador de  la transacción en el sistema del comercio. | string       | No       |
 | transaction.description                  | Descripción de la compra                 | string       | Si       |
 | transaction.soft_descriptor              | Descripción corta de la transacción      | string       | Si       |
@@ -47,9 +45,6 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | transaction.item_list.items.quantity     | Cantidad.  Solo se pemite un producto para compra con puntos.      | string       | Si       |
 | transaction.item_list.items.price        | Precio unitario                          | number          | Si       |
 | transaction.item_list.items.tax          | Monto del impuesto del producto          | number          | Si       |
-| **transaction.points_amount**            | **Información de la cantidad de puntos para la transacción(s)**         | **object**   |
-| transaction.points_amount.currency       | Tipo del monto del parte de la compra en puntos. Por ahora solo soporta valor 'LOY'| string          |
-| transaction.points_amount.total          | Monto del parte de la compra en puntos.| number          |
 | **purchase_order**          | **Grupo de campos con el detalle de la orden del comercio.** | **objeto**   |
 | purchase_order.purchase_order_id | El código de referencia de la transacción. Representa el identificador de  la transacción en el sistema del comercio. (para propositos de conciliación) **Este valor debe tener como maximo 12 caracteres** | string       | Si       |
 | purchase_order.purchase_order_date | Fecha de inscripción de la orden en el sistema del comercio. | string (ISO 8601)    | Si       |
