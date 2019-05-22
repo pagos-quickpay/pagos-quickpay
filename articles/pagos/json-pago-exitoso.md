@@ -98,7 +98,13 @@
                 "shipping": 0,
                 "shipping_discount": 0
             }
-        }
+        },
+        "selected_promotion": {
+            "type": "CMR",
+            "amount": 10000,
+            "currency": "CLP"
+        },
+        "selected_payment_method": "WALLET_CREDIT"
     },
     "payer": {
         "payer_info": {
