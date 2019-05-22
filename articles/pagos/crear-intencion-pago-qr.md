@@ -18,9 +18,14 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | payer.document_type           | Tipo de documento de identificación      | string       | Si       |
 | **transaction**                          | **Grupo de campos con la información de la transacción** | **object**   |       
 | transaction.purchase_order                | Id de transacción que es enviada al  gateway de pago. **Este valor debe ser unico** | string       | Si       |
-| transaction.reference_id                 | El código de referencia de la transacción. Representa el identificador de  la transacción en el sistema del comercio. | string       | No       |
+| transaction.reconciliation_id                 | El código de referencia de la transacción. Representa el identificador de  la transacción en el sistema del comercio. | string       | No       |
 | transaction.description                  | Descripción de la compra                 | string       | Si       |
 | transaction.soft_descriptor              | Descripción corta de la transacción      | string       | Si       |
+| transaction.invoice_type                  | Tipo de documento boleta/factura                 | string       | Si       |
+| transaction.invoice_number                  | Numero de boleta                 | string       | Si       |
+| transaction.terminal_id                  | Identificador del terminal                 | string       | Si       |
+| transaction.store_id                  | Identificacion de la tienda                | string       | Si       |
+| transaction.channel                  | Canal de compra                 | string       | Si       |
 | **transaction.amount**                   | **Grupo de campos que detalla los montos de la compra** | **object**   |
 | transaction.amount.currency              | Código ISO de la moneda asociada al monto de la compra. | string       | Si       |
 | transaction.amount.total                 | Monto total de la compra que será descontado de la tarjeta o cuenta del  cliente | number          | Si       |
