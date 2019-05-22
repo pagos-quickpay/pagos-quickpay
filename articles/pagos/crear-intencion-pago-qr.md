@@ -45,19 +45,11 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | transaction.item_list.items.quantity     | Cantidad.  Solo se pemite un producto para compra con puntos.      | string       | Si       |
 | transaction.item_list.items.price        | Precio unitario                          | number          | Si       |
 | transaction.item_list.items.tax          | Monto del impuesto del producto          | number          | Si       |
-| **purchase_order**          | **Grupo de campos con el detalle de la orden del comercio.** | **objeto**   |
-| purchase_order.purchase_order_id | El código de referencia de la transacción. Representa el identificador de  la transacción en el sistema del comercio. (para propositos de conciliación) **Este valor debe tener como maximo 12 caracteres** | string       | Si       |
-| purchase_order.purchase_order_date | Fecha de inscripción de la orden en el sistema del comercio. | string (ISO 8601)    | Si       |
-| **redirect_urls**                        | **Url de redirección dependiendo del estado de la captura una vez  finalizado el proceso de captura** | **objeto**   |
-| redirect_urls.return_url                 | URL de notificación de pago exitoso      | string (url) | Si       |
-| redirect_urls.cancel_url                 | URL de notificación de pago fallido      | string (url) | Si       |
-| **additional_attributes**                | **Grupo de campos de uso exclusivo**     | **objeto**   |
-| additional_attributes.insuranceCode      | Código de la Aseguradora                 | string       | No       |
-| additional_attributes.insuranceName      | Nemotécnico de la Asegurado              | string       | No       |
-| **additional_attributes.promotions**      | Listado de Promociones                    | **objeto**   | No       |
+| **promotions**      | Listado de Promociones                    | **array**   | No       |
 | additional_attributes.promotions.type     | Tipo de Promoción                        | string       | No       |
 | additional_attributes.promotions.amount   | Monto correspondiente a la promoción       | number       | No       |
 | additional_attributes.promotions.currency | Código ISO de la moneda asociada al descuento | string  | No       |
+| **additional_attributes**                | **Grupo de campos de uso exclusivo**     | **objeto**   |
 | **additional_attributes.installments_offer** | Listado de cuotas habilitadas por el comercio | **objeto (string)** | No    |
 | **additional_attributes.installments_without_interest** | Listado de cuotas sin interes | **objeto (string)** | No    |
 | additional_attributes.default_installment_number | Cantidad de cuotas por default | string | No   |
