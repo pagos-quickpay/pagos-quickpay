@@ -55,8 +55,8 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | promotions.amount   | Monto correspondiente a la promoción       | number       | No       |
 | promotions.currency | Código ISO de la moneda asociada al descuento | string  | No       |
 | **installments**                | **Grupo de campos para informacion de cuotas**     | **objeto**   |
-| installments.installments_offer | Listado de cuotas habilitadas por el comercio | **objeto (string)** | No    |
-| installments.installments_without_interest | Listado de cuotas sin interes | **objeto (string)** | No    |
+| installments.installments_offer | Listado de cuotas habilitadas por el comercio | **array** | No    |
+| installments.installments_without_interest | Listado de cuotas sin interes | **array** | No    |
 | installments.default_installment_number | Cantidad de cuotas por default | string | No   |
 | **deferred_info**                | **Grupo de campos para informacion de mes diferido**     | **objeto**   |
 | deferred_info.deferred_months | Cantidad de  cuotas diferidas para el pago de la primera cuota | array | No   |
