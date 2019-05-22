@@ -46,9 +46,9 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | transaction.item_list.items.price        | Precio unitario                          | number          | Si       |
 | transaction.item_list.items.tax          | Monto del impuesto del producto          | number          | Si       |
 | **promotions**      | Listado de Promociones                    | **array**   | No       |
-| additional_attributes.promotions.type     | Tipo de Promoción                        | string       | No       |
-| additional_attributes.promotions.amount   | Monto correspondiente a la promoción       | number       | No       |
-| additional_attributes.promotions.currency | Código ISO de la moneda asociada al descuento | string  | No       |
+| promotions.type     | Tipo de Promoción                        | string       | No       |
+| promotions.amount   | Monto correspondiente a la promoción       | number       | No       |
+| promotions.currency | Código ISO de la moneda asociada al descuento | string  | No       |
 | **installments**                | **Grupo de campos para informacion de cuotas**     | **objeto**   |
 | installments.installments_offer | Listado de cuotas habilitadas por el comercio | **objeto (string)** | No    |
 | installments.installments_without_interest | Listado de cuotas sin interes | **objeto (string)** | No    |
