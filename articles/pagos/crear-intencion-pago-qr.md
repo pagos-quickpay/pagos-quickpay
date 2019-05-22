@@ -16,8 +16,7 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | payer.country                 | Nacionalidad                             | string       | Si       |
 | payer.document_number         | Número de identificación                 | string       | Si       |
 | payer.document_type           | Tipo de documento de identificación      | string       | Si       |
-
-| **transaction**                          | **Grupo de campos con la información de la transacción** | **object**   |        |
+| **transaction**                          | **Grupo de campos con la información de la transacción** | **object**   |       
 | transaction.purchase_order                | Id de transacción que es enviada al  gateway de pago. **Este valor debe ser unico** | string       | Si       |
 | transaction.reference_id                 | El código de referencia de la transacción. Representa el identificador de  la transacción en el sistema del comercio. | string       | No       |
 | transaction.description                  | Descripción de la compra                 | string       | Si       |
