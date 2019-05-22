@@ -154,7 +154,6 @@
     ],
     "update_time": "2018-11-08T13:11:09.110Z",
     "create_time": "2018-11-08T13:10:21.283Z",
-    "invoice_number": "IP15416826212839081",
     "state": "paid",
     "intent": "sale",
     "id": "5be435bd8cd94e0034c544d1"
