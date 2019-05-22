@@ -129,10 +129,10 @@ El resultado de la llamada a la API de checkout, será una intención de pago en
 | update_time                              | Fecha de actualización de la intención   | string (ISO 8601)|
 | application                              | Identificador interno    | string|
 | **links** | Arreglo de Link HATEOAS para la ejecución de operaciones disponibles sobre la intención | array |
-| **link** | Enlace bajo formato HATEOAS, sobre la definición de una operación disponible en una intención  | **objeto**  |
-| link.href | Dirección URL de la operación | string (URL) |
-| link.rel |Relación de la operación sobre una intención | Enum |
-| link.method |Verbo HTTP solicitado para la ejecución de la operación|Enum|
+| **links.link** | Enlace bajo formato HATEOAS, sobre la definición de una operación disponible en una intención  | **objeto**  |
+| links.link.href | Dirección URL de la operación | string (URL) |
+| links.link.rel |Relación de la operación sobre una intención | Enum |
+| links.link.method |Verbo HTTP solicitado para la ejecución de la operación|Enum|
 
 **Detalle de las URLs generadas:**
 
