@@ -5,15 +5,13 @@
     "application": "5af0799cd1aa8e000f9de4ca",
     "payment_method": "WALLET_QR",
     "gateway": {
-        "msgType": "PagoInAppResponse",
+        "msgType": "WalletQRResponse",
         "responseCode": 0,
         "responseDescription": "success",
-        "UUID": "ca0368bb-6b89-4d47-b14d-2d3221d5984d",
-        "close": true,
         "transactionId": "ca0368bb-6b89-4d47-b14d-2d3221d5984d",
         "txnDetails": {
             "qpTxnId": 2034524,
-            "accountLast4": "1434",
+            "panLast4": "1434",
             "authorizationCode": "168817595910",
             "status": "success"
         },
@@ -22,21 +20,23 @@
                 "code": 0
             },
             "transaction": {
-                "installments_number": 0,
+                "installments_number": 1,
                 "amount": 300,
-                "buy_order": "IP-15416826212839081",
-                "currency": "CLP",
+                "purchase_order": "IP15416826212839081",
                 "date": "2018-11-08T13:11:09.108Z",
-                "type": "CREDIT",
-                "gateway_id": "ca0368bb-6b89-4d47-b14d-2d3221d5984d"
+                "deferred_month": "3"
             },
-            "authorizations": {
-                "code": "168817595910"
-            },
-            "card_number": {
-                "pan_last4": "1434"
-            },
-            "_id": "5be435ed8cd94e0034c544d2"
+            "authorizations": [
+                {
+                    "type": "CREDIT"
+                    "code": "168817595910",
+                    "amount": 300,
+                    "currency": "CLP"
+                    "card_number": {
+                        "pan_last4": "1434"
+                    }
+                }
+            ]
         }
     },
     "transaction": {
@@ -47,7 +47,7 @@
         "description": "Compra en Comercio X",
         "soft_descriptor": "PRODUCTO X",
         "invoice_type": "boleta",
-        "invoice_number": "AB-123456",
+        "invoice_number": "AB123456",
         "terminal_id": "1234567",
         "store_id": "102",
         "channel:" "WEB",
@@ -98,6 +98,29 @@
                 "shipping_discount": 0
             }
         },
+        "promotions": [
+            {
+              "type": "CMR",
+              "amount": 20000,
+              "currency": "CLP",
+            }
+        ],
+        "installments": {
+            "installments_offer": [
+               "1",
+               "3",
+               "6"
+            ],
+            "installments_without_interest": [  
+               "3"
+            ],
+            "default_installment_number": "1"
+        },
+        "deferred_info": {
+          "deferred_months": [
+            "1", "2", "3"
+        ],
+        "default_deferred_month":"3",
         "selected_promotion": {
             "type": "CMR",
             "amount": 20000,
