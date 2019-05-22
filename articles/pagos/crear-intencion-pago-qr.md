@@ -123,6 +123,7 @@ El resultado de la llamada a la API de checkout, será una intención de pago en
 | deferred_info.deferred_months | Cantidad de  cuotas diferidas para el pago de la primera cuota | array | No   |
 | deferred_info.default_deferred_month | Cantidad de  cuotas diferidas para el pago de la primera cuota | string | No   |
 | **additional_attributes**                | **Grupo de campos de uso exclusivo**     | **objeto**   |
+| ...               | ...    | **objeto**   |
 | id                                       | Identificador unico de la intención      | string (Guid)|
 | create_time                              | Fecha de creación de la intención        | string (ISO 8601)|
 | update_time                              | Fecha de actualización de la intención   | string (ISO 8601)|
