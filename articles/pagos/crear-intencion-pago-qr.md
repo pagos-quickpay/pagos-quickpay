@@ -9,13 +9,14 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | Nombre                                   | Descripción                              | Tipo         |    Requerido |
 | ---------------------------------------- | ---------------------------------------- | ------------ | ------------ |
 | intent                                   | Identifica en tipo de transacción: Venta | string       | Si           |
+| payment_method                     | Identifica el método de pago a utilizar (WALLET_QR)  | string       | Si       |
 | **payer**                     | **Información del cliente que está comprando en el sitio del  comercio** | **object**   |
 | payer.email                   | correo electrónico                       | string       | Si       |
 | payer.full_name               | nombre completo                          | string       | Si       |
 | payer.country                 | Nacionalidad                             | string       | Si       |
 | payer.document_number         | Número de identificación                 | string       | Si       |
 | payer.document_type           | Tipo de documento de identificación      | string       | Si       |
-| payer.payment_method                     | Identifica el método de pago a utilizar (WALLET_QR)  | string       | Si       |
+
 | **transaction**                          | **Grupo de campos con la información de la transacción** | **object**   |        |
 | transaction.purchase_order                | Id de transacción que es enviada al  gateway de pago. **Este valor debe ser unico** | string       | Si       |
 | transaction.reference_id                 | El código de referencia de la transacción. Representa el identificador de  la transacción en el sistema del comercio. | string       | No       |
@@ -49,11 +50,14 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | additional_attributes.promotions.type     | Tipo de Promoción                        | string       | No       |
 | additional_attributes.promotions.amount   | Monto correspondiente a la promoción       | number       | No       |
 | additional_attributes.promotions.currency | Código ISO de la moneda asociada al descuento | string  | No       |
+| **installments**                | **Grupo de campos para informacion de cuotas**     | **objeto**   |
+| installments.installments_offer | Listado de cuotas habilitadas por el comercio | **objeto (string)** | No    |
+| installments.installments_without_interest | Listado de cuotas sin interes | **objeto (string)** | No    |
+| installments.default_installment_number | Cantidad de cuotas por default | string | No   |
+| **deferred_info**                | **Grupo de campos para informacion de mes diferido**     | **objeto**   |
+| deferred_info.deferred_months | Cantidad de  cuotas diferidas para el pago de la primera cuota | array | No   |
+| deferred_info.default_deferred_month | Cantidad de  cuotas diferidas para el pago de la primera cuota | string | No   |
 | **additional_attributes**                | **Grupo de campos de uso exclusivo**     | **objeto**   |
-| **additional_attributes.installments_offer** | Listado de cuotas habilitadas por el comercio | **objeto (string)** | No    |
-| **additional_attributes.installments_without_interest** | Listado de cuotas sin interes | **objeto (string)** | No    |
-| additional_attributes.default_installment_number | Cantidad de cuotas por default | string | No   |
-| additional_attributes.default_deferred_month | Cantidad de  cuotas diferidas para el pago de la primera cuota | string | No   |
 
 El resultado de la llamada a la API de checkout, será una intención de pago en su estado inicial (created), que contendrá el, o los links HATEOAS relacionados con la llamada.
 
