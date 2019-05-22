@@ -232,6 +232,6 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
  Posibles resultados de la transacción
  
  - [Json ejemplo Pago Exitoso](json-wallet-qr-exitoso.md)
- - [Json ejemplo Pago Rechazado](json-pago-rechazado.md)
+ - [Json ejemplo Pago Rechazado](json-wallet-qr-rechazado.md)
  - [Json ejemplo Pago Expirado](json-pago-expirado.md)
  - [Json ejemplo Pago Reversado](json-pago-reversado.md)
