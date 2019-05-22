@@ -97,6 +97,7 @@ curl -X POST \
       ],
       "default_installment_number":"1",
       "default_deferred_month":"3",
+      "invoice_type": "boleta"
   }
 }'
  ```
