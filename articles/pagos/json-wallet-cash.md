@@ -62,7 +62,8 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
       "purchase_order": "identificador_unico comercio (max 12 caracteres)",
       "description": "Compra en Comercio X",
       "soft_descriptor": "COMERCIO",
-      "type": "CASH_IN/CASH_OUT"
+      "type": "CASH_IN/CASH_OUT",
+      "transaction_code": "20190501001222",
       "channel:" "WEB",
       "item_list": {
         "shipping_method": "DIGITAL",
@@ -107,7 +108,7 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
             "method": "POST"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/code/1234ABCD",
+            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/code/20190501001222",
             "rel": "self_by_transaction_code",
             "method": "GET"
         }
