@@ -84,7 +84,7 @@ El resultado de la llamada a la API de checkout, será una intención de pago en
 | transaction.soft_descriptor              | Descripción corta de la transacción      | string       |
 | transaction.invoice_type                  | Tipo de documento boleta/factura                 | string       |
 | transaction.invoice_number                  | Número de boleta                 | string       |
-| transaction.transaction_code  | string  |
+| transaction.transaction_code  | Código alternativo para identificar la intención de pago | string  |
 | transaction.terminal_id                  | Identificador del terminal                 | string       |
 | transaction.store_id                  | Identificacion de la tienda                | string       |
 | transaction.channel                  | Canal de compra                 | string       |
