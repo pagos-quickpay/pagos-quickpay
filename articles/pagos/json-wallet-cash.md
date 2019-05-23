@@ -125,4 +125,3 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
  
  - [Json ejemplo Pago Exitoso](json-wallet-cash-exitoso.md)
  - [Json ejemplo Pago Rechazado](json-wallet-cash-rechazado.md)
- - [Json ejemplo Pago Expirado](json-wallet-cash-expirado.md) (Por confirmar si es necesario)
