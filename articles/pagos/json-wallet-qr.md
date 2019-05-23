@@ -117,6 +117,7 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
         "soft_descriptor": "PRODUCTO X",
         "invoice_type": "boleta",
         "invoice_number": "AB-123456",
+        "transaction_code": "1234ABCD"
         "terminal_id": "1234567",
         "store_id": "102",
         "channel:" "WEB",
