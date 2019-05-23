@@ -130,7 +130,7 @@ El resultado de la llamada a la API de checkout, será una intención de pago en
 | type                            | Tipo de promocion                                       | string |
 | amount                          | Monto                                                   | number |
 | currency                        | Código ISO de la moneda asociada al precio promocional  | string |
-| **selected_payment_method**     | Arreglo que contiene los medios de pagos seleccionados por el cliente  | **array** | 
+| **selected_payment_methods**    | Arreglo que contiene los medios de pagos seleccionados por el cliente  | **array** | 
 | **additional_attributes**                | **Grupo de campos de uso exclusivo**     | **objeto**   |
 | ...               | ...    | **objeto**   |
 | id                                       | Identificador unico de la intención      | string (Guid)|
