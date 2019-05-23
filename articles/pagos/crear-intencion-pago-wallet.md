@@ -2,7 +2,8 @@
 
 Para generar una intención de pago debes hacer una petición a la API de **Intención de Pago /payments** con el **access_token** generado en el [paso 1](obtener-token-acceso.md) y el JSON correspondiente al metodo de pago que quieras emplear.
 
-- Wallet QR [Json ejemplo payment_method": "WALLET_QR" ](json-wallet-qr.md)
+- Wallet QR [Json ejemplo payment_method: "WALLET_QR" ](json-wallet-qr.md)
+- Wallet CASH [Json ejemplo payment method: "WALLET_CASH"](json-wallet-cash.md)
 
 **Detalle de los Campos de la Petición**
 
