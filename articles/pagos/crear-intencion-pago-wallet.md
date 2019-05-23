@@ -33,6 +33,7 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | transaction.amount.details               | Detalles del monto de la compra          |              |
 | transaction.amount.details.subtotal      | Monto de la compra sin incluir impuesto  | number          | Si       |
 | transaction.amount.details.tax           | Monto total de los impuestos             | number          | Si       |
+| transaction.amount.details.surcharge     | Recargo financiero                       | number          | Si       |
 | transaction.amount.details.shipping      | Costo del despacho                       | number          | Si       |
 | transaction.amount.details.shipping_discount | Monto de descuento en costo de despacho  | number          | Si       |
 | **transaction.item_list**                | **Información del producto(s)**         | **object**   |
@@ -95,6 +96,7 @@ El resultado de la llamada a la API de checkout, será una intención de pago en
 | transaction.amount.details               | Detalles del monto de la compra          |              |
 | transaction.amount.details.subtotal      | Monto de la compra sin incluir impuesto  | number          |
 | transaction.amount.details.tax           | Monto total de los impuestos             | number          |
+| transaction.amount.details.surcharge     | Recargo financiero                       | number          |
 | transaction.amount.details.shipping      | Costo del despacho                       | number          |
 | transaction.amount.details.shipping_discount | Monto de descuento en costo de despacho  | number|
 | **transaction.item_list**                | **Información del producto(s)**         | **object**   |
