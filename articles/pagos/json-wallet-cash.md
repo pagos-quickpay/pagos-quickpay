@@ -103,7 +103,7 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
             "method": "GET"
         },
         {
-            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/{payment_method}/5b6121d4d28fc400163111d6",
+            "href": "https://api.sandbox.connect.fif.tech/checkout/payments/{payment_method}/20190501001222",
             "rel": "confirm",
             "method": "POST"
         },
