@@ -68,6 +68,7 @@ curl -X POST \
       "details": {
         "subtotal": 26500,
         "tax": 0,
+        "surcharge": 0,
         "shipping": 0,
         "shipping_discount": 0
       }
@@ -164,6 +165,7 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
             "details": {
                 "subtotal": 26500,
                 "tax": 0,
+                "surcharge": 0,
                 "shipping": 0,
                 "shipping_discount": 0
             }
