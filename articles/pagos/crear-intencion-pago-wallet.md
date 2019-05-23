@@ -78,15 +78,16 @@ El resultado de la llamada a la API de checkout, será una intención de pago en
 | payer.document_number          | Número de identificación                 | string       |
 | payer.document_type            | Tipo de documento de identificación      | string       |
 | **transaction**                          | **Grupo de campos con la información de la transacción** | **object**   |
-| transaction.purchase_order                | Id de transacción que es enviada al  gateway de pago. **Este valor debe ser unico** | string       | Si       |
-| transaction.reconciliation_id                 | El código de referencia de la transacción. Representa el identificador de  la transacción en el sistema del comercio. | string       | No       |
-| transaction.description                  | Descripción de la compra                 | string       | Si       |
-| transaction.soft_descriptor              | Descripción corta de la transacción      | string       | Si       |
-| transaction.invoice_type                  | Tipo de documento boleta/factura                 | string       | Si       |
-| transaction.invoice_number                  | Número de boleta                 | string       | Si       |
-| transaction.terminal_id                  | Identificador del terminal                 | string       | Si       |
-| transaction.store_id                  | Identificacion de la tienda                | string       | Si       |
-| transaction.channel                  | Canal de compra                 | string       | Si       |
+| transaction.purchase_order                | Id de transacción que es enviada al  gateway de pago. **Este valor debe ser unico** | string       |
+| transaction.reconciliation_id                 | El código de referencia de la transacción. Representa el identificador de  la transacción en el sistema del comercio. | string       |
+| transaction.description                  | Descripción de la compra                 | string       |
+| transaction.soft_descriptor              | Descripción corta de la transacción      | string       |
+| transaction.invoice_type                  | Tipo de documento boleta/factura                 | string       |
+| transaction.invoice_number                  | Número de boleta                 | string       |
+| transaction.transaction_code  | string  |
+| transaction.terminal_id                  | Identificador del terminal                 | string       |
+| transaction.store_id                  | Identificacion de la tienda                | string       |
+| transaction.channel                  | Canal de compra                 | string       |
 | **transaction.amount**                   | **Grupo de campos que detalla los montos de la compra** | **object**   |
 | transaction.amount.currency              | Código ISO de la moneda asociada al monto de la compra. | string       |
 | transaction.amount.total                 | Monto total de la compra que será descontado de la tarjeta o cuenta del  cliente | number          |
@@ -111,17 +112,17 @@ El resultado de la llamada a la API de checkout, será una intención de pago en
 | transaction.item_list.items.quantity     | Cantidad:  Solo se pemite un producto para compra con puntos | string       |
 | transaction.item_list.items.price        | Precio unitario                          | number          |
 | transaction.item_list.items.tax          | Monto del impuesto del producto          | number          |
-| **promotions**      | Listado de Promociones                    | **array**   | No       |
-| promotions.type     | Tipo de Promoción                        | string       | No       |
-| promotions.amount   | Monto correspondiente a la promoción       | number       | No       |
-| promotions.currency | Código ISO de la moneda asociada al descuento | string  | No       |
+| **promotions**      | Listado de Promociones                    | **array**   |
+| promotions.type     | Tipo de Promoción                        | string       |
+| promotions.amount   | Monto correspondiente a la promoción       | number       |
+| promotions.currency | Código ISO de la moneda asociada al descuento | string  |
 | **installments**                | **Grupo de campos para informacion de cuotas**     | **objeto**   |
-| installments.installments_offer | Listado de cuotas habilitadas por el comercio | **array** | No    |
-| installments.installments_without_interest | Listado de cuotas sin interes | **array** | No    |
-| installments.default_installment_number | Cantidad de cuotas por default | string | No   |
+| installments.installments_offer | Listado de cuotas habilitadas por el comercio | **array** |
+| installments.installments_without_interest | Listado de cuotas sin interes | **array** |
+| installments.default_installment_number | Cantidad de cuotas por default | string |
 | **deferred_info**                | **Grupo de campos para informacion de mes diferido**     | **objeto**   |
-| deferred_info.deferred_months | Cantidad de  cuotas diferidas para el pago de la primera cuota | array | No   |
-| deferred_info.default_deferred_month | Cantidad de  cuotas diferidas para el pago de la primera cuota | string | No   |
+| deferred_info.deferred_months | Cantidad de  cuotas diferidas para el pago de la primera cuota | array |
+| deferred_info.default_deferred_month | Cantidad de  cuotas diferidas para el pago de la primera cuota | string |
 | **additional_attributes**                | **Grupo de campos de uso exclusivo**     | **objeto**   |
 | ...               | ...    | **objeto**   |
 | id                                       | Identificador unico de la intención      | string (Guid)|
