@@ -126,7 +126,7 @@
             "amount": 20000,
             "currency": "CLP"
         },
-        "selected_payment_method": ["WALLET_CREDIT"]
+        "selected_payment_methods": ["WALLET_CREDIT"]
     },
     "payer": {
         "email": "pperez@gmail.com",
