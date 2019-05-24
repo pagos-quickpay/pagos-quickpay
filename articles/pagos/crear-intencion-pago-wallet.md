@@ -71,8 +71,9 @@ El resultado de la llamada a la API de checkout, será una intención de pago en
 
 | Nombre                                   | Descripción                              | Tipo         |
 | ---------------------------------------- | ---------------------------------------- | ------------ |
-| intent                                   | Identifica en tipo de transacción: Venta | string       |
-| payment_method                     | Identifica el método de pago a utilizar  | string       |
+| intent                             | Identifica en tipo de transacción: Venta | string             |
+| payment_method                     | Identifica el método de pago a utilizar  | string             |
+| expiration_date                    | Fecha de expiracion de la intencion  | string (ISO 8601)      |
 | **payer**                                | **Información del cliente que está comprando en el sitio del  comercio**                              | **object**   |
 | payer.email                   | correo electrónico                       | string       |
 | payer.full_name               | nombre completo                          | string       |
