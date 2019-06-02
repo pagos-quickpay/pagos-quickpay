@@ -45,6 +45,12 @@ Como respuesta obtendrás la siguiente información:
         },
         {
             "href": "https://api.qa.peinau.fif.tech/tokenization/captures/gateways/cmr/capture/ed72148e-3037-45e3-8ae3-e16eb4643a0f/capture",
+            "rel": "capture_url",
+            "method": "REDIRECT",
+            "security": []
+        },
+        {
+            "href": "https://api.qa.peinau.fif.tech/tokenization/captures/gateways/cmr/capture/ed72148e-3037-45e3-8ae3-e16eb4643a0f/capture",
             "rel": "capture",
             "method": "POST",
             "security": [
@@ -78,10 +84,15 @@ Como respuesta obtendrás la siguiente información:
 }
 ```
 
+> **Recordar** que el plazo de tiempo para que una intención de captura sea tokenizada es de 5 minutos. Ver el ejemplo del JSON de respuesta a la creación de intención de captura en el que el atributo "deletion_time" dista del "create_time" por 5 minutos. Si se intenta tokenizar la tarjeta después de los 5 minutos, la tokenización fallará.
+
 **Obtendrás los links:**
 
 - **self**: desde esta URL puedes consultar la información de la intención de captura. [Ejemplo de ejecución de Self](self-capture.md).
+- **capture_url**: desde esta se abre el iframe para que usuario complete los datos y tokenice su tarjeta.
 - **capture**: desde esta se debe tokenizar/capturar tarjeta [Ejemplo de ejecución del capture/tokenización](json-capture.md).
 
 
 > Estas URLs son dinamicas, nunca debes guardarlas como variables de entorno. Siempre debes consultarlas desde aquí para continuar con los pasos siguientes.
+
+> **Si usas el capture_url** para que tus usuarios puedan tokenizar por iframe, debes recordar que tu modelo de integración sea el llamar al Api Single Sign ON (cuya vigencia del token generado por esta api tenga configurado un valor mayor o igual a los 10 minutos) e inmediatamente después llamar a la creación de intención de captura y del mismo modo, mostrar el iframe Quickpay Connect para tokenizar. Se recomienda crear el documento e inmediatamente mostrar el iframe con la url generada.
