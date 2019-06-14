@@ -222,3 +222,5 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al confirma
     "id": "5d03b77314c196001682b02a"
 }
 ```
+
+> **Importante** Podrás ver el detalle de la autorización en el campo **gateway.authorization** y el de la confirmación en **gateway.creditAuthorization**.
