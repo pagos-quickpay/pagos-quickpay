@@ -198,6 +198,11 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
             "method": "GET"
         },
         {
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/quickpay/credit/5c0599e3ca2e140015a77689/confirm",
+            "rel": "confirm_authorization",
+            "method": "POST"
+        },
+        {
             "href": "https://api.qa.peinau.fif.tech/checkout/payments/IP-15438709476584211",
             "rel": "self_by_gateway_order",
             "method": "GET"
@@ -219,5 +224,6 @@ Obtendrás los Links:
 - **query_installments**: este endpoint se usa para consultar las cuotas de la tarjeta. [ejemplo](quickpay-query-installments.md)
 - **check_balance**: este endpoint sirve para consultar si la tarjeta tiene saldo para la compra. [ejemplo](quickpay-check-balance.md)
 - **silent_charge**: este endpoint se usa para aplicar la pre-autorización. [ejemplo](quickpay-authorization.md)
+- **confirm_authorization**: este endpoint se usa para confirmar la pre-autorización. [ejemplo](quickpay-confirm.md)
 - **void_method**: este endpoint sirve para reversar la compra. [ejemplo](quickpay-void.md)
 - **refund_method**: este endpoint sirve para anular la compra. [ejemplo](quickpay-refund.md)
