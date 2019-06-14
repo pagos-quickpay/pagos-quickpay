@@ -1,7 +1,7 @@
 ## Ejemplo petición de confirm_authorization:
 Según lo devuelto en la creación de la intención de pago, la llamada a la confirmación de la operación previamente autorizada se realiza mediante una llamada POST enviando el access_token previamente obtenido con la Api Single Sign On.
 
-No se envía nada en el request. Los valores necesarios para la confirmación se obtendrán internamente.
+No se envía nada en el request. Los valores necesarios para la confirmación se obtendrán internamente. **Sólo las órdenes de pago en estado authorized podrán ser confirmados.**
 
 ```
 {
