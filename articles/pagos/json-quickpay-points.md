@@ -312,216 +312,405 @@ Con la **approval_url** de la respuesta de la intención de captura, puedes inic
 
 El cliente debe ingresar los datos de rut y multiclave, seleccionar las cuotas, pasar la prueba de segundo factor y aprobar el pago para que nuestro sistema pueda ejecutar el cargo a la tarjeta de crédito. 
 
-## Anular o reversar una compra.
+## Reversar una compra.
 
-Para anular o reversar una compra, se debe usar el método refund o void. Al anular obtendremos un json de respuesta exitosa, en caso de que la anulación o el refund funcione de forma correcta, obtendremos un json con el estado de la transacción en refunded o void. A continuación un ejemplo de la transaccion en estado refunded.
+Para reversar una compra, se debe usar el método **void**. No se envía nada en el cuerpo del request. Al reversar obtendremos un json de respuesta exitosa con el estado de la transacción en estado **voided**. A continuación un ejemplo:
 ```
 {
-  "_id": "5ca5044657a18100167f15fd",
-  "application": "5b76f2ef3eb77128dda44168",
-  "gateway": {
-    "refunds": [
-      {
-        "refunded_amount": 100,
-        "message": "successful refund",
-        "refundResponseCode": 0,
-        "refundResponseDescription": "Success",
-        "refundCancellationCode": "168817647126",
-        "refundTxnId": "3062450",
-        "type": "CreditPayment"
-      },
-      {
-        "refunded_amount": 10,
-        "message": "successful refund",
-        "refundResponseCode": 0,
-        "refundResponseDescription": "Success",
-        "refundTxnId": "3062451",
-        "type": "PointsPayment"
-      }
-    ],
-    "postMessage": {
-      "msgType": "PayWithPointsResponse",
-      "responseCode": 0,
-      "responseDescription": "Success",
-      "UUID": "4f99a1e7-69ae-4d3c-be4b-5823bc993b5e",
-      "transactionId": "4f99a1e7-69ae-4d3c-be4b-5823bc993b5e"
+    "_id": "5d07e6ed14c196001682b171",
+    "application": "5ae7359a6a3635000fafbc4c",
+    "gateway": {
+        "void": [
+            {
+                "merchTxnId": "IP-15607989574491991-CMR",
+                "code": "SUCCESSFUL_REVERSAL",
+                "message": "successful reversal",
+                "statusCode": 200
+            },
+            {
+                "merchTxnId": "IP-15607989574491991",
+                "code": "SUCCESSFUL_REVERSAL",
+                "message": "successful reversal",
+                "statusCode": 200
+            }
+        ],
+        "postMessage": {
+            "msgType": "PayWithPointsResponse",
+            "responseCode": 0,
+            "responseDescription": "Success",
+            "UUID": "3d0c790d-8e78-4021-a128-4c6b2b410e0e",
+            "transactionId": "3d0c790d-8e78-4021-a128-4c6b2b410e0e"
+        },
+        "status": {
+            "uuid": "3d0c790d-8e78-4021-a128-4c6b2b410e0e",
+            "status": "DONE_POINTS",
+            "errorDescription": "",
+            "paymentTransactionDetails": [
+                {
+                    "status": "success",
+                    "authorizationCode": "168817670954",
+                    "type": "CreditPayment",
+                    "qpTxnId": 3519693,
+                    "amount": 100,
+                    "accountFirst6": "111120",
+                    "accountLast4": "9968"
+                },
+                {
+                    "status": "success",
+                    "authorizationCode": "168817670955",
+                    "type": "PointsPayment",
+                    "qpTxnId": 3519694,
+                    "amount": 5000
+                }
+            ],
+            "createdDate": "2019-06-17T19:16:13.330Z",
+            "updatedDate": "2019-06-17T19:17:35.758Z",
+            "logTrackId": "#LGID=f674ad23702742409632b0cc23bb0ec3#MID=007407719#CHID=WEB#PYMT=P#DT=RUT#DID=159299740#UUID=3d0c790d-8e78-4021-a128-4c6b2b410e0e#TID=IP-15607989574491991#"
+        },
+        "resume": {
+            "response": {
+                "code": 0
+            },
+            "transaction": {
+                "installments_number": 1,
+                "points_amount": 5000,
+                "amount": 0,
+                "buy_order": "IP-15607989574491991",
+                "currency": "LOY",
+                "date": "2019-06-17T19:17:37.423Z",
+                "type": "CREDIT",
+                "gateway_id": "3d0c790d-8e78-4021-a128-4c6b2b410e0e"
+            },
+            "authorizations": {
+                "code": "168817670954"
+            },
+            "_id": "5d07e751e30f18001643edb0"
+        }
     },
-    "status": {
-      "uuid": "4f99a1e7-69ae-4d3c-be4b-5823bc993b5e",
-      "status": "DONE_POINTS",
-      "errorDescription": "",
-      "paymentTransactionDetails": [
+    "purchase_order": {
+        "purchase_order_id": "00536155295217"
+    },
+    "additional_attributes": {
+        "point_type": "CMR_PUNTOS",
+        "installments_offer": [
+            "1",
+            "3",
+            "6"
+        ],
+        "default_installment_number": "3",
+        "default_deferred_month": "3"
+    },
+    "redirect_urls": {
+        "return_url": "https://www.falabella.com",
+        "cancel_url": "https://www.google.com"
+    },
+    "transaction": {
+        "gateway_order": "IP-15607989574491991",
+        "reference_id": "OD0000233",
+        "description": "Transaction detailed description",
+        "soft_descriptor": "Transaction Short description",
+        "amount": {
+            "currency": "CLP",
+            "total": 100,
+            "details": {
+                "subtotal": 100,
+                "tax": 0,
+                "shipping": 0,
+                "shipping_discount": 0
+            }
+        },
+        "item_list": {
+            "shipping_method": "DIGITAL",
+            "items": [
+                {
+                    "thumbnail": "http://portal.sandbox.connect.fif.tech/bundles/app/css/images/e-commerce-demo/product-icon.png",
+                    "sku": "000000000009735780",
+                    "category": "Electronica",
+                    "name": "Tostador",
+                    "description": "Tostador",
+                    "quantity": 1,
+                    "price": 100,
+                    "tax": 0
+                }
+            ],
+            "shipping_address": {
+                "line1": "General Carol Urzua 1020, Depto 102A",
+                "city": "Santiago",
+                "country_code": "CL",
+                "phone": "+56 9 8762 1244",
+                "type": "HOME_OR_WORK",
+                "recipient_name": "Jhon Doe Son"
+            }
+        },
+        "points_amount": {
+            "currency": "CMR",
+            "total": 5000
+        }
+    },
+    "payer": {
+        "payer_info": {
+            "email": "jhondoe@gmail.com",
+            "full_name": "Jhon Doe",
+            "country": "CL",
+            "document_number": "159299740",
+            "document_type": "RUT",
+            "is_guest": "true"
+        },
+        "payment_method": "CMR_POINTS"
+    },
+    "links": [
         {
-          "status": "success",
-          "authorizationCode": "168817647122",
-          "type": "CreditPayment",
-          "qpTxnId": 3062448,
-          "amount": 100,
-          "accountFirst6": "111125",
-          "accountLast4": "1713"
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/5d07e6ed14c196001682b171",
+            "rel": "self",
+            "method": "GET"
         },
         {
-          "status": "success",
-          "authorizationCode": "552256755111",
-          "type": "PointsPayment",
-          "qpTxnId": 3062449,
-          "amount": 10
-        }
-      ],
-      "createdDate": "2019-04-03T19:06:57.764Z",
-      "updatedDate": "2019-04-03T19:08:19.160Z",
-      "logTrackId": "#LGID=8a71335c7ab92ce1db13b8c11a317ada#MID=008598176#CHID=WEB#PYMT=P#DT=RUT#DID=177694886#UUID=4f99a1e7-69ae-4d3c-be4b-5823bc993b5e#TID=IP-15543184064832051#"
-    },
-    "resume": {
-      "response": {
-        "code": 0
-      },
-      "transaction": {
-        "installments_number": 1,
-        "points_amount": 10,
-        "amount": 0,
-        "buy_order": "IP-15543184064832051",
-        "currency": "LOY",
-        "date": "2019-04-03T19:08:20.567Z",
-        "type": "CREDIT",
-        "gateway_id": "4f99a1e7-69ae-4d3c-be4b-5823bc993b5e"
-      },
-      "authorizations": {
-        "code": "168817647122"
-      },
-      "_id": "5ca504a44fec1e0016a6d753"
-    }
-  },
-  "purchase_order": {
-    "purchase_order_id": "536155295217"
-  },
-  "additional_attributes": {
-    "point_type": "CMR_PUNTOS",
-    "installments_offer": [
-      "1",
-      "3",
-      "6"
-    ],
-    "default_installment_number": "3",
-    "default_deferred_month": "3"
-  },
-  "redirect_urls": {
-    "return_url": "http://portal.sandbox.connect.fif.tech",
-    "cancel_url": "http://portal.sandbox.connect.fif.tech"
-  },
-  "transaction": {
-    "gateway_order": "IP-15543184064832051",
-    "description": "Transaction detailed description",
-    "soft_descriptor": "Transaction Short description",
-    "amount": {
-      "currency": "CLP",
-      "total": 100,
-      "details": {
-        "subtotal": 100,
-        "tax": 0,
-        "shipping": 0,
-        "shipping_discount": 0
-      }
-    },
-    "item_list": {
-      "shipping_method": "DIGITAL",
-      "items": [
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/cmr/points/5d07e6ed14c196001682b171/pay",
+            "rel": "approval_url",
+            "method": "REDIRECT"
+        },
         {
-          "thumbnail": "http://portal.sandbox.connect.fif.tech/bundles/app/css/images/e-commerce-demo/product-icon.png",
-          "sku": "TRK345-2",
-          "name": "Flight 2344",
-          "description": "Flight SCL - ONT",
-          "quantity": 1,
-          "price": 500,
-          "tax": 0,
-          "category": "Vuelos"
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/5d07e6ed14c196001682b171/edit",
+            "rel": "update_url",
+            "method": "PUT"
+        },
+        {
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/cmr/points/5d07e6ed14c196001682b171/void",
+            "rel": "void_method",
+            "method": "POST"
+        },
+        {
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/cmr/points/5d07e6ed14c196001682b171/refund",
+            "rel": "refund_method",
+            "method": "POST"
         }
-      ],
-      "shipping_address": {
-        "line1": "General Carol Urzua 1020, Depto 102A",
-        "city": "Santiago",
-        "country_code": "CL",
-        "phone": "+56 9 8762 1244",
-        "type": "HOME_OR_WORK",
-        "recipient_name": "Jhon Doe Son"
-      }
-    },
-    "points_amount": {
-      "currency": "CMR",
-      "total": 10
-    }
-  },
-  "payer": {
-    "payer_info": {
-      "email": "jhondoe@gmail.com",
-      "full_name": "Jhon Doñe",
-      "country": "CL",
-      "document_number": "177694886",
-      "document_type": "RUT"
-    },
-    "payment_method": "CMR_POINTS"
-  },
-  "links": [
-    {
-      "href": "https://api.qa.peinau.fif.tech/checkout/payments/5ca5044657a18100167f15fd",
-      "rel": "self",
-      "method": "GET"
-    },
-    {
-      "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/cmr/points/5ca5044657a18100167f15fd/pay",
-      "rel": "approval_url",
-      "method": "REDIRECT"
-    },
-    {
-      "href": "https://api.qa.peinau.fif.tech/checkout/payments/5ca5044657a18100167f15fd/edit",
-      "rel": "update_url",
-      "method": "PUT"
-    },
-    {
-      "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/cmr/points/5ca5044657a18100167f15fd/void",
-      "rel": "void_method",
-      "method": "POST"
-    },
-    {
-      "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/cmr/points/5ca5044657a18100167f15fd/refund",
-      "rel": "refund_method",
-      "method": "POST"
-    }
-  ],
-  "update_time": "2019-04-03T19:15:05.896Z",
-  "create_time": "2019-04-03T19:06:46.483Z",
-  "invoice_number": "IP-15543184064832051",
-  "state": "refunded",
-  "intent": "sale",
-  "id": "5ca5044657a18100167f15fd"
+    ],
+    "update_time": "2019-06-17T19:18:04.212Z",
+    "create_time": "2019-06-17T19:15:57.449Z",
+    "invoice_number": "IP-15607989574491991",
+    "state": "voided",
+    "intent": "sale",
+    "id": "5d07e6ed14c196001682b171"
 }
 ```
-En caso de que la anulación o el refund falle, obtendremos los repsectivos mensajes de error.
-Un posible fallo es el siguiente:
-Se realiza un void, y solo se puede hacer refund para esta transacción.
+
+## Anular una compra.
+Para anular una compra, se debe usar el método **refund** con el siguiente body request con los valores respectivos a anular en puntos y en pesos. 
+
 ```
 {
-  "error_code": "TRANSITION_TO_NEW_STATE_IS_NOT_FOUND",
-  "error_description": "TRANSITION_TO_NEW_STATE_IS_NOT_FOUND",
-  "meta_data": {
-    "paymentId": "5ca509574fec1e0016a6d75a",
-    "gatewayOrder": "IP-15543197032341481",
-    "paymentMethod": "CMR_POINTS",
-    "documentState": "rejected",
-    "curency": "CLP",
-    "totalAmount": 100,
-    "payerDocumentNumber": "177694886",
-    "additionalData": {
-      "newState": "voided",
-      "availableTransitions": [
-        "reversed"
-      ]
-    }
-  }
+    "refunded_points_amount": 5000,
+    "refunded_amount": 50
 }
 ```
-Un ejemplo de refund fallido es el siguiente:
 
+Al anular obtendremos un json de respuesta exitosa con el estado de la transacción en estado **partially_refunded** si la anulación no contempló anular todos los puntos y pesos; y en **refunded** si la anulación contempló la totalidad de los puntos y los pesos. A continuación un ejemplo:
+
+```
+{
+    "_id": "5d07ec36ea04da644b15cf67",
+    "application": "5ae7359a6a3635000fafbc4c",
+    "gateway": {
+        "refunds": [
+            {
+                "items": [
+                    {
+                        "description": "Tostador",
+                        "totalPrice": 100,
+                        "quantity": 1,
+                        "pricePerUnit": 100,
+                        "category": "Electronica",
+                        "sku": "000000000009735780"
+                    }
+                ],
+                "refunded_amount": 100,
+                "message": "successful refund",
+                "refundResponseCode": 0,
+                "refundResponseDescription": "Success",
+                "refundCancellationCode": "168817670965",
+                "refundTxnId": "3519704",
+                "type": "CreditPayment"
+            },
+            {
+                "items": [
+                    {
+                        "description": "Tostador",
+                        "totalPrice": 100,
+                        "quantity": 1,
+                        "pricePerUnit": 100,
+                        "category": "Electronica",
+                        "sku": "000000000009735780"
+                    }
+                ],
+                "refunded_amount": 5000,
+                "message": "successful refund",
+                "refundResponseCode": 0,
+                "refundResponseDescription": "Success",
+                "refundTxnId": "3519705",
+                "type": "PointsPayment"
+            }
+        ],
+        "postMessage": {
+            "msgType": "PayWithPointsResponse",
+            "responseCode": 0,
+            "responseDescription": "Success",
+            "UUID": "6448bc2e-bb90-413f-b945-e0a672ac6e85",
+            "transactionId": "6448bc2e-bb90-413f-b945-e0a672ac6e85"
+        },
+        "status": {
+            "uuid": "6448bc2e-bb90-413f-b945-e0a672ac6e85",
+            "status": "DONE_POINTS",
+            "errorDescription": "",
+            "paymentTransactionDetails": [
+                {
+                    "status": "success",
+                    "authorizationCode": "168817670963",
+                    "type": "CreditPayment",
+                    "qpTxnId": 3519702,
+                    "amount": 100,
+                    "accountFirst6": "111149",
+                    "accountLast4": "6809"
+                },
+                {
+                    "status": "success",
+                    "authorizationCode": "168817670964",
+                    "type": "PointsPayment",
+                    "qpTxnId": 3519703,
+                    "amount": 5000
+                }
+            ],
+            "createdDate": "2019-06-17T19:37:23.461Z",
+            "updatedDate": "2019-06-17T19:38:28.882Z",
+            "logTrackId": "#LGID=28c4e5a96bb0531b2a53e4343b60cf60#MID=007407719#CHID=WEB#PYMT=P#DT=RUT#DID=159299740#UUID=6448bc2e-bb90-413f-b945-e0a672ac6e85#TID=IP-15608003100143211#"
+        },
+        "resume": {
+            "response": {
+                "code": 0
+            },
+            "transaction": {
+                "installments_number": 1,
+                "points_amount": 5000,
+                "amount": 0,
+                "buy_order": "IP-15608003100143211",
+                "currency": "LOY",
+                "date": "2019-06-17T19:39:46.698Z",
+                "type": "CREDIT",
+                "gateway_id": "6448bc2e-bb90-413f-b945-e0a672ac6e85"
+            },
+            "authorizations": {
+                "code": "168817670963"
+            },
+            "_id": "5d07ec82ea04da644b15cf69"
+        }
+    },
+    "purchase_order": {
+        "purchase_order_id": "00536155295217"
+    },
+    "additional_attributes": {
+        "point_type": "CMR_PUNTOS",
+        "installments_offer": [
+            "1",
+            "3",
+            "6"
+        ],
+        "default_installment_number": "3",
+        "default_deferred_month": "3"
+    },
+    "redirect_urls": {
+        "return_url": "https://www.falabella.com",
+        "cancel_url": "https://www.google.com"
+    },
+    "transaction": {
+        "gateway_order": "IP-15608003100143211",
+        "reference_id": "OD0000233",
+        "description": "Transaction detailed description",
+        "soft_descriptor": "Transaction Short description",
+        "amount": {
+            "currency": "CLP",
+            "total": 100,
+            "details": {
+                "subtotal": 100,
+                "tax": 0,
+                "shipping": 0,
+                "shipping_discount": 0
+            }
+        },
+        "item_list": {
+            "shipping_method": "DIGITAL",
+            "items": [
+                {
+                    "thumbnail": "http://portal.sandbox.connect.fif.tech/bundles/app/css/images/e-commerce-demo/product-icon.png",
+                    "sku": "000000000009735780",
+                    "category": "Electronica",
+                    "name": "Tostador",
+                    "description": "Tostador",
+                    "quantity": 1,
+                    "price": 100,
+                    "tax": 0
+                }
+            ],
+            "shipping_address": {
+                "line1": "General Carol Urzua 1020, Depto 102A",
+                "city": "Santiago",
+                "country_code": "CL",
+                "phone": "+56 9 8762 1244",
+                "type": "HOME_OR_WORK",
+                "recipient_name": "Jhon Doe Son"
+            }
+        },
+        "points_amount": {
+            "currency": "CMR",
+            "total": 5000
+        }
+    },
+    "payer": {
+        "payer_info": {
+            "email": "jhondoe@gmail.com",
+            "full_name": "Jhon Doe",
+            "country": "CL",
+            "document_number": "159299740",
+            "document_type": "RUT",
+            "is_guest": "true"
+        },
+        "payment_method": "CMR_POINTS"
+    },
+    "links": [
+        {
+            "href": "http://localhost:8081/payments/5d07ec36ea04da644b15cf67",
+            "rel": "self",
+            "method": "GET"
+        },
+        {
+            "href": "http://localhost:8081/payments/gateways/cmr/points/5d07ec36ea04da644b15cf67/pay",
+            "rel": "approval_url",
+            "method": "REDIRECT"
+        },
+        {
+            "href": "http://localhost:8081/payments/5d07ec36ea04da644b15cf67/edit",
+            "rel": "update_url",
+            "method": "PUT"
+        },
+        {
+            "href": "http://localhost:8081/payments/gateways/cmr/points/5d07ec36ea04da644b15cf67/void",
+            "rel": "void_method",
+            "method": "POST"
+        },
+        {
+            "href": "http://localhost:8081/payments/gateways/cmr/points/5d07ec36ea04da644b15cf67/refund",
+            "rel": "refund_method",
+            "method": "POST"
+        }
+    ],
+    "update_time": "2019-06-17T19:40:09.125Z",
+    "create_time": "2019-06-17T19:38:30.014Z",
+    "invoice_number": "IP-15608003100143211",
+    "state": "refunded",
+    "intent": "sale",
+    "id": "5d07ec36ea04da644b15cf67"
+}
+```
+
+Un ejemplo de error en el proceso de anulación:
 ```
 {
     "error_code": "INVALID_HTTP_STATUS_CODE_IN_REQUEST",
