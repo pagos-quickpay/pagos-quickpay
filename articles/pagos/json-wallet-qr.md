@@ -58,7 +58,7 @@ curl -X POST \
         "city": "Santiago",
         "country_code": "CL",
         "phone": "+56 9 1234 1234",
-        "type": "HOME_OR_WORK",
+        "address_type": "HOME_OR_WORK",
         "recipient_name": "Jhon Doe Son"
       }
     },
@@ -155,7 +155,7 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
                 "city": "Santiago",
                 "country_code": "CL",
                 "phone": "+56 9 1234 1234",
-                "type": "HOME_OR_WORK",
+                "address_type": "HOME_OR_WORK",
                 "recipient_name": "Jhon Doe Son"
             }
         },
