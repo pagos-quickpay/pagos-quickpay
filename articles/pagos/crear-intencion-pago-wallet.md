@@ -42,7 +42,7 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | transaction.item_list.shipping_address.city | Ciudad donde se realizará el despacho    | string       | Si       |
 | transaction.item_list.shipping_address.country_code | Código de país donde se efectúa el despacho | string       | Si       |
 | transaction.item_list.shipping_address.phone | Número de teléfono para la recepción de los productos despachados | string       | Si       |
-| transaction.item_list.shipping_address.type | Tipo de despacho                         | string       | Si       |
+| transaction.item_list.shipping_address.address_type | Tipo de despacho                         | string       | Si       |
 | transaction.item_list.shipping_address.recipient_name | Nombre de la persona que recibirá el producto | string       | Si       |
 | transaction.item_list.shipping_method    | Método de despacho de la compra: Digital, | string       | Si       |
 | **transaction.item_list.items**          | **Grupo de campos que detalla los productos o servicios de la compra. Solo se pemite un producto para compra con puntos.** | **objeto**   |
