@@ -33,6 +33,7 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | transaction.amount.details               | Detalles del monto de la compra          |              |
 | transaction.amount.details.subtotal      | Monto de la compra sin incluir impuesto  | number          | Si       |
 | transaction.amount.details.tax           | Monto total de los impuestos             | number          | Si       |
+| transaction.transaction_code             | Codigo alterno de la transaccion         | number          | Si       |
 | transaction.amount.details.surcharge     | Recargo financiero                       | number          | Si       |
 | transaction.amount.details.shipping      | Costo del despacho                       | number          | Si       |
 | transaction.amount.details.shipping_discount | Monto de descuento en costo de despacho  | number          | Si       |
