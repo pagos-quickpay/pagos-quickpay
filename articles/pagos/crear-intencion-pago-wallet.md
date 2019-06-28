@@ -22,18 +22,18 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | transaction.reconciliation_id                 | El código de referencia de la transacción. Representa el identificador de  la transacción en el sistema del comercio. | string       | No       |
 | transaction.description                  | Descripción de la compra                 | string       | Si       |
 | transaction.soft_descriptor              | Descripción corta de la transacción      | string       | Si       |
-| transaction.invoice_type                  | Tipo de documento boleta/factura                 | string       | Si       |
-| transaction.invoice_number                  | Número de boleta                 | string       | Si       |
+| transaction.invoice_type                 | Tipo de documento boleta/factura                 | string       | Si       |
+| transaction.invoice_number               | Número de boleta                 | string       | Si       |
 | transaction.terminal_id                  | Identificador del terminal                 | string       | Si       |
-| transaction.store_id                  | Identificacion de la tienda                | string       | Si       |
-| transaction.channel                  | Canal de compra                 | string       | Si       |
+| transaction.store_id                     | Identificacion de la tienda                | string       | Si       |
+| transaction.channel                      | Canal de compra                 | string       | Si       |
+| transaction.transaction_code             | Codigo alterno de la transaccion         | number          | Si       |
 | **transaction.amount**                   | **Grupo de campos que detalla los montos de la compra** | **object**   |
 | transaction.amount.currency              | Código ISO de la moneda asociada al monto de la compra. | string       | Si       |
 | transaction.amount.total                 | Monto total de la compra que será descontado de la tarjeta o cuenta del  cliente | number          | Si       |
 | transaction.amount.details               | Detalles del monto de la compra          |              |
 | transaction.amount.details.subtotal      | Monto de la compra sin incluir impuesto  | number          | Si       |
 | transaction.amount.details.tax           | Monto total de los impuestos             | number          | Si       |
-| transaction.transaction_code             | Codigo alterno de la transaccion         | number          | Si       |
 | transaction.amount.details.surcharge     | Recargo financiero                       | number          | Si       |
 | transaction.amount.details.shipping      | Costo del despacho                       | number          | Si       |
 | transaction.amount.details.shipping_discount | Monto de descuento en costo de despacho  | number          | Si       |
