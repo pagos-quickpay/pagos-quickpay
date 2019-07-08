@@ -1,3 +1,5 @@
+Si deseas mostrar nuestro iframe de consulta de puntos CMR en tu sitio, necesitas crear una **intención de consulta**.
+
 ## Intención de Consulta
 
 Para generar una intención de consulta debes hacer una petición a la API de **Intención de Consulta /queries** con el **access_token** generado en el [paso 1](obtener-token-acceso.md) y el JSON correspondiente al metodo de consulta (query) que quieras emplear.
