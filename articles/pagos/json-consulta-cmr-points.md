@@ -10,10 +10,8 @@ curl -X POST \
   -d '{
  "query": "CMR_POINTS",
  "customer": {
-   "reference_id": "001389",
    "country": "CL",
    "name": "Jose Galvans",
-   "email": "JLPrueba1@gmail.com",
    "document_type": "RUT",
    "document_number": "123451238",
    "is_guest": "false"
