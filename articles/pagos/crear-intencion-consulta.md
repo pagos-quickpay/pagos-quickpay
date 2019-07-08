@@ -52,7 +52,6 @@ El resultado de la llamada a la API de query, será una intención de consulta e
 
 - **self**: desde esta URL puedes consultar la información de la intención de consulta. [Ejemplo de ejecución de Self](self-query.md).
 - **query_url**: desde esta URL el cliente debe ejcutar la consulta de CMR Points. Esta desplegará el iframe de consulta y guardará la cantidad de punto en el documento de consulta si el usuario se loguea correctamente, o el parametro guest es igual a false (o sea, el comercio confía en el usuario). Al documento de consulta se puede acceder con el self.
-- **silent_query**: desde esta URL el comercio puede saber cuantos puntos tiene el usuario sin desplegar el iframe. De esta forma, si necesita conocer los puntos de antemano para ofrecer una oferta, puede hacerlo.
 
 > Estas URLs son dinamicas, nunca debes guardarlas como variables de entorno. Siempre debes consultarlas desde aquí para continuar con los pasos siguientes.
 
