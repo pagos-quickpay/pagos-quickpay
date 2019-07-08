@@ -1,4 +1,4 @@
-En ocasiones, querrás consultar los puntos de tu cliente sin la necesidad de que él interactue con un iframe para consultar para poder saber qué productos ofrecerle. En ese caso, te recomendamos utilizar la consulta silenciosa (no necesitarás crear una intención de consulta).
+Si deseas consultar los puntos de tu cliente (para saber qué productos ofrecerle) sin la necesidad de que él interactue con un iframe, te recomendamos utilizar la consulta silenciosa.
 
 ## Consulta silenciosa de puntos
 
