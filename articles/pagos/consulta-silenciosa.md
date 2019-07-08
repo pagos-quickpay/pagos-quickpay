@@ -28,3 +28,5 @@ Obtendrás el siguiente resultado en formato JSON:
     "dateToExpire": "2019-07-31"
 }
 ```
+
+[Regresar](introduction.md)
