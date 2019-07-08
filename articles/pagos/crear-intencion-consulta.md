@@ -10,10 +10,8 @@ Para generar una intención de consulta debes hacer una petición a la API de **
 | ---------------------------------------- | ---------------------------------------- | ------------ | ------------ |
 | query                                    | Identifica el tipo de consulta           | string       | Si           |
 | **customer**                             | **Cliente**                              | **object**   |              |
-| customer.reference_id                    | El código de referencia de la consulta. Representa el identificador de  la consulta en el sistema del comercio. | string       | No       |
 | customer.country                         | Nacionalidad                             | string       | Si           |
 | customer.name                            | Nombre del cliente                       | string       | Si           |
-| customer.email                           | correo electrónico                       | string       | Si           |
 | customer.document_type                   | Tipo de documento de identificación      | string       | Si           |
 | customer.document_number                 | Número de identificación                 | string       | Si           |
 | customer.is_guest                        | Indica si es un cliente invitado o un cliente que hizo login en el comercio | string  | No       |
