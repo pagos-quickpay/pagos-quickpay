@@ -16,7 +16,7 @@ Para generar una intención de consulta debes hacer una petición a la API de **
 | customer.name                            | Nombre del cliente                       | string       | Si           |
 | customer.document_type                   | Tipo de documento de identificación      | string       | Si           |
 | customer.document_number                 | Número de identificación                 | string       | Si           |
-| customer.is_guest                        | Indica si es un cliente invitado o un cliente que hizo login en el comercio | string  | No       |
+| customer.is_guest                        | Indica si es un cliente invitado o un cliente que hizo login en el comercio | Boolean  | No       |
 | **redirect_urls**                        | **Url de redirección dependiendo del estado de la consulta una vez finalizado el proceso de consulta** | **objeto**   |
 | redirect_urls.return_url                 | URL de notificación de consulta exitoso  | string (url) | Si       |
 | redirect_urls.cancel_url                 | URL de notificación de consulta fallida  | string (url) | Si       |
