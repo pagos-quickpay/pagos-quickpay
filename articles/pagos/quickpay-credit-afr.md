@@ -274,3 +274,5 @@ En caso no hayas enviado alguno de los campos anteriormente mencionados, podras 
     }
 }
 ```
+
+[Regresar](json-captured-quickpay-credit.md)
