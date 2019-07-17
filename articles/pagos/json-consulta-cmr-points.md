@@ -14,7 +14,7 @@ curl -X POST \
    "name": "Jose Galvans",
    "document_type": "RUT",
    "document_number": "123451238",
-   "is_guest": "false"
+   "is_guest": false
  },
 "redirect_urls": {
    "return_url": "https://google.com",
