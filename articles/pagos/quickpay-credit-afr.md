@@ -12,7 +12,7 @@ curl -X POST \
     "payer_info": {
       "email": "accept@accept.com",
       "full_name": "Jhon Doe",
-      <b>"first_name": "Jhon",<b>
+      <pre><b>"first_name": "Jhon",</b></pre>
       "last_name": "Doe",
       "country": "CL",
       "document_number": "177694886",
