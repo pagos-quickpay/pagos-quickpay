@@ -24,7 +24,6 @@ Para generar una intención de consulta debes hacer una petición a la API de **
 **Importante**
 El número de documento va a ser requerido de acuerdo al campo is_guest bajo el siguiente criterio:
 
-| Intención de consulta                |                                 |                                           |
 | **is_guest**                         | **document_number**             | **Acción Quickpay**                       |
 | ------------------------------------ | ------------------------------- | ----------------------------------------- |
 | true                                 | Viene el Rut (RUT opcional)     | Se pide multiclave y se muestra rut por defecto, se permite cambio de rut|
