@@ -13,13 +13,25 @@ Para generar una intención de consulta debes hacer una petición a la API de **
 | query                                    | Identifica el tipo de consulta           | string       | Si           |
 | **customer**                             | **Cliente**                              | **object**   |              |
 | customer.country                         | Nacionalidad                             | string       | Si           |
-| customer.name                            | Nombre del cliente                       | string       | Si           |
+| customer.name                            | Nombre del cliente                       | string       | No           |
 | customer.document_type                   | Tipo de documento de identificación      | string       | Si           |
-| customer.document_number                 | Número de identificación                 | string       | Si           |
-| customer.is_guest                        | Indica si es un cliente invitado o un cliente que hizo login en el comercio | Boolean  | No       |
+| customer.document_number                 | Número de identificación                 | string       | *            |
+| customer.is_guest                        | Indica si es un cliente invitado o un cliente que hizo login en el comercio | Boolean  | Sí       |
 | **redirect_urls**                        | **Url de redirección dependiendo del estado de la consulta una vez finalizado el proceso de consulta** | **objeto**   |
-| redirect_urls.return_url                 | URL de notificación de consulta exitoso  | string (url) | Si       |
-| redirect_urls.cancel_url                 | URL de notificación de consulta fallida  | string (url) | Si       |
+| redirect_urls.return_url                 | URL de notificación de consulta exitoso  | string (url) | No       |
+| redirect_urls.cancel_url                 | URL de notificación de consulta fallida  | string (url) | No       |
+
+**Importante**
+El número de documento va a ser requerido de acuerdo al campo is_guest bajo el siguiente criterio:
+
+| Intención de consulta                |                                 |                                           |
+| **is_guest**                         | **document_number**             | **Acción Quickpay**                       |
+| ------------------------------------ | ------------------------------- | ----------------------------------------- |
+| true                                 | Viene el Rut (RUT opcional)     | Se pide multiclave y se muestra rut por defecto, se permite cambio de rut|
+| false                                | No viene el RUT (RUT requerido) | Se muestran los puntos directamente       |
+| true                                 | No viene el RUT (RUT opcional)  | Se pide multiclave y rut, se permite cambio de rut|
+| false                                | No viene el RUT (RUT requerido) | Se retorna error por campo requerido      |
+
 
 El resultado de la llamada a la API de query, será una intención de consulta en su estado inicial (created), que contendrá el, o los links HATEOAS relacionados con la llamada.
 
