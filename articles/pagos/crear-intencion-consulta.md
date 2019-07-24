@@ -21,6 +21,7 @@ Para generar una intención de consulta debes hacer una petición a la API de **
 | redirect_urls.return_url                 | URL de notificación de consulta exitoso  | string (url) | No       |
 | redirect_urls.cancel_url                 | URL de notificación de consulta fallida  | string (url) | No       |
 
+
 **Importante**
 El número de documento va a ser requerido de acuerdo al campo is_guest bajo el siguiente criterio:
 
