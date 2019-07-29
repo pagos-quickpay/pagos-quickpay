@@ -15,7 +15,7 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | payer.email                   | correo electrónico                       | string       | Si       |
 | payer.full_name               | nombre completo                          | string       | Si       |
 | payer.country                 | Nacionalidad                             | string       | Si       |
-| payer.document_number         | Número de identificación                 | string       | Si       |
+| payer.document_number         | Número de identificación. Debe enviarse sin puntos ni guiones. | string       | Si       |
 | payer.document_type           | Tipo de documento de identificación      | string       | Si       |
 | **transaction**                          | **Grupo de campos con la información de la transacción** | **object**   |       
 | transaction.purchase_order                | Id de transacción que es enviada al  gateway de pago. **Este valor debe ser unico** | string       | Si       |
@@ -79,7 +79,7 @@ El resultado de la llamada a la API de checkout, será una intención de pago en
 | payer.email                   | correo electrónico                       | string       |
 | payer.full_name               | nombre completo                          | string       |
 | payer.country                 | Nacionalidad                             | string       |
-| payer.document_number          | Número de identificación                 | string       |
+| payer.document_number          | Número de identificación. Debe enviarse sin puntos ni guiones. | string       |
 | payer.document_type            | Tipo de documento de identificación      | string       |
 | **transaction**                          | **Grupo de campos con la información de la transacción** | **object**   |
 | transaction.purchase_order                | Id de transacción que es enviada al  gateway de pago. **Este valor debe ser unico** | string       |
