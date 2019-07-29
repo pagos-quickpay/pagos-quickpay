@@ -17,7 +17,7 @@ curl -X GET \
 | ---------------------------------------- | ------------ |
 | country                                  | Sí           |
 | document_type                            | Sí           |
-| document_number                          | Sí           |
+| document_number (debe enviarse sin puntos ni guiones) | Sí           |
 
 Obtendrás el siguiente resultado en formato JSON:
 ```
