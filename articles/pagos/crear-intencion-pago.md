@@ -34,7 +34,7 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | payer.payer_info.email                   | correo electrónico                       | string       | Si       |
 | payer.payer_info.full_name               | nombre completo                          | string       | Si       |
 | payer.payer_info.country                 | Nacionalidad                             | string       | Si       |
-| payer.payer_info.document_number         | Número de identificación                 | string       | Si       |
+| payer.payer_info.document_number         | Número de identificación. Debe ir sin puntos ni guiones | string       | Si       |
 | payer.payer_info.document_type           | Tipo de documento de identificación      | string       | Si       |
 | payer.payer_info.is_guest                | Indica si es un cliente invitado o un cliente que hizo login en el comercio | string  | No       |
 | payer.payment_method                     | Identifica el método de captura a utilizar (PEINAU_CAPTURE)  | string       | Si       |
@@ -100,7 +100,7 @@ El resultado de la llamada a la API de checkout, será una intención de pago en
 | payer.payer_info.email                   | correo electrónico                       | string       |
 | payer.payer_info.full_name               | nombre completo                          | string       |
 | payer.payer_info.country                 | Nacionalidad                             | string       |
-| payer.payer_info.document_number          | Número de identificación                 | string       |
+| payer.payer_info.document_number          | Número de identificación. Debe ir sin puntos ni guiones | string       |
 | payer.payer_info.document_type            | Tipo de documento de identificación      | string       |
 | payer.payer_info.is_guest                | Indica si es un cliente invitado o un cliente que hizo login en el comercio | string  |
 | payer.payment_method                     | Identifica el método de pago a utilizar  | string       |
