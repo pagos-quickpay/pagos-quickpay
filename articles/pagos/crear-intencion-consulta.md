@@ -15,7 +15,7 @@ Para generar una intención de consulta debes hacer una petición a la API de **
 | customer.country                         | Nacionalidad                             | string       | Si           |
 | customer.name                            | Nombre del cliente                       | string       | No           |
 | customer.document_type                   | Tipo de documento de identificación      | string       | Si           |
-| customer.document_number                 | Número de identificación                 | string       | *            |
+| customer.document_number                 | Número de identificación. Debe enviarse sin puntos ni guiones. | string       | *            |
 | customer.is_guest                        | Indica si es un cliente invitado o un cliente que hizo hard login en el comercio | Boolean  | Sí       |
 | **redirect_urls**                        | **Url de redirección dependiendo del estado de la consulta una vez finalizado el proceso de consulta** | **objeto**   |
 | redirect_urls.return_url                 | URL de notificación de consulta exitoso  | string (url) | No       |
@@ -53,7 +53,7 @@ El resultado de la llamada a la API de query, será una intención de consulta e
 | customer.country                         | Nacionalidad                             | string       |
 | customer.name                            | Nombre del cliente                       | string       |
 | customer.document_type                   | Tipo de documento de identificación      | string       |
-| customer.document_number                 | Número de identificación                 | string       |
+| customer.document_number                 | Número de identificación. Debe enviarse sin puntos ni guiones. | string       |
 | customer.is_guest                        | Indica si es un cliente invitado o un cliente que hizo login en el comercio |
 | expiration_time                          | Fecha en la cual expiran los CMR Points  | string (ISO 8601)|
 | update_time                              | Fecha de actualización de la intención   | string (ISO 8601)|
