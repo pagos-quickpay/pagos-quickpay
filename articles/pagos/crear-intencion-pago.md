@@ -44,7 +44,7 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | transaction.description                  | Descripción de la compra                 | string       | Si       |
 | transaction.soft_descriptor              | Descripción corta de la transacción      | string       | Si       |
 | **transaction.amount**                   | **Grupo de campos que detalla los montos de la compra** | **object**   |
-| transaction.amount.currency              | Código ISO de la moneda asociada al monto de la compra. | string       | Si       |
+| transaction.amount.currency              | Código ISO de la moneda asociada al monto de la compra. Los valores soportados corresponden a CLP, ARS, COP y PEN. | string       | Si       |
 | transaction.amount.total                 | Monto total de la compra que será descontado de la tarjeta o cuenta del  cliente | number          | Si       |
 | transaction.amount.details               | Detalles del monto de la compra          |              |
 | transaction.amount.details.subtotal      | Monto de la compra sin incluir impuesto  | number          | Si       |
@@ -68,7 +68,7 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | transaction.item_list.items.price        | Precio unitario                          | number          | Si       |
 | transaction.item_list.items.tax          | Monto del impuesto del producto          | number          | Si       |
 | **transaction.points_amount**            | **Información de la cantidad de puntos para la transacción(s)**         | **object**   |
-| transaction.points_amount.currency       | Tipo del monto del parte de la compra en puntos. Por ahora solo soporta valor 'LOY'| string          |
+| transaction.points_amount.currency       | Tipo del monto del parte de la compra en puntos. Por ahora solo soporta valor 'CMR'| string          |
 | transaction.points_amount.total          | Monto del parte de la compra en puntos.| number          |
 | **purchase_order**          | **Grupo de campos con el detalle de la orden del comercio.** | **objeto**   |
 | purchase_order.purchase_order_id | El código de referencia de la transacción. Representa el identificador de  la transacción en el sistema del comercio. (para propositos de conciliación) **Este valor debe tener como maximo 12 caracteres** | string       | Si       |
@@ -109,7 +109,7 @@ El resultado de la llamada a la API de checkout, será una intención de pago en
 | transaction.reference_id                 | El código de referencia de la transacción. Representa el identificador de  la transacción en el sistema del comercio. | string       |
 | transaction.soft_descriptor              | Descripción corta de la transacción      | string       |
 | **transaction.amount**                   | **Grupo de campos que detalla los montos de la compra** | **object**   |
-| transaction.amount.currency              | Código ISO de la moneda asociada al monto de la compra. | string       |
+| transaction.amount.currency              | Código ISO de la moneda asociada al monto de la compra. Los valores soportados corresponden a CLP, ARS, COP y PEN. | string       |
 | transaction.amount.total                 | Monto total de la compra que será descontado de la tarjeta o cuenta del  cliente | number          |
 | transaction.amount.details               | Detalles del monto de la compra          |              |
 | transaction.amount.details.subtotal      | Monto de la compra sin incluir impuesto  | number          |
@@ -133,7 +133,7 @@ El resultado de la llamada a la API de checkout, será una intención de pago en
 | transaction.item_list.items.price        | Precio unitario                          | number          |
 | transaction.item_list.items.tax          | Monto del impuesto del producto          | number          |
 | **transaction.points_amount**            | **Información de la cantidad de puntos para la transacción(s)**         | **object**   |
-| transaction.points_amount.currency       | Tipo del monto del parte de la compra en puntos. Por ahora solo soporta valor 'LOY'| string          |
+| transaction.points_amount.currency       | Tipo del monto del parte de la compra en puntos. Por ahora solo soporta valor 'CMR'| string          |
 | transaction.points_amount.total          | Monto del parte de la compra en puntos.| number          |
 | **redirect_urls**                        | **Url de redirección dependiendo del estado de la transacción una vez  finalizado el proceso de pago** | **objeto**   |
 | redirect_urls.return_url                 | URL de notificación de pago exitoso      | string (url) |
