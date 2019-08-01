@@ -61,9 +61,6 @@ curl -X POST \
    "redirect_urls":{  
       "return_url":"http://portal.sandbox.connect.fif.tech",
       "cancel_url":"http://portal.sandbox.connect.fif.tech"
-   },
-   "additional_attributes":{  
-      "tributary_document_type":"B"
    }
 }'
  ```
