@@ -2,7 +2,7 @@
 
 ```
 curl -X POST \
-  https://api.sandbox.connect.fif.tech/checkout/payments \
+  https://api.qa.peinau.fif.tech/checkout/payments \
   -H 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcmltYXJ5c2lkIjoiMjhhZGI5OTktN2EyZS03MGI4LWMwOTItZTRjMTZhOWU5ZTBhIiwidW5pcXVlX25hbWUiOiJUb2lwYXRvLmNvbSIsImdyb3Vwc2lkIjoiQVBQTCIsImlzcyI6IkZhbGFiZWxsYSIsImF1ZCI6IldlYiIsInR5cGUiOiJCZWFyZXIiLCJzY29wZSI6W10sImlhdCI6MTUxMzE3Nzk1OCwiZXhwIjoxNTEzMTc4ODU4fQ.OYBksNEvNBU012fJt4IhUnQ5g0szPXPmivD2GvprLczjbG6Pd7HeSyWddSCVOAwAXfycNMzwn0nb_6VdYMqbSzE3T9Bu0Oqzih4b_BfLLb4EwpRQ3L0ObFNkJTI2hfIMUNJQ5ohT8b2yR-1SiehAUd0Tlkb3zrh2aDP9AYVZGqkjLdnwQOpBtXVs6VmntXnb3_MklOU7U0BylB1kVG40t9qfSxf79DYTcr3JWs6LdCFDThkudMZtJfnjYsOoqt--Iv8BzhCU7Eft1Isf2Qfqn_1-p778E7r4yQY1GREuAsXPNfnnHxi7gOVVQ1owq1aekqt4m4ML-VLow8pUx5duYw' \
   -H 'content-type: application/json' \
   -d ' {  
@@ -142,6 +142,16 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
             "method": "PUT"
         },
         {
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/5b76e5653cecac0015e3de55/void",
+            "rel": "void_method",
+            "method": "POST"
+        },
+        {
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/5b76e5653cecac0015e3de55/refund",
+            "rel": "refund_method",
+            "method": "POST"
+        },
+        {
             "href": "https://api.qa.peinau.fif.tech/checkout/payments/INPA-1534518629615",
             "rel": "self_by_gateway_order",
             "method": "GET"
@@ -156,4 +166,9 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
 }
 ```
  
- 
+ Obtendrás los Links:
+
+- **self**: desde esta URL puedes consultar la información de pago.
+- **self_by_gateway_order**: desde esta URL puedes consultar la información de pago usando el gateway_order.
+- **void_method**: este endpoint sirve para reversar la compra. [ejemplo](quickpay-debit-void.md)
+- **refund_method**: este endpoint sirve para anular la compra. [ejemplo](quickpay-debit-refund.md)
