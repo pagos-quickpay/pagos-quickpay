@@ -88,7 +88,19 @@ https://api.qa.peinau.fif.tech/checkout/payments \
 
 | **is_guest**        | **document_number**             | **query_id**  | **Tiempo desde la consulta** | **Acción**            |
 | ------------------- | ------------------------------- | ------------- | ---------------------------- | --------------------- |
-| true                | Viene el Rut (RUT opcional)     | No viene      | N/A                          | Se pide multiclave y se muestra rut por defecto, se permite cambio de rut |
+| "true"              | Viene (opcional)	        | No viene      | N/A                          | Se pide multiclave y se muestra rut por defecto, se permite cambio de rut |
+| "true"              | Viene (opcional)	        | Viene         | < 3 minutos		       | Se omite autenticación de 1er factor    |
+| "true"              | Viene (opcional)	        | Viene		| > 3 minutos		       | Se pide multiclave y se muestra rut por defecto, se permite cambio de rut |
+| "true"              | No viene (opcional)		| Viene         | < 3 minutos		       | Se omite autenticación de 1er factor (QP obtiene RUT de intención de consulta) |
+| "true" 	      | No viene (opcional)     	| Viene		| > 3 minutos		       | Se pide multiclave y rut |
+| "true"              | No viene (opcional) 	        | No viene 	| N/A 			       | Se pide multiclave y rut |
+| "false" 	      | Viene (obligatorio)		| No viene	| N/A			       | Se omite autenticación de 1er factor |
+| "false"	      | Viene (obligatorio)		| Viene		| < 3 minutos		       | Se omite autenticación de 1er factor |
+| "false"	      | Viene (obligatorio)		| Viene		| > 3 minutos		       | Se omite autenticación de 1er factor |
+| "false"	      | No viene (obligatorio)		| Viene		| < 3 minutos		       | Devolvemos un error |
+| "false"	      | No viene (obligatorio)		| Viene		| > 3 minutos		       | Devolvemos un error |
+| "false"	      | No viene (obligatorio)		| No viene	| N/A			       | Devolvemos un error |
+
 
 A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear una intención de pago a través de la API RESTful de checkout:
 
