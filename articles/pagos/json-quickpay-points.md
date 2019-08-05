@@ -12,6 +12,7 @@ https://api.qa.peinau.fif.tech/checkout/payments \
 "intent": "sale",
 "payer": {
   "payer_info": {
+    "is_guest": "true",
     "email": "jhondoe@gmail.com",
     "full_name": "Jhon Doñe",
     "country": "CL",
@@ -69,6 +70,7 @@ https://api.qa.peinau.fif.tech/checkout/payments \
   "cancel_url": "http://portal.sandbox.connect.fif.tech"
 },
 "additional_attributes": {
+  "query_id": "ID_INTENCION_DE_CONSULTA",
   "point_type": "CMR_PUNTOS",
   "installments_offer": [
 	  "1",
@@ -81,7 +83,13 @@ https://api.qa.peinau.fif.tech/checkout/payments \
 }'
  
 ```
- 
+
+**Importante**, cabe mencionar que el atributo **payer.payer_info.is_guest** se rige bajo el siguiente criterio:
+
+| **is_guest**        | **document_number**             | **query_id**  | **Tiempo desde la consulta** | **Acción**            |
+| ------------------- | ------------------------------- | ------------- | ---------------------------- | --------------------- |
+| true                | Viene el Rut (RUT opcional)     | No viene      | N/A                          | Se pide multiclave y se muestra rut por defecto, se permite cambio de rut |
+
 A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear una intención de pago a través de la API RESTful de checkout:
 
 ```
@@ -149,6 +157,7 @@ A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear un
   },
   "payer": {
     "payer_info": {
+      "is_guest": "true",
       "document_type": "RUT",
       "document_number": "177694886",
       "country": "CL",
@@ -261,6 +270,7 @@ Cuando se realiza una búsqueda para transacción se obtienen estos datos:
      },
      "payer": {
        "payer_info": {
+         "is_guest": "true",
          "email": "jhondoe@gmail.com",
          "full_name": "Jhon Doñe",
          "country": "CL",
