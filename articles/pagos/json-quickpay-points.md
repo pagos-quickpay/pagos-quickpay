@@ -568,6 +568,7 @@ Al anular obtendremos un json de respuesta exitosa con el estado de la transacci
                 "message": "successful refund",
                 "refundResponseCode": 0,
                 "refundResponseDescription": "Success",
+		"refundCancellationCode": "168817670966",
                 "refundTxnId": "3519705",
                 "type": "PointsPayment"
             }
