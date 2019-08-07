@@ -522,7 +522,7 @@ Para anular una compra, se debe usar el método **refund** con el siguiente body
 ```
 {
     "refunded_points_amount": 5000,
-    "refunded_amount": 50
+    "refunded_amount": 100
 }
 ```
 
