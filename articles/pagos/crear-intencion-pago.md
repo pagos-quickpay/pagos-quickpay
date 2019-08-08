@@ -45,12 +45,12 @@ Para generar una intención de pago debes hacer una petición a la API de **Inte
 | transaction.soft_descriptor              | Descripción corta de la transacción      | string       | Si       |
 | **transaction.amount**                   | **Grupo de campos que detalla los montos de la compra** | **object**   |
 | transaction.amount.currency              | Código ISO de la moneda asociada al monto de la compra. Los valores soportados corresponden a CLP, ARS, COP y PEN. | string       | Si       |
-| transaction.amount.total                 | Monto total de la compra que será descontado de la tarjeta o cuenta del  cliente | number          | Si       |
-| transaction.amount.details               | Detalles del monto de la compra          |              |
-| transaction.amount.details.subtotal      | Monto de la compra sin incluir impuesto  | number          | Si       |
-| transaction.amount.details.tax           | Monto total de los impuestos             | number          | Si       |
-| transaction.amount.details.shipping      | Costo del despacho                       | number          | Si       |
-| transaction.amount.details.shipping_discount | Monto de descuento en costo de despacho  | number          | Si       |
+| transaction.amount.total                 | Monto total de la compra que será descontado de la tarjeta o cuenta del  cliente. **Importante**: Para Chile este valor debe enviarse como número entero, mientras que para otros países, en caso se necesite enviar decimales, debe hacerse con el separador decimal "." | number          | Si       |
+| **transaction.amount.details**               | Detalles del monto de la compra          |              |
+| transaction.amount.details.subtotal      | Monto de la compra sin incluir impuesto. **Importante**: Para Chile este valor debe enviarse como número entero, mientras que para otros países, en caso se necesite enviar decimales, debe hacerse con el separador decimal "."  | number          | Si       |
+| transaction.amount.details.tax           | Monto total de los impuestos. **Importante**: Para Chile este valor debe enviarse como número entero, mientras que para otros países, en caso se necesite enviar decimales, debe hacerse con el separador decimal "."             | number          | Si       |
+| transaction.amount.details.shipping      | Costo del despacho. **Importante**: Para Chile este valor debe enviarse como número entero, mientras que para otros países, en caso se necesite enviar decimales, debe hacerse con el separador decimal "."                       | number          | Si       |
+| transaction.amount.details.shipping_discount | Monto de descuento en costo de despacho. **Importante**: Para Chile este valor debe enviarse como número entero, mientras que para otros países, en caso se necesite enviar decimales, debe hacerse con el separador decimal "."  | number          | Si       |
 | **transaction.item_list**                | **Información del producto(s)**         | **object**   |
 | **transaction.item_list.shipping_address** | **Dirección de despacho (compras con despacho a domicilio)** | **object**   |
 | transaction.item_list.shipping_address.line1 | Direccion de despaho                     | string       | Si       |
