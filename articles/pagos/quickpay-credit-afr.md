@@ -27,7 +27,8 @@ curl -X POST \
       "enrollmentDate": "2014-10-15T00:00:00-05:00",
       "ip": "200.10.10.10",
       "category": "Elite",
-      "is_employee": "true"
+      "is_employee": "true",
+      "session_id": "123"
     },
     "payment_method": "QUICKPAY_CREDIT"
   },
