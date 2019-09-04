@@ -10,26 +10,24 @@ curl -X POST \
   "intent": "sale",
   "payer": {
     "payer_info": {
-      "email": "accept@accept.com",
-      "full_name": "Jhon Doe",
-      "first_name": "Jhon",
-      "last_name": "Doe",
-      "country": "CL",
-      "document_number": "177694886",
-      "document_type": "RUT",
+      "email": "reject@reject.com",
+      "first_name": "Marta",
+      "last_name": "Larracheava",
+      "country": "PE",
+      "document_number": "47007107",
+      "document_type": "DNI",
       "qp_user_id": "",
       "phone": "56987861255",
-      "is_guest": "true",
+      "is_guest": "false",
       "gender": "Male",
       "age": "55",
       "session_attempt_count": "1",
       "taxpayer_identity": "2343243242",
-      "enrollmentDate": "2014-10-15T00:00:00-05:00",
       "ip": "200.10.10.10",
       "category": "Elite",
       "is_employee": "true",
-      "session_id": "123"
-    },
+      "session_id": "12ADAsfs2333"
+    },																																																														
     "payment_method": "QUICKPAY_CREDIT"
   },
   "transaction": {
@@ -37,12 +35,12 @@ curl -X POST \
     "reference_id": "OD0000233",
     "description": "Transaction detailed description",
     "soft_descriptor": "Transaction Short description",
-    "associate_promotion": "",
-    "receipt_type": "boleta",
-    "with_discount_coupon": "false",
+    "associate_promotion": "Prueba2050",
+    "receipt_type": "Factura",
+    "with_discount_coupon": "true",
     "amount": {
-      "currency": "CLP",
-      "total": 1000,
+      "currency": "PEN",
+      "total": 111,
       "details": {
         "subtotal": 1000,
         "tax": 0,
@@ -55,7 +53,7 @@ curl -X POST \
       "shipping_address": {
         "line1": "General Carol Urzua 1020, Depto 102A",
         "city": "Santiago",
-        "country_code": "CL",
+        "country_code": "PE",
         "phone": "+56 9 8762 1244",
         "type": "HOME_OR_WORK",
         "recipient_name": "Jhon Doe Son"
@@ -67,7 +65,7 @@ curl -X POST \
           "sku": "TRK345-2",
           "category": "Viaje Intercontinental",
           "name": "Flight 2344",
-          "description": "Flight SCL - ONT",
+          "description": "Default",
           "quantity": 2,
           "price": 500,
           "tax": 0
@@ -76,20 +74,21 @@ curl -X POST \
     }
   },
   "travel": {
-    "complete_route": "SCL-JPN",
-    "departure_datetime": "11:34",
-    "journey_type": "SoloIda",
+    "complete_route": "ESP-ITA",
+    "departure_datetime": "2019-09-18T12:35:31",
+    "journey_type": "IdaVuelta",
+    "passenger_count": "3",
     "passengers": [
       {
-        "first_name": "Juan",
-        "last_name": "Perez",
+        "first_name": "Oswaldo",
+        "last_name": "Garcia",
         "phone": "987987987",
         "email": "juanitoperez@gmail.com",
         "document_id": "876123",
         "document_type": "DNI",
-        "category": "STATUS",
-        "country": "CL",
-        "type": "Type"
+        "status": "VIP",
+        "country": "PE",
+        "type": "Cnn"
       }
     ]
   },
@@ -99,33 +98,33 @@ curl -X POST \
   },
   "additional_attributes": {
   	"capture_token": "{{token_intencion_captura}}",
+  	"total_product_count": "10",
+  	"enrollment_days": "10",
+	"channel": "FONO_COMPRAS",
  	"afrInputs": [
 	  {
 		"id": "52",
-		"value": "TOPE123"
+		"value": "PEFA4562135"
+	  },
+	  	  {
+		"id": "72",
+		"value": "PEFA4562235"
 	  }
     ], 
-    "wedding_code": "987654321",
-    "customer_registration_days": "2014-10-15T00:00:00-05:00",
+    "wedding_code": "false",
+    "customer_registration_days": "2014-10-15T00:00:00",
     "first_purchase_days": "901820",
-    "installments_offer": [
-      "1",
-      "3",
-      "6"
-    ],
-    "installments_without_interest": [
-      "3"
-    ],
-    "default_installment_number": "1",
-    "default_deferred_month": "0",
-    "is_deferred_capture": "false",
+   
+    "default_installment_number": "8",
+    "default_deferred_month": "1",
+    "is_deferred_capture": "true",
     "last_purchase_days": "20",
     "customer_purchases_number": "3",
     "purchase_history": "1",
-    "average_purchases_amount": "1233",
+    "average_purchases_amount": "12.33",
     "average_purchases_time": "1234",
-    "is_save_card_customer": "false", 
-    "is_save_card_payment": "false", 
+    "is_save_card_customer": "true", 
+    "is_save_card_payment": "true", 
     "other_card_attempts": "2", 
     "origin_phone_number": "987987987",
     "copy_paste_email": "false",
@@ -137,46 +136,47 @@ curl -X POST \
     "modified_order": "false",
     "is_no_food": "true",
     "copy_paste_card": "false",
-    "commerce_risk_data": "123",
+    "commerce_risk_data": "R999",
     "credit_cards_count": "2",
-    "device_finger_print": "123456qwertyu"
+    "device_finger_print": "123456rrra"
   },
   "shipping_list": {
     "shipping": {
       "line1": "Nueva York 54",
-      "city": "Santiago",
-      "state": "RM",
-      "postal_code": "",
-      "country": "CL",
+      "city": "Lima",
+      "state": "MIraflores",
+      "postal_code": "801010",
+      "country": "PE",
       "commune": "SANTIAGO",
       "county": "RM",
-      "region": "", 
-      "document_type": "CEDULA_DE_CIUDADANIA",
+      "region": "RM", 
+      "document_type": "DNI",
       "document_number": "10321050",
       "first_name": "Andres",
       "last_name": "Roa",
       "phone": "56987861255",
-      "store_id": "Nueva York",
-      "date": "2016-05-31T00:00:00-03:00",
-      "pick_up_type": "TITULAR",
-      "type": "RETIRO_TIENDA",
-      "shipping_way": "Mail",
-      "courier_name": "Falabella"
+      "store_id": "999",
+      "date": "2019-08-26T00:00:00-03:00",
+      "pick_up_type": "terceros",
+      "is_pickup":"false",
+      "type": "DESPACHO_NOVIOS",
+      "shipping_way": "Motoboy",
+      "courier_name": "Fedex"
     }
   },
   "purchase_order": {
-    "purchase_order_id": "536155295217",
-    "purchase_order_date": "2018-09-05T00:00:00-05:00"
+    "purchase_order_id": "7896",
+    "purchase_order_date": "2019-08-23T00:00:00-05:00"
   },
   "billing_address": {
-    "address": "Moneda",
-    "city": "Santaigo",
+    "address": "Agustinas 445",
+    "city": "Santiago",
     "state": "RM",
-    "postal_code": "",
-    "country": "CL",
+    "postal_code": "800088",
+    "country": "PE",
     "commune": "SANTIAGO",
     "county": "RM",
-    "region": ""
+    "region": "RM"
   }
 }'
  
