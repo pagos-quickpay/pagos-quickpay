@@ -181,7 +181,7 @@ curl -X POST \
 }'
  
 ```
-![Excel](Campos_formato_AFR.xlsx)
+A continuación, se adjunta el archivo con el detalle de los campos que utiliza el servicio AFR. (Seleccionar "Descargar")[Excel](Campos_formato_AFR.xlsx)
 
 Importante a destacar que debes enviar el capture_token que fue recibido como parte de la captura hecha previamente. Después de crear la intención de pago.
 
