@@ -181,7 +181,7 @@ curl -X POST \
 }'
  
 ```
-[Excel](Campos_formato_AFR.xlsx)
+![Excel](Campos_formato_AFR.xlsx)
 
 Importante a destacar que debes enviar el capture_token que fue recibido como parte de la captura hecha previamente. Después de crear la intención de pago.
 
