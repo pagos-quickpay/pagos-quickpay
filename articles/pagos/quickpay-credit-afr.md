@@ -27,7 +27,7 @@ curl -X POST \
       "category": "Elite",
       "is_employee": "true",
       "session_id": "12ADAsfs2333"
-    },																																																														
+    },						
     "payment_method": "QUICKPAY_CREDIT"
   },
   "transaction": {
@@ -181,6 +181,8 @@ curl -X POST \
 }'
  
 ```
+[Excel](Campos_formato_AFR.xlsx)
+
 Importante a destacar que debes enviar el capture_token que fue recibido como parte de la captura hecha previamente. Después de crear la intención de pago.
 
 Ahora sí se puede llamar a la url de Assess Fraud Risk. A continuación un ejemplo.
