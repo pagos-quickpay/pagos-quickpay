@@ -3,7 +3,7 @@
 Necesitas enviar el **access_token** (en el header de la petición) obtenido en la **Autenticación** y la url **refund_method** generada en la respuesta de la **intención de pago**, para ejecutar una petición a la **API de Anulación /refund** de la siguiente forma:
 
 ```
- curl -X POST 'hhttps://api.sandbox.connect.fif.tech/checkout/payments/gateways/quickpay/token/19a516df-b027-443e-be15-e44a41dbd94f/refund' \
+ curl -X POST 'hhttps://api.qa.peinau.fif.tech/checkout/payments/gateways/quickpay/token/19a516df-b027-443e-be15-e44a41dbd94f/refund' \
   -H 'authorization: Bearer REEMPLAZAR AQUI EL ACCESS TOKEN' \
   -H 'content-type: application/json' \
   -d '{
@@ -199,7 +199,7 @@ Al consultar el estado de la transacción (self):
 
 ```
 curl -X GET \
-  https://api.sandbox.connect.fif.tech/checkout/payments/{id} \
+  https://api.qa.peinau.fif.tech/checkout/payments/{id} \
   -H 'authorization: REEMPLAZAR AQUI EL ACCESS TOKEN' \
  ```
 
@@ -328,7 +328,7 @@ Al consultar el estado de la transacción (self):
 
 ```
 curl -X GET \
-  https://api.sandbox.connect.fif.tech/checkout/payments/{id} \
+  https://api.qa.peinau.fif.tech/checkout/payments/{id} \
   -H 'authorization: REEMPLAZAR AQUI EL ACCESS TOKEN' \
  ```
 
