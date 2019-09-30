@@ -14,7 +14,7 @@ Para saber si la tarjeta tiene saldo suficiente se debe invocar el endpoint rel:
 	}]
        }'
 ```
-El campo "items" es opcional. Además, las anulaciones pueden ser parciales.
+El campo "items" es opcional. Además, las anulaciones pueden ser parciales enviando en el campo "refunded_amount" un valor menor al valor autorizado.
  
 A continuación se presenta ejemplo de un JSON de respuesta obtenido al devolver una intención de pago a través de la API RESTful de checkout:
 
