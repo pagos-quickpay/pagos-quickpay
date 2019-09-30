@@ -1,6 +1,20 @@
 ## Ejemplo petición de devolución:
 
-Para saber si la tarjeta tiene saldo suficiente se debe invocar el endpoint rel: “refund_method”
+Para saber si la tarjeta tiene saldo suficiente se debe invocar el endpoint rel: “refund_method”. Ejemplo
+
+```
+ curl -X POST 'https://api.qa.peinau.fif.tech/checkout/payments/gateways/quickpay/credit/5c0a6b7ed5b963001553865d/refund' \
+  -H 'authorization: Bearer REEMPLAZAR AQUI EL ACCESS TOKEN' \
+  -H 'content-type: application/json' \
+  -d '{
+	   "refunded_amount":"1000",
+    	"items": [{
+      "sku": "117110",
+      "quantity": 1
+     }]
+  }'
+```
+El campo "items" es opcional.
  
 A continuación se presenta ejemplo de un JSON de respuesta obtenido al devolver una intención de pago a través de la API RESTful de checkout:
 
