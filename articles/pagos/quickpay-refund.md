@@ -1,6 +1,6 @@
 ## Ejemplo petición de devolución:
 
-Para saber si la tarjeta tiene saldo suficiente se debe invocar el endpoint rel: “refund_method”. Ejemplo
+Para realizar una devolución de dinero al cliente se debe invocar el endpoint rel: “refund_method”. Ejemplo
 
 ```
  curl -X POST 'https://api.qa.peinau.fif.tech/checkout/payments/gateways/quickpay/credit/5c0a6b7ed5b963001553865d/refund' \
