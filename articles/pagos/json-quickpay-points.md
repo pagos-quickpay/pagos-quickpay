@@ -83,6 +83,7 @@ https://api.qa.peinau.fif.tech/checkout/payments \
 }'
  
 ```
+> **Reemplazar** el campo additional_attributes.query_id con el valor de la intencion de consulta si es que realizaste una consulta exitosa via iframe.
 
 **Importante**, cabe mencionar que el atributo **payer.payer_info.is_guest** se rige bajo el siguiente criterio:
 
