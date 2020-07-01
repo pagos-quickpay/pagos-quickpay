@@ -60,7 +60,8 @@ https://api.qa.peinau.fif.tech/checkout/payments \
         "category": "Vuelos"
       }
     ]
-  }
+  },
+  "gateway_order": "900000065434"
 },
 "purchase_order": {
   "purchase_order_id": "536155295217"
