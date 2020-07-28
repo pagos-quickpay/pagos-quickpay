@@ -1,4 +1,20 @@
 ## Ejemplo petición payment_method": "CMR_POINTS"
+Para CMR_POINTS la app permite usuarios clientes  y no clientes tanto para Chile, Colombia y Perú.
+Teniendo como opción canje de puntos y puntos más pesos. 
+
+Ejemplos para canje de  puntos, se debe sestear el total en cero ya que no acepta puntos más pesos : ( opción que aplica para no clientes Chile, clientes y no clientes Colombia y Perú) 
+```
+"amount": {
+    "currency": "CLP",
+    "total": 0,
+    "details": {
+      "subtotal": 0,
+      "tax": 0,
+      "shipping": 0,
+      "shipping_discount": 0
+    }
+  },
+```
 Esta petición es para puntos mas pesos. Si se quiere realizar una canje de solo puntos, se debe setear los campos transaction.amount.total = 0 y transaction.amount.details.subtotal = 0.
 
 ```
