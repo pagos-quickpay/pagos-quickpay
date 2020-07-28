@@ -1,5 +1,5 @@
 ## Ejemplo petición payment_method": "CMR_POINTS"
-Esta petición es para puntos mas pesos. Si se quiere realizar una consulta de solo puntos, se debe setear los campos transaction.amount.total = 0 y transaction.amount.details.subtotal = 0.
+Esta petición es para puntos mas pesos. Si se quiere realizar una canje de solo puntos, se debe setear los campos transaction.amount.total = 0 y transaction.amount.details.subtotal = 0.
 
 ```
 curl -X POST \
@@ -102,6 +102,9 @@ https://api.qa.peinau.fif.tech/checkout/payments \
 | "false"	      | No viene (obligatorio)		| Viene		| < 3 minutos		       | Devolvemos un error |
 | "false"	      | No viene (obligatorio)		| Viene		| > 3 minutos		       | Devolvemos un error |
 | "false"	      | No viene (obligatorio)		| No viene	| N/A			       | Devolvemos un error |
+
+| país                | 
+| ------------------- | 
 
 
 A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear una intención de pago a través de la API RESTful de checkout:
