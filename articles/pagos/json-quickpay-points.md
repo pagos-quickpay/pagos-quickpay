@@ -134,14 +134,11 @@ Tabla que representa el país y su respectivo tipo de documento
 
 | **país**            | **Tipo de documento**           |
 | ------------------- | ------------------------------- | 
-|Chile                | RUT                             |
-| ------------------- | ------------------------------- | 
+|Chile                | RUT                             | 
 |Colombia             | Cédula de ciudadanía            |
-|                     | Cédula de extranjería           |
-| ------------------- | ------------------------------- | 
+|                     | Cédula de extranjería           | 
 |Perú                 | DNI                             | 
 |                     | Carnet de extranjería           | 
-| ------------------- | ------------------------------- | 
 
 A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear una intención de pago a través de la API RESTful de checkout:
 
