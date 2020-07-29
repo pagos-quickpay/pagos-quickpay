@@ -377,7 +377,7 @@ El cliente debe ingresar los datos “tipo de documento (Rut) y multiclave” se
 **Canje de puntos no clientes Chile**
 
 
-![Ejmplo de Apertura cnc  de pago](images/cnc.1.png)
+![Ejmplo de Apertura cnc  de pago](images/cnc.2.png)
 
 Un no cliente debe ingresar los datos tipo de documento (Rut) y multiclave, pasar la prueba de segundo factor donde si es primera vez que se autentica, se solicitará la validación por TransUnion lo que deberá ingresar el número de serie del carnet  para realizar el canje
 
