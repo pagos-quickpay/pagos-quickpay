@@ -366,7 +366,7 @@ Cuando se realiza una búsqueda para transacción se obtienen estos datos:
 ```
 ## Mostrar Formulario Pago con puntos más pesos
 
-Con la **approval_url** de la respuesta de la intención de captura, puedes iniciar el flujo de pago de puntos/puntos mas pesos
+Con la **approval_url** de la respuesta de la intención de captura, puedes iniciar el flujo de pago de puntos/puntos más pesos
 
 **Canje de puntos más pesos, opción que aplica solo para clientes Chile**
 
@@ -379,7 +379,7 @@ El cliente debe ingresar los datos “tipo de documento (Rut) y multiclave” se
 
 ![Ejmplo de Apertura cnc  de pago](images/cnc.2.png)
 
-Un no cliente debe ingresar los datos tipo de documento (Rut) y multiclave, pasar la prueba de segundo factor donde si es primera vez que se autentica, se solicitará la validación por TransUnion lo que deberá ingresar el número de serie del carnet  para realizar el canje
+Un no cliente debe ingresar los datos tipo de documento (Rut) y multiclave, pasar la prueba de segundo factor donde si es primera vez que se auténtica, se solicitará la validación por TransUnion lo que deberá ingresar el número de serie del carnet para realizar el canje
 
 **Canje de puntos Cliente Banco falabella Colombia** 
 ![Ejmplo de Apertura ccc  de pago](images/ccc.2.png)
