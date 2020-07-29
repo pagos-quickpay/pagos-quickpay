@@ -364,11 +364,12 @@ Cuando se realiza una búsqueda para transacción se obtienen estos datos:
      "id": "5ca4ea4157a18100167f15de"
    }
 ```
-## Mostrar Formulario Pago con puntos mas pesos
+## Mostrar Formulario Pago con puntos más pesos
 
 Con la **approval_url** de la respuesta de la intención de captura, puedes iniciar el flujo de pago de puntos/puntos mas pesos
 
 ![Ejemplo de Apertura de iframe de pago-con-puntos](images/apertura-iframe-1.png)
+![Ejemplo de Apertura de iframe de pago-con-puntos-más-pesos] (images/ppmp.png)
 
 El cliente debe ingresar los datos de rut y multiclave, seleccionar las cuotas, pasar la prueba de segundo factor y aprobar el pago para que nuestro sistema pueda ejecutar el cargo a la tarjeta de crédito. 
 
