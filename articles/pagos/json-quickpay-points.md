@@ -382,12 +382,12 @@ El cliente debe ingresar los datos “tipo de documento (Rut) y multiclave” se
 Un no cliente debe ingresar los datos tipo de documento (Rut) y multiclave, pasar la prueba de segundo factor donde si es primera vez que se autentica, se solicitará la validación por TransUnion lo que deberá ingresar el número de serie del carnet  para realizar el canje
 
 **Canje de puntos Cliente Banco falabella Colombia** 
-![Ejmplo de Apertura ccc  de pago](images/ccc.1.png)
+![Ejmplo de Apertura ccc  de pago](images/ccc.2.png)
 
 El cliente debe ingresar los datos tipo de documento desplegando el combobox, número de documento y multiclave, pasar la prueba de segundo factor para realizar el canje
 
 **Canje de puntos de un No clientes Perú**
-![Ejmplo de Apertura cncp  de pago](images/cncp.1.png)
+![Ejmplo de Apertura cncp  de pago](images/cncp.2.png)
 
 El cliente debe ingresar los datos tipo de documento desplegando el combobox, número de documento y multiclave, pasar la prueba de segundo factor para realizar el canje
 
