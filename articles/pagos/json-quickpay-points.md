@@ -2,7 +2,7 @@
 Para CMR_POINTS la app permite usuarios clientes  y no clientes tanto para Chile, Colombia y Perú.
 Teniendo como opción canje de puntos y puntos más pesos. 
 
-Ejemplos para canje de  puntos, se debe sestear el total en cero ya que no acepta puntos más pesos : ( opción que aplica para no clientes Chile, clientes y no clientes Colombia y Perú) 
+Ejemplos para canje de  puntos, se debe sestear el total en cero ya que no acepta puntos más pesos (opción que aplica para no clientes Chile, clientes y no clientes Colombia y Perú).
 ```
 "amount": {
     "currency": "CLP",
@@ -15,8 +15,20 @@ Ejemplos para canje de  puntos, se debe sestear el total en cero ya que no acept
     }
   },
 ```
-Esta petición es para puntos mas pesos. Si se quiere realizar una canje de solo puntos, se debe setear los campos transaction.amount.total = 0 y transaction.amount.details.subtotal = 0.
-
+Ejemplo para puntos más pesos, opción que permite solo a clientes Chile 
+```
+"amount": {
+    "currency": "CLP",
+    "total": 100,
+    "details": {
+      "subtotal": 100,
+      "tax": 0,
+      "shipping": 0,
+      "shipping_discount": 0
+    }
+  },
+  ``` 
+ A continuación se muestra la petición completa 
 ```
 curl -X POST \
 https://api.qa.peinau.fif.tech/checkout/payments \
@@ -100,27 +112,26 @@ https://api.qa.peinau.fif.tech/checkout/payments \
 }'
  
 ```
-> **Reemplazar** el campo additional_attributes.query_id con el valor de la intencion de consulta si es que realizaste una consulta exitosa via iframe.
 
 **Importante**, cabe mencionar que el atributo **payer.payer_info.is_guest** se rige bajo el siguiente criterio:
 
 | **is_guest**        | **document_number**             | **query_id**  | **Tiempo desde la consulta** | **Acción**            |
 | ------------------- | ------------------------------- | ------------- | ---------------------------- | --------------------- |
-| "true"              | Viene (opcional)	        | No viene      | N/A                          | Se pide multiclave y se muestra rut por defecto, se permite cambio de rut |
-| "true"              | Viene (opcional)	        | Viene         | < 3 minutos		       | Se omite autenticación de 1er factor    |
-| "true"              | Viene (opcional)	        | Viene		| > 3 minutos		       | Se pide multiclave y se muestra rut por defecto, se permite cambio de rut |
-| "true"              | No viene (opcional)		| Viene         | < 3 minutos		       | Se omite autenticación de 1er factor (QP obtiene RUT de intención de consulta) |
-| "true" 	      | No viene (opcional)     	| Viene		| > 3 minutos		       | Se pide multiclave y rut |
-| "true"              | No viene (opcional) 	        | No viene 	| N/A 			       | Se pide multiclave y rut |
-| "false" 	      | Viene (obligatorio)		| No viene	| N/A			       | Se omite autenticación de 1er factor |
-| "false"	      | Viene (obligatorio)		| Viene		| < 3 minutos		       | Se omite autenticación de 1er factor |
-| "false"	      | Viene (obligatorio)		| Viene		| > 3 minutos		       | Se omite autenticación de 1er factor |
+| "true"              | Viene (opcional)	        | No viene      | N/A                          | Se pide primer factor y se muestra  tipo de documento por defecto, se permite cambio de   tipo de documento y/o número de documento este ultimo aplicando para CO-PE|
+| "true"              | Viene (opcional)	        | Viene         | < 3 minutos		       | Se omite la autenticación del primer factor|
+| "true"              | Viene (opcional)	        | Viene		| > 3 minutos		       | Se pide primer factor y se muestra tipo de documento por defecto, se permite cambio de  tipo de documento y/o número de documento este ultimo aplicando para CO-PE |
+| "true"              | No viene (opcional)		| Viene         | < 3 minutos		       | Se omite la autenticación de primer factor (Payments obtiene tipo de documento de intención de consulta)|
+| "true" 	      | No viene (opcional)     	| Viene		| > 3 minutos		       | Se pide primer factor y tipo de documento y/o número de documento este ultimo aplicando para CO-PE |
+| "true"              | No viene (opcional) 	        | No viene 	| N/A 			       |Se pide primer factor y tipo de documento y/o número de documento este ultimo aplicando para CO-PE |
+| "false" 	      | Viene (obligatorio)		| No viene	| N/A			       | Se omite la autenticación de primer factor|
+| "false"	      | Viene (obligatorio)		| Viene		| < 3 minutos		       | Se omite la autenticación de primer factor|
+| "false"	      | Viene (obligatorio)		| Viene		| > 3 minutos		       | Se omite la autenticación de primer factor|
 | "false"	      | No viene (obligatorio)		| Viene		| < 3 minutos		       | Devolvemos un error |
 | "false"	      | No viene (obligatorio)		| Viene		| > 3 minutos		       | Devolvemos un error |
 | "false"	      | No viene (obligatorio)		| No viene	| N/A			       | Devolvemos un error |
 
-| país                | 
-| ------------------- | 
+| **país**            | **Tipo de documento**           |
+| ------------------- | ------------------------------- | 
 
 
 A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear una intención de pago a través de la API RESTful de checkout:
