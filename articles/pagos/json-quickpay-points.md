@@ -368,7 +368,7 @@ Cuando se realiza una búsqueda para transacción se obtienen estos datos:
 
 Con la **approval_url** de la respuesta de la intención de captura, puedes iniciar el flujo de pago de puntos/puntos mas pesos
 
-## Canje de puntos más pesos, opción que aplica solo para clientes Chile
+**Canje de puntos más pesos, opción que aplica solo para clientes Chile**
 
 ![Ejmplo de Apertura  ppmp de pago](images/cpmp1.png)
 
