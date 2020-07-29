@@ -367,7 +367,9 @@ Cuando se realiza una búsqueda para transacción se obtienen estos datos:
 ## Mostrar Formulario Pago con puntos más pesos
 
 Con la **approval_url** de la respuesta de la intención de captura, puedes iniciar el flujo de pago de puntos/puntos mas pesos
-**Canje de puntos más pesos , opción que aplica solo para clientes Chile**
+
+## Canje de puntos más pesos, opción que aplica solo para clientes Chile
+
 ![Ejmplo de Apertura  ppmp de pago](images/cpmp1.png)
 
 El cliente debe ingresar los datos “tipo de documento (Rut) y multiclave” seleccionar las cuotas, pasar la prueba de segundo factor y aprobar el pago para que nuestro sistema pueda ejecutar la carga a la tarjeta de crédito.
