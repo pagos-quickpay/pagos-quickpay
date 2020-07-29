@@ -130,9 +130,18 @@ https://api.qa.peinau.fif.tech/checkout/payments \
 | "false"	      | No viene (obligatorio)		| Viene		| > 3 minutos		       | Devolvemos un error |
 | "false"	      | No viene (obligatorio)		| No viene	| N/A			       | Devolvemos un error |
 
+Tabla que representa el país y su respectivo tipo de documento 
+
 | **país**            | **Tipo de documento**           |
 | ------------------- | ------------------------------- | 
-
+|Chile                | RUT                             |
+| ------------------- | ------------------------------- | 
+|Colombia             | Cédula de ciudadanía            |
+|                     | Cédula de extranjería           |
+| ------------------- | ------------------------------- | 
+|Perú                 | DNI                             | 
+|                     | Carnet de extranjería           | 
+| ------------------- | ------------------------------- | 
 
 A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear una intención de pago a través de la API RESTful de checkout:
 
