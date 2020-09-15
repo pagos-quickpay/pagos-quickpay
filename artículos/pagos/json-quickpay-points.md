@@ -374,14 +374,15 @@ Con la **approval_url** de la respuesta de la intención de captura, puedes inic
 
 El cliente debe ingresar los datos “tipo de documento (Rut) y multiclave” seleccionar las cuotas, pasar la prueba de segundo factor y aprobar el pago para que nuestro sistema pueda ejecutar la carga a la tarjeta de crédito.
 
-**Canje de puntos no clientes Chile**
 
+**Canje de puntos no clientes Chile**
 
 ![Ejmplo de Apertura cnc  de pago](images/cnc.2.png)
 
 Un no cliente debe ingresar los datos tipo de documento (Rut) y multiclave, pasar la prueba de segundo factor donde si es primera vez que se auténtica, se solicitará la validación por TransUnion lo que deberá ingresar el número de serie del carnet para realizar el canje
 
 **Canje de puntos Cliente Banco falabella Colombia** 
+
 ![Ejmplo de Apertura ccc  de pago](images/ccc.2.png)
 
 El cliente debe ingresar los datos tipo de documento desplegando el combobox, número de documento y multiclave, pasar la prueba de segundo factor para realizar el canje
