@@ -134,7 +134,7 @@ Tabla que representa el país y su respectivo tipo de documento
 
 | **país**            | **Tipo de documento**           |
 | ------------------- | ------------------------------- | 
-|Chile                | RUT                             | 
+|Chile| Rut|              
 |Colombia             | Cédula de ciudadanía            |
 |                     | Cédula de extranjería           | 
 |Perú                 | DNI                             | 
