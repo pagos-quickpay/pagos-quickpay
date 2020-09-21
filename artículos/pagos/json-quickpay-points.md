@@ -143,7 +143,7 @@ Tabla que representa el país y su respectivo tipo de documento
 
 Parametrizar el valor del canje para envío de segundo factor según puntos por país, aplica para Clientes y no Clientes
 
-| Parametrización por País       |
+| Parametrización |Puntos        |
 |-----------------|--------------|
 |Chile            | 9.000 Puntos |
 |Colombia         | 0     Puntos |
