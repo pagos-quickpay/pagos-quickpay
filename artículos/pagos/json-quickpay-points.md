@@ -28,7 +28,7 @@ Ejemplo para puntos más pesos, opción que permite solo a clientes Chile
     }
   },
   ``` 
- A continuación se muestra la petición completa 
+ A continuación se muestra la petición completa de canje de puntos más pesos 
 ```
 curl -X POST \
 https://api.qa.peinau.fif.tech/checkout/payments \
@@ -132,13 +132,31 @@ https://api.qa.peinau.fif.tech/checkout/payments \
 
 Tabla que representa el país y su respectivo tipo de documento 
 
-| **país**            | **Tipo de documento**           |
+| **País**            | **Tipo de documento**           |
 | ------------------- | ------------------------------- | 
-|Chile| Rut|              
+|Chile|               | RUT                             |             
 |Colombia             | Cédula de ciudadanía            |
 |                     | Cédula de extranjería           | 
 |Perú                 | DNI                             | 
 |                     | Carnet de extranjería           | 
+
+
+Parametrizar el valor del canje para envío de segundo factor según puntos por país, aplica para Clientes y no Clientes
+
+| Parametrización por País       |
+|-----------------|--------------|
+|Chile            | 9.000 Puntos |
+|Colombia         | 0     Puntos |
+|Perú             | 0     Puntos |
+
+|Para el caso de Chile aplican los siguientes criterios                                                                                                    |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Si un usuario ya esta autenticado previamente y esta canjeando un producto inferior a 9.000 puntos pasa directo a el canje, sin solicitar segundo factor. |
+|Si guest=false y el valor del canje es inferior a 9.000 se realiza canje directo sin solicitar autenticación                                              |
+|Si guest= false y el valor del canje es mayor o igual a 9.000  pasa directo a segundo factor.                                                             |
+|La lógica de transUnion se mantiene tal cual                                                                                                              |
+
+
 
 A continuación se presenta ejemplo de un JSON de respuesta obtenido al crear una intención de pago a través de la API RESTful de checkout:
 
@@ -381,11 +399,13 @@ El cliente debe ingresar los datos “tipo de documento (Rut) y multiclave” se
 
 Un no cliente debe ingresar los datos tipo de documento (Rut) y multiclave, pasar la prueba de segundo factor donde si es primera vez que se auténtica, se solicitará la validación por TransUnion lo que deberá ingresar el número de serie del carnet para realizar el canje
 
+
 **Canje de puntos Cliente Banco falabella Colombia** 
 
 ![Ejmplo de Apertura ccc  de pago](images/ccc.2.png)
 
 El cliente debe ingresar los datos tipo de documento desplegando el combobox, número de documento y multiclave, pasar la prueba de segundo factor para realizar el canje
+
 
 **Canje de puntos de un No clientes Perú**
 ![Ejmplo de Apertura cncp  de pago](images/cncp.2.png)
