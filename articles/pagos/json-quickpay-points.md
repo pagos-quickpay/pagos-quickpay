@@ -401,7 +401,7 @@ Un no cliente debe ingresar los datos tipo de documento (Rut) y multiclave, pasa
 
 El cliente debe ingresar los datos tipo de documento desplegando el combobox, número de documento y multiclave, pasar la prueba de segundo factor para realizar el canje
 
-**Canje de puntos de un No clientes Perú**
+**Canje de puntos de un No cliente Perú**
 
 ![Ejmplo de Apertura cncp  de pago](images/cncp.2.png)
 
@@ -589,10 +589,170 @@ Para reversar una compra, se debe usar el método **void**. No se envía nada en
 }
 ```
 
+## Reversa preventiva
+La reversa preventiva se ejecuta cuando el estado de la intención esta en created,  como prerrequisito esta solo se ejecuta una sola vez 
+```
+{
+    "_id": "5fbc20724a5496001740535d",
+    "application": "5f186a3f5f62bf0017a6042c",
+    "gateway": {
+        "void": [
+            {
+                "merchTxnId": "IP-16061645944853931-CMR",
+                "code": "SUCCESSFUL_REVERSAL",
+                "message": "successful reversal",
+                "statusCode": 200
+            }
+        ],
+        "postMessage": {
+            "msgType": "PayWithPointsResponse",
+            "responseCode": 0,
+            "responseDescription": "Success",
+            "UUID": "56f9941a-9e17-4e88-9bda-bd74d41c8dcf",
+            "transactionId": "56f9941a-9e17-4e88-9bda-bd74d41c8dcf"
+        },
+        "status": {
+            "uuid": "56f9941a-9e17-4e88-9bda-bd74d41c8dcf",
+            "status": "DONE_POINTS",
+            "errorDescription": "",
+            "paymentTransactionDetails": [
+                {
+                    "status": "success",
+                    "authorizationCode": "000000482133",
+                    "type": "PointsPayment",
+                    "qpTxnId": 7309961,
+                    "amount": 5000
+                }
+            ],
+            "createdDate": "2020-11-23T20:49:57.834Z",
+            "updatedDate": "2020-11-23T20:50:10.007Z",
+            "logTrackId": "#LGID=7f2ccfe1b6b529a6fe738c1e5d0f4b2d#MID=005751018#CHID=WEB#PYMT=P#DT=RUT#DID=148313148#UUID=56f9941a-9e17-4e88-9bda-bd74d41c8dcf#TID=IP-16061645944853931#",
+            "documentNumber": "CL:RUT:148313148"
+        },
+        "resume": {
+            "response": {
+                "code": 0
+            },
+            "transaction": {
+                "points_amount": 5000,
+                "amount": 0,
+                "buy_order": "IP-16061645944853931",
+                "currency": "CMR",
+                "date": "2020-11-23T20:50:10.688Z",
+                "type": "POINTS",
+                "gateway_id": "56f9941a-9e17-4e88-9bda-bd74d41c8dcf"
+            },
+            "authorizations": {
+                "code": "000000482133"
+            },
+            "_id": "5fbc208222116f001efbe64b"
+        }
+    },
+    "purchase_order": {
+        "purchase_order_id": "536155295217CVC201"
+    },
+    "additional_attributes": {
+        "point_type": "CMR_PUNTOS"
+    },
+    "redirect_urls": {
+        "return_url": "http://localhost/experiences/ok",
+        "cancel_url": "http://localhost/experiences/nok"
+    },
+    "transaction": {
+        "gateway_order": "IP-16061645944853931",
+        "description": "Transaction detailed description",
+        "soft_descriptor": "Transaction Short description",
+        "item_list": {
+            "shipping_method": "DIGITAL",
+            "items": [
+                {
+                    "thumbnail": "http://portal.sandbox.connect.fif.tech/bundles/app/css/images/e-commerce-demo/product-icon.png",
+                    "sku": "000000000000000101",
+                    "name": "Flight 2344",
+                    "description": "Flight SCL - ONT",
+                    "quantity": 1,
+                    "price": 0,
+                    "tax": 0,
+                    "category": "Vuelos"
+                }
+            ],
+            "shipping_address": {
+                "line1": "General Carol Urzua 1020, Depto 102A",
+                "city": "Santiago",
+                "country_code": "CL",
+                "phone": "+56 9 8762 1244",
+                "type": "HOME_OR_WORK",
+                "recipient_name": "Jhon Doe Son"
+            }
+        },
+        "points_amount": {
+            "currency": "CMR",
+            "total": 5000
+        },
+        "amount": {
+            "currency": "CLP",
+            "total": 0,
+            "details": {
+                "subtotal": 0,
+                "tax": 0,
+                "shipping": 0,
+                "shipping_discount": 0
+            }
+        }
+    },
+    "payer": {
+        "payer_info": {
+            "email": "jhondoe@gmail.com",
+            "full_name": "Jhon Doñe",
+            "country": "CL",
+            "document_number": "148313148",
+            "document_type": "RUT",
+            "is_guest": "false"
+        },
+        "payment_method": "CMR_POINTS"
+    },
+    "links": [
+        {
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/5fbc20724a5496001740535d",
+            "rel": "self",
+            "method": "GET"
+        },
+        {
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/cmr/points/5fbc20724a5496001740535d/pay",
+            "rel": "approval_url",
+            "method": "REDIRECT"
+        },
+        {
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/5fbc20724a5496001740535d/edit",
+            "rel": "update_url",
+            "method": "PUT"
+        },
+        {
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/cmr/points/5fbc20724a5496001740535d/void",
+            "rel": "void_method",
+            "method": "POST"
+        },
+        {
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/cmr/points/5fbc20724a5496001740535d/preventive-void",
+            "rel": "preventive_void_method",
+            "method": "POST"
+        },
+        {
+            "href": "https://api.qa.peinau.fif.tech/checkout/payments/gateways/cmr/points/5fbc20724a5496001740535d/refund",
+            "rel": "refund_method",
+            "method": "POST"
+        }
+    ],
+    "update_time": "2020-11-23T20:52:03.022Z",
+    "create_time": "2020-11-23T20:49:54.485Z",
+    "invoice_number": "IP-16061645944853931",
+    "state": "preventive_voided",
+    "intent": "sale",
+    "id": "5fbc20724a5496001740535d"
+}
 ## Anular una compra.
 Para anular una compra, se debe usar el método **refund** con el siguiente body request con los valores respectivos a anular en puntos y en pesos. 
 
-```
 {
     "refunded_points_amount": 5000,
     "refunded_amount": 100
