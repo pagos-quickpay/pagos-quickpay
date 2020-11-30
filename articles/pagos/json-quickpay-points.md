@@ -130,11 +130,26 @@ https://api.qa.peinau.fif.tech/checkout/payments \
 | "false"	      | No viene (obligatorio)		| Viene		| > 3 minutos		       | Devolvemos un error |
 | "false"	      | No viene (obligatorio)		| No viene	| N/A			       | Devolvemos un error |
 
+Es importante mencionar que se parametrizaron los valores para el envío del segundo factor según puntos por país (Lógica solo para canje de puntos)
+
+|**País**             | **Parametrización** |
+|-------------------  | --------------------|
+|Chile                | 9.000 puntos       |
+|Colombia             | 0 puntos           |
+|Perú                 | 0 puntos           |
+
+Para el caso de Chile se ríge bajo los siguentes atributos 
+
+| **is_guest**         | **Parametrización** | **Acción**                                                                         |
+| -------------------  | --------------------| -----------------------------------------------------------------------------------|
+| False                |  > 9.000            | Realizar canje directo sin solicitar autenticación                                 |
+| False                |  ≤ 9.000            | Pasa directo y solicita segundo factor                                             |
+
 Tabla que representa el país y su respectivo tipo de documento 
 
-| **país**            | **Tipo de documento**           |
+| **País**            | **Tipo de documento**           |
 | ------------------- | ------------------------------- | 
-|Chile| Rut|              
+|Chile                | Rut
 |Colombia             | Cédula de ciudadanía            |
 |                     | Cédula de extranjería           | 
 |Perú                 | DNI                             | 
