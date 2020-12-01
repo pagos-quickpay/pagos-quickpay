@@ -134,11 +134,11 @@ Es importante mencionar que se parametrizaron los valores para el envío del seg
 
 |**País**             | **Parametrización** |
 |-------------------  | --------------------|
-|Chile                | 9.000 puntos       |
-|Colombia             | 0 puntos           |
-|Perú                 | 0 puntos           |
+|Chile                | 0 puntos            |
+|Colombia             | 9.000 puntos        |
+|Perú                 | 9.000 puntos        |
 
-Para el caso de Chile se ríge bajo los siguentes atributos 
+ Se ríge bajo los siguentes atributos 
 
 | **is_guest**         | **Parametrización** | **Acción**                                                                         |
 | -------------------  | --------------------| -----------------------------------------------------------------------------------|
@@ -281,6 +281,8 @@ approval_url: debes desplegar esta URL al cliente para que pueda continuar con e
 refund_method: te permite anular la transacción.
 
 void_method: te permite cancelar la transacción.
+
+preventive_void_method: Permite cancelar la transacción, cuando debido a un error de comunicación, el estado de la intención no se actualizó a paid
 
 self_by_gateway_order: desde esta URL también puedes consultar la información del pago utilizando el gateway_order.
 
@@ -590,8 +592,7 @@ Para reversar una compra, se debe usar el método **void**. No se envía nada en
 ```
 
 ## Reversa preventiva
-La reversa preventiva se ejecuta cuando el estado de la intención esta en created,  como prerrequisito esta solo se ejecuta una sola vez 
-```
+La reversa preventiva se ejecuta cuando la intención esta en estado created. (La reversa preventiva solo se puede ejecutar una vez)
 {
     "_id": "5fbc20724a5496001740535d",
     "application": "5f186a3f5f62bf0017a6042c",
@@ -750,6 +751,7 @@ La reversa preventiva se ejecuta cuando el estado de la intención esta en creat
     "intent": "sale",
     "id": "5fbc20724a5496001740535d"
 }
+
 ## Anular una compra.
 Para anular una compra, se debe usar el método **refund** con el siguiente body request con los valores respectivos a anular en puntos y en pesos. 
 
