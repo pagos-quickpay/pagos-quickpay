@@ -412,6 +412,7 @@ El cliente debe ingresar los datos tipo de documento desplegando el combobox, n�
 ## Reversar una compra.
 
 Para reversar una compra, se debe usar el método **void**. No se envía nada en el cuerpo del request. Al reversar obtendremos un json de respuesta exitosa con el estado de la transacción en estado **voided**. A continuación un ejemplo:
+
 ```
 {
     "_id": "5d07e6ed14c196001682b171",
@@ -594,6 +595,8 @@ Para reversar una compra, se debe usar el método **void**. No se envía nada en
 ## Reversa preventiva.
 
 La reversa preventiva se ejecuta cuando la intención esta en estado created. (La reversa preventiva solo se puede ejecutar una vez)
+
+```
 {
     "_id": "5fbc20724a5496001740535d",
     "application": "5f186a3f5f62bf0017a6042c",
@@ -753,10 +756,13 @@ La reversa preventiva se ejecuta cuando la intención esta en estado created. (L
     "id": "5fbc20724a5496001740535d"
 }
 
+```
+
 ## Anular una compra.
 
 Para anular una compra, se debe usar el método **refund** con el siguiente body request con los valores respectivos a anular en puntos y en pesos. 
 
+```
 {
     "refunded_points_amount": 5000,
     "refunded_amount": 100
