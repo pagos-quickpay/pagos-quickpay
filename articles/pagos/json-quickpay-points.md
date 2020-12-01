@@ -591,7 +591,8 @@ Para reversar una compra, se debe usar el método **void**. No se envía nada en
 }
 ```
 
-## Reversa preventiva
+## Reversa preventiva.
+
 La reversa preventiva se ejecuta cuando la intención esta en estado created. (La reversa preventiva solo se puede ejecutar una vez)
 {
     "_id": "5fbc20724a5496001740535d",
@@ -753,6 +754,7 @@ La reversa preventiva se ejecuta cuando la intención esta en estado created. (L
 }
 
 ## Anular una compra.
+
 Para anular una compra, se debe usar el método **refund** con el siguiente body request con los valores respectivos a anular en puntos y en pesos. 
 
 {
